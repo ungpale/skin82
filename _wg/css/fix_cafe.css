@@ -58,8 +58,8 @@ a:hover { text-decoration:none !important; }
 select { appearance:none; -webkit-appearance:none; }
 select::-ms-expand { display:none; }
 
-::selection {color:#fff;background:#0054D6;}
-::-moz-selection {color:#000;background:#0054D6;}
+/* ::selection {color:#fff;background:#0054D6;}
+::-moz-selection {color:#000;background:#0054D6;} */
 
 .leftArea { float:left; }
 .rightArea { float:right; }

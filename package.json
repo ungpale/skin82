@@ -4,8 +4,8 @@
   "description": "우진포장 쇼핑몰스킨 skin82",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./css/tailwind.css",
+    "build-css": "tailwindcss -i ./src/input.css -o ./_wg/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./_wg/css/tailwind.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

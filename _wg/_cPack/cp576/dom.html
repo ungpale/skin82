@@ -1,0 +1,132 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--------------------------------------------------------------------------------------------------------------
+
+	### cp576 (포토리뷰) ###
+
+-------------------------------------------------------------------------------------------------------------->
+
+<div id="titleArea">
+    <h2>Photo review</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" ></a>
+    </span>
+</div>
+
+<!--
+	팝업은 /_wg/import/review_readPop.html 에서 수정가능
+-->
+<!--@js(/_wg/_cPack/cp576/core.js)-->
+<!--@css(/_wg/css/jquery.fancybox.css)-->
+<!--@css(/_wg/_cPack/cp576/style.css)-->
+
+<div module="board_listpackage_4" class="cp576 -switch">
+    <div module="board_list_4">
+        <!--
+        $count = 16
+        $login_page_url = /member/login.html
+        $deny_access_url = /index.html
+        $board_no = 4
+        $main_list_reply_view = no
+        -->
+        
+        <ul class="list">
+            <li data-img="{$img_src}">
+                <span class="num">{$checkbox} {$no}</span>
+                <a href="/_wg/_cPack/cp576/review_readPop.html{$param_read}" class="thumb fancybox-x fancybox.iframe">
+                    <div class="image empty" style="background-image:url('/_wg/_cPack/cp576/img/review_blank.jpg');"></div><!-- 공백이미지 -->
+                    <div class="image pro" style="background-image:url('{$image_medium_src}');"></div><!-- 상품이미지 -->
+                    <div class="image file" style="background-image:url('{$img_src|replace:gallery/,}');"></div><!-- 첨부이미지 -->
+                </a>
+                <div class="description">
+                    <div class="{$category_display|display} category">{$category_name}</div>
+                    <div class="subject"><a href="/_wg/_cPack/cp576/review_readPop.html{$param_read}" class="fancybox-x fancybox.iframe">{$subject}</a></div>
+                    <div class="board_content">{$content}</div>
+                    <div class="{$point_display|display} point"><img src="//img.echosting.cafe24.com/skin/base/board/ico_point{$point_count}.gif" alt="{$point_count}Point"> {$comment_count}</div>
+                    <div class="date">{$writer}<span class="{$date_display|display}"> | {$write_date}</span></div>
+                    <div class="product"><a href="/product/detail.html{$param_product}"><p class="name1">{$product_img}{$product_name}</p><p class="name2">INFO.</p></a></div>
+                </div>
+            </li>
+            <li data-img="{$img_src}">
+                <span class="num">{$checkbox} {$no}</span>
+                <a href="/_wg/_cPack/cp576/review_readPop.html{$param_read}" class="thumb fancybox-x fancybox.iframe">
+                    <div class="image empty" style="background-image:url('/_wg/_cPack/cp576/img/review_blank.jpg');"></div><!-- 공백이미지 -->
+                    <div class="image pro" style="background-image:url('{$image_medium_src}');"></div><!-- 상품이미지 -->
+                    <div class="image file" style="background-image:url('{$img_src|replace:gallery/,}');"></div><!-- 첨부이미지 -->
+                </a>
+                <div class="description">
+                    <div class="{$category_display|display} category">{$category_name}</div>
+                    <div class="subject"><a href="/_wg/_cPack/cp576/review_readPop.html{$param_read}" class="fancybox-x fancybox.iframe">{$subject}</a></div>
+                    <div class="board_content">{$content}</div>
+                    <div class="{$point_display|display} point"><img src="//img.echosting.cafe24.com/skin/base/board/ico_point{$point_count}.gif" alt="{$point_count}Point"> {$comment_count}</div>
+                    <div class="date">{$writer}<span class="{$date_display|display}"> | {$write_date}</span></div>
+                    <div class="product"><a href="/product/detail.html{$param_product}"><p class="name1">{$product_img}{$product_name}</p><p class="name2">INFO.</p></a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <p module="board_empty_4" class="empty {$empty_display|display}">{$empty_message}</p>
+</div>
+
+<div module="board_ButtonList_4" class="ec-base-button {$write_display|display}">
+    <a href="/board/product/write.html{$param_write}" class="-btn -lg -black">Write</a>
+</div>
+
+<div module="board_paging_4" class="ec-base-paginate typeList">
+    <!--
+        $count = 5
+    -->
+    <a href="{$param_prev}" class="btnPrev">이전 페이지</a>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <a href="{$param_next}" class="btnNext">다음 페이지</a>
+</div>
+
+<div module="board_search_4">
+    <!--@css(/css/module/board/search.css)-->
+    <fieldset class="boardSearch">
+        <legend>게시물 검색</legend>
+        <div class="category">{$form.product_category_selector} {$form.search_date} {$form.search_key}</div>
+        <div class="ec-base-field">{$form.search} <button class="-btn -sm -dgrey" onclick="{$action_search}">검색</button></div>
+    </fieldset>
+</div>
+
+<!-- 관리자 전용 메뉴 -->
+<div module="board_catemove_4">
+    <!--@css(/css/module/board/catemove.css)-->
+    <p>
+        {$board_catemove_selectbox}
+        <a href="#none" class="btnNormal" onclick="{$action_category_move}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif" alt="" /> {$category_move}</a>
+    </p>
+</div>
+
+
+<script>
+/* 팬시박스 옵션조절 */
+document.addEventListener("DOMContentLoaded", function(event) {
+    jQuery(".fancybox-x").fancybox({
+        padding: 20,
+        width:'100%',
+        openEffect : 'fade',
+        openSpeed  : 150,
+        closeEffect : 'fade',
+        closeSpeed  : 150,
+        closeClick : true,
+        beforeShow : function() {
+        	jQuery('body').addClass('fbs-off'); //스타일 조정을 위해서 fbs-off 클래스 추가
+        },
+        afterClose : function() {
+       	 	jQuery('body').removeClass('fbs-off');
+        }
+    });
+    
+    /* 첨부 이미지가 없는 리뷰는 삭제
+    $('.cp576 ul.list>li').each(function(idx, el) {
+        if(!/\.(gif|jpg|jpeg|png)$/i.test($(this).data('img'))) {
+            $(this).remove();
+        }
+    }); */
+}); 
+</script>

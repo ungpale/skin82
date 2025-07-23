@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=1.0, user-scalable=yes, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- PG크로스브라우징필수내용 -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- // PG크로스브라우징필수내용 -->
+
+    <title></title>
+    
+    <!--@css(/layout/basic/css/common.css)--><!-- 수정 -->
+    <!--@css(/layout/basic/css/ec-base-ui.css)--><!-- 수정 -->
+    <!--@css(/layout/basic/css/ec-base-paginate.css)--><!-- 수정 -->
+    <!--@css(/layout/basic/css/ec-base-button.css)--><!-- 수정 -->
+    <!--@css(/layout/basic/css/ec-base-tab.css)--><!-- 수정 -->
+    
+    <!--@css(/layout/basic/css/ec-base-box.css)--><!-- PC -->
+    <!--@css(/layout/basic/css/ec-base-desc.css)--><!-- PC -->
+    
+    <!--@css(/layout/basic/css/ec-base-tooltip.css)--><!-- 모바일 -->
+    <!--@css(/layout/basic/css/ec-base-help.css)--><!-- 모바일 -->
+    <!--@css(/layout/basic/css/ec-base-table.css)--><!-- 모바일 -->
+ 	<!--@css(/layout/basic/css/ec-base-fold.css)--><!-- 모바일 -->
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)--><!-- 모바일 -->
+
+    <!-- 사용안함 (/_wg/css/fix_cafe.css 에서 수정가능) -->
+    <!--@css(/layout/basic/css/layout.css) --><!-- 사용안함 -->
+    <!--@css(/layout/basic/css/ec-base-product.css) --><!-- 사용안함 -->
+    
+    <!--@js(/layout/basic/js/basic.js)-->
+    <!--@js(/js/common.js)-->
+    <!--@js(/js/module/layout/quick_view.js)-->
+        
+    <!--@import(/_wg/base.html)--><!-- 베이스 -->
+</head>
+<body id="main" class="-switchWrap colorThema">
+    
+    
+<style>
+	.pro_info { font-family:'Jost'; }
+
+/** 공지사항 **/
+    .notice { display:block; margin:0; text-align:center; }
+
+
+/** 공통버튼 **/
+    .top_btn ul { display:flex; flex-flow:wrap row; justify-content:space-around; position:relative; max-width:1000px; width:100%; height:190px; margin:30px auto 50px; border-bottom:1px solid #ddd; font-family:'Jost'; font-size:15px; }
+    .top_btn ul li { flex:0 1 45%!important; align-self:flex-start;}
+    .top_btn ul li a { display:block; line-height:30px; padding:50px 0; border-radius:10px; background-color:#0a80fe; font-family:'Jost'; font-size:130%; text-align:center; color:#fff; font-weight:bold; transition:all .3s ease; }
+    .top_btn ul li a:hover { background-color:#333; }
+
+
+
+/** NEW 상품설명 공통(23165부터 적용) **/
+    .skin_info { display:block; position:relative; max-width:1000px; margin:0 auto; padding:0 10px; font-family:'Jost' !important; font-size:14px; }
+
+    .skin_info li, .skin_info p, .skin_info strong, .skin_info span { font-family:'Jost' !important; }
+
+    .skin_info .logo { margin:0 auto; padding:20px 0 0; text-align:center; }
+    .skin_info .logo img { max-width:150px; width:100%; }
+   
+    .skin_info .section { position:relative; margin:0; padding:90px 0 70px; border-bottom:1px solid #ddd; }
+    .skin_info .section img { max-width:1000px; width:100%; }
+    /* 목록 */
+    .skin_info .section p { line-height:170%; margin:0 0 40px; font-size:130%; text-align:center; letter-spacing:-0.02em; }
+    .skin_info .section p strong { border-bottom:3px solid #007ef6; font-weight:normal; color:#111; }
+
+    /* 목록으로 버튼 */
+    .skin_info .section .btn_back { position:absolute; bottom:0px; left:50%; width:100px; height:40px; line-height:40px; background:url('https://webgood.co.kr/design/23165/img/arrow.jpg') no-repeat 0 50%; background-size:25% 40%; text-align:center; text-indent:10px; color:#fff; font-size:100%; transform:translate(-15%,0); transition:all .3s ease; }
+    .skin_info .section .btn_back:hover { bottom:5px; color:#333; }
+
+    .skin_info .section h2 { display:block; position:relative; font-size:300%; color:#111; text-align:center; letter-spacing:-0.03em; font-weight:bold; font-family:'Jost'; }
+    .skin_info .section h2 p { line-height:40px; margin:0; font-size:45%; font-weight:normal; color:#999; }
+    .skin_info .section h3 { margin:0 0 40px; line-height:40px; font-size:220%; color:#111; text-align:center; letter-spacing:-0.03em; font-weight:bold;  font-family:'Jost'; }
+    .skin_info .section h3 span { line-height:40px; font-weight:bold; color:#007ef6; }
+	.skin_info .section h3 img { position:relative; top:-2px; width:40px; margin:0 12px 0 0; }
+
+    .skin_info .list { display:flex; flex-flow:wrap row; justify-content:flex-start; position:relative; }
+    
+    .skin_info .list.grid3 li { flex:0 1 25%; }
+    .skin_info .list.grid3 li img { width:40%; }
+    .skin_info .list.grid3 li:hover { border-radius:5%; background:#f4f4f4; }
+    
+    .skin_info .list.grid2 { margin:0 0 40px; }
+    .skin_info .list.grid2 li { flex:0 1 50%; }
+    .skin_info .list.grid2 li img { width:90%; margin:0 auto 20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.15); overflow:hidden; }
+       
+    .skin_info .list li { align-self:flex-start; text-align:center; transition:all .3s ease; }
+    .skin_info .list li a { display:block; padding:20px 0; }
+
+    .skin_info .list li img { display:block; margin:0 auto 20px; }
+    
+    .skin_info .list li strong { display:block; margin:0 0 8px; font-size:120%; }
+    .skin_info .list li p { line-height:20px; margin:0; padding:0; font-size:100%; color:#777; }
+
+    .skin_info #section_03 p img { max-width:374px; width:100%; }
+    .skin_info #section_06 p img { max-width:600px; width:100%; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.15); overflow:hidden; }
+    .skin_info #section_07 p img { max-width:900px; width:100%; }
+    .skin_info #section_08 p img { max-width:800px; width:100%; }
+    .skin_info #section_02 p img,
+    .skin_info #section_04 p img,
+    .skin_info #section_05 p img,
+    .skin_info #section_09 p img,
+    .skin_info #section_10 p img, 
+    .skin_info #section_11 p img { max-width:800px; width:100%; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.15); overflow:hidden; }
+    
+    .skin_info #section_12 ul { display:flex; flex-flow:wrap column; justify-content:flex-start; position:relative; width:100%; }
+    .skin_info #section_12 li { align-self:flex-start; width:100%; line-height:45px; font-size:120%; color:#999; }
+    .skin_info #section_12 li strong{ display:inline-block; width:35%; padding:0 2% 0 0; text-align:right; font-weight:bold; color:#111; }
+    .skin_info #section_12 li span { display:inline-block; width:60%; }
+
+    @media all and (max-width:575px) {
+        .skin_info { font-size:11px; }
+        .skin_info .list.grid3 li { flex:0 1 32%; }
+        .skin_info .list.grid3 li img { width:50%; }
+        .skin_info .list.grid2 li img { display:inline-block; width:90%; }
+        .skin_info #section_12 li span { width:35%; }
+    }
+
+</style>
+    
+<!-- 공지사항 -->
+<div class="notice">
+   <img src="http://hotsos7.cafe24.com/design/notice.jpg">
+</div>
+
+<!-- 공통버튼 -->
+<div class="top_btn">
+   <ul>
+      <li><a href="https://webgood.co.kr" target="_blank">디자인웹굿<br>홈페이지</a></li>
+      <li><a href="https://webgood.co.kr/board/free/list.html?board_no=101" target="_blank">디자인 주문서<br>작성하기</a></li>
+   </ul>
+</div>
+
+
+<div class="skin_info">
+    <div class="logo">
+        <a href="https://webgood.co.kr" target="_blank"><img src="https://webgood.co.kr/design/23165/img/logo.jpg" alt=""/></a>
+    </div>
+    
+    <div class="section">
+        <h2><p>쇼핑몰의 시작을 함께 하겠습니다.</p>스마트24 완전반응형 스킨</h2>
+    </div>
+    
+    <div id="section_00" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_00.png" alt="" /><span>디자인웹굿</span> 이 만들면 다릅니다.</h3>
+        <p>* 아이콘을 클릭하시면 해당 설명으로 이동됩니다.</p>
+        <ul class="list grid3">
+            <li><a href="#section_01"><img src="https://webgood.co.kr/design/23165/img/list_01.png" alt="" /><strong>완전반응형</strong><p>모바일 수정은 NO!<br>PC스킨만 수정하세요</p></a></li>
+            <li><a href="#section_02"><img src="https://webgood.co.kr/design/23165/img/list_02.png" alt="" /><strong>가로/세로형</strong><p>2가지 디자인으로<br>원하시는걸 사용하세요</p></a></li>
+            <li><a href="#section_03"><img src="https://webgood.co.kr/design/23165/img/list_03.png" alt="" /><strong>모바일스킨 별도제공</strong><p>PC 디자인 구매하면<br>모바일 디자인 공짜!</p></a></li>
+            <li><a href="#section_04"><img src="https://webgood.co.kr/design/23165/img/list_04.png" alt="" /><strong>컬러변경</strong><p>간편하게 원하시는<br>컬러를 적용가능</p></a></li>
+            
+            <li><a href="#section_05"><img src="https://webgood.co.kr/design/23165/img/list_05.png" alt="" /><strong>풀HD 지원</strong><p>넓은 화면으로<br>눈이 편한 쇼핑</p></a></li>
+            <li><a href="#section_06"><img src="https://webgood.co.kr/design/23165/img/list_06.png" alt="" /><strong>ON/OFF 기능</strong><p>필요없는 디자인<br>간편하게 삭제가능</p></a></li>
+            <li><a href="#section_061"><img src="https://webgood.co.kr/design/23165/img/list_061.png" alt="" /><strong>사이즈표</strong><p>의류쇼핑몰의 필수품<br>이것도 공짜!</p></a></li>
+            <li><a href="#section_07"><img src="https://webgood.co.kr/design/23165/img/list_07.png" alt="" /><strong>다양한 커스텀팩</strong><p>스킨하나 구매했는데<br>디자인이 몇개야?</p></a></li>
+            
+            <li><a href="#section_08"><img src="https://webgood.co.kr/design/23165/img/list_08.png" alt="" /><strong>최신버젼 JQuery</strong><p>보안, 속도, 업데이트<br>안전성이 필요하죠</p></a></li>
+            <li><a href="#section_09"><img src="https://webgood.co.kr/design/23165/img/list_09.png" alt="" /><strong>디자인 매뉴얼 제공</strong><p>디자인만 이쁘다고<br>끝이 아닙니다</p></a></li>
+            <li><a href="#section_10"><img src="https://webgood.co.kr/design/23165/img/list_10.png" alt="" /><strong>디자인 구매후기</strong><p>카페24 최대,최초의<br>구매후기</p></a></li>
+            <li><a href="#section_11"><img src="https://webgood.co.kr/design/23165/img/list_11.png" alt="" /><strong>삼성같은 A/S</strong><p>저희 문의게시판은<br>항상 열려있습니다</p></a></li>
+            
+            <li><a href="#section_12"><img src="https://webgood.co.kr/design/23165/img/list_12.png" alt="" /><strong>빠른 주문작업</strong><p>빠르고 정확하게<br>제공해 드리겠습니다</p></a></li>
+        </ul>
+    </div>
+    
+    <div id="section_01" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_01.png" alt="" /><span>완전 반응형</span> 스킨을 알아보자.</h3>
+        <img src="https://webgood.co.kr/design/23165/img/section_01.jpg" alt=""/>
+        <p>
+            어떠한 환경에서도 <strong>동일한 컨셉의 일관적 디자인</strong><br>
+            PC스킨만 수정하면 모바일은따로 수정을 할 필요가 없습니다.<br>
+            바쁘신데 PC 따로 모바일 따로 수정하세요?
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_02" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_02.png" alt="" /><span>가장 많이 물어보시는 질문</span> 어떤걸 사야되나요?</h3>
+        <ul class="list grid2">
+            <li><a href="https://ecudemo23165.cafe24.com/skin-skin529" target="_blank"><img src="https://webgood.co.kr/design/23165/img/section_0201.jpg" alt="" /><p>가로형 스킨</p></a></li>
+            <li><a href="https://ecudemo23165.cafe24.com/skin-skin530" target="_blank"><img src="https://webgood.co.kr/design/23165/img/section_0202.jpg" alt="" /><p>세로형 스킨</p></a></li>
+        </ul>
+        <p>
+            * 이미지를 클릭하시면 샘플 쇼핑몰을 볼 수 있습니다.<br><br>
+            2가지 디자인중 어떤 디자인을 골라야될까요?<br>
+            고르지마세요.<br>
+            <strong>가로형/세로형 디자인 모두 드립니다!</strong>
+        </p>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_0203.jpg" alt="" /></p>
+        <p>
+            위 버튼을 클릭하시면 세로형(가로형) 디자인으로 변경됩니다.<br>
+            실제 사용하실 쇼핑몰에는 노출되지 않습니다.
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_03" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_03.png" alt="" /><span>모바일 스킨</span>도 드려요.</h3>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_03.jpg" alt="" /></p>
+        <p>
+            PC스킨과 컨셉이 맞지도 않는 모바일 스킨을 돈주고 구매하세요?<br>
+            저희는 <strong>PC스킨과 동일한 컨셉의 모바일 스킨을 제공</strong> 해드립니다.<br>
+            모바일 스킨을 별도로 사용하시고픈 분을 위해 준비했습니다.
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_04" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_04.png" alt="" /><span>포토샵이 필요없는</span> 컬러 확인</h3>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_04.jpg" alt="" /></p>
+        <p>
+            <strong>간단하게 원하시는 컬러를 적용</strong> 해볼 수 있습니다.<br>
+            위 버튼을 클릭하시면 컬러 리스트 확인이 가능합니다.
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_05" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_05.png" alt="" /><span>눈이 편안한 쇼핑</span>을 위해 쫙~ 키웠습니다.</h3>
+        <ul class="list grid2">
+            <li><img src="https://webgood.co.kr/design/23165/img/section_0501.jpg" alt="" /><p>기존 HD 사이즈</p></li>
+            <li><img src="https://webgood.co.kr/design/23165/img/section_0502.jpg" alt="" /><p>Full HD 사이즈</p></li>
+        </ul>
+        <p>
+            <strong>눈이 나빠도 돋보기가 없어도 크게 편안하게 쇼핑</strong>을 하세요.<br>
+            가장 많이 사용하는 모니터 해상도 2560 X 1440 꽉! 차게.<br>
+            나이가 많을 수록 돈도 많습니다. 고령화 시대에 매출을 잡으세요!
+        </p>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_0503.jpg" alt="" /></p>
+        <p>
+            위 버튼을 클릭하시면 화면 모드가 변경됩니다.
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_06" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_06.png" alt="" />필요없는 디자인은 <span>ON/OFF 기능으로</span></h3>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_0601.jpg" alt="" /></p>
+        <p>
+            사용하지 않는 디자인은 간편하게 사용안함 처리가 가능합니다.<br>
+            아래 이미지처럼 사용안함 처리를 한 디자인은 표시되지 않습니다.
+        </p>
+        <ul class="list grid2">
+            <li><img src="https://webgood.co.kr/design/23165/img/section_0602.jpg" alt="" /><p>사용안함 처리</p></li>
+            <li><img src="https://webgood.co.kr/design/23165/img/section_0603.jpg" alt="" /><p>실제 노출 화면</p></li>
+        </ul>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+
+    <div id="section_061" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_061.png" alt="" />의류 쇼핑몰에 가장 필요한<span> 사이즈, 세탁, 모델 디자인</span></h3>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_061.jpg" alt="" /></p>
+        <p>
+            저희 쇼핑몰 디자인에 어울리게 깔끔하게 제작된 디자인 포멧을 제공해드립니다.<br>
+            샘플 쇼핑몰의 상세페이지에 들어가시면 실제 디자인을 확인할 수 있습니다.
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_07" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_07.png" alt="" /><span>커스텀팩</span>, 다재다능이라는 이런 것!</h3>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_07.jpg" alt="" /></p>
+        <p>
+            뭘 좋아하시는지 몰라 좋은건 다 때려넣었습니다!!<br>
+            <strong>수십가지의 다양한 디자인</strong> 포맷을 제공해드립니다.
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_08" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_08.png" alt="" /><span>보안, 속도, 업데이트, 안전성</span> 이건 최신 제이쿼리로</h3>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_0801.jpg" alt="" /></p>
+        <p>
+            <strong>가장 최신 제이쿼리 업데이트 기대 효과</strong><br><br>
+            1. JQuery 를 최신 버전 (v3.6.0) 으로 사용하게 되면 <strong>웹 보안 취약점을 해결</strong> 할 수 있습니다.<br>
+            2. 모바일 기기에서의 프론트 성능 향상을 기대 할 수 있으므로 보다 <strong>빠른 인터렉션</strong>을 제공 할 수 있습니다.<br>
+            3. 차후 신규 최신버전이 릴리즈 된다 하더라고 <strong>업데이트에 빠르게 대응</strong> 할 수 있습니다.<br>
+            4. 실제 디자인 내에 포함된 <strong>스크립트와의 충돌 방지</strong>를 최소화 할 수 있는 이점이 있습니다.<br><br>
+            * 해당 설명은 카페24측에서 저희측에 메일로 전달한 내용입니다.
+        </p>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_0802.jpg" alt="" /></p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_09" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_09.png" alt="" />디자인의 완성은 <span>차원이 다른</span> 매뉴얼</h3>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_09.jpg" alt="" /></p>
+        <p>
+            아무리 이쁜 디자인도 사용 방법을 모르면 제대로 사용할 수 없습니다.<br>
+            디자인만큼 매뉴얼도 최선을 다해 준비했습니다.
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_10" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_10.png" alt="" />디자인센터 고객평가 <span>최대, 최초 5,859개의 후기</span></h3>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_10.jpg" alt="" /></p> 
+        <p>
+            아무리 이쁜 디자인도 사용 방법을 모르면 제대로 사용할 수 없습니다.<br>
+            디자인만큼 매뉴얼도 최선을 다해 준비했습니다.
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_11" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_11.png" alt="" /><span>삼성 같은 A/S</span> 약 60,000개의 문의와 답변</h3>
+        <p><img src="https://webgood.co.kr/design/23165/img/section_11.jpg" alt="" /></p>
+        <p>
+            잠수 타지 않습니다.<br>
+            고객센터 게시판은 항상 열려있습니다.
+        </p>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+    
+    <div id="section_12" class="section">
+        <h3><img src="https://webgood.co.kr/design/23165/img/list_12.png" alt="" /><span>주문서 작성</span> 시작~</h3>
+		<ul>
+            <li><strong>1. 주문전 상담</strong> <span>010-3360-8426으로 전화 또는 문자 가능.</span><li>
+            <li><strong>2. 주문서 작성</strong> <span>디자인웹굿 홈페이지(https://webgood.co.kr)로 이동.</span><li>
+            <li><strong>3. 결제완료</strong> <span>안전결제 및 세금계산서 발행가능</span>.<li>
+            <li><strong>4. 문자확인</strong> <span>모든 내용은 문자로 발송되니 꼭 확인해주세요.</span><li>
+            <li><strong>5. 디자인 셋팅</strong> <span>기본셋팅은 1일 소요.</span><li>
+            <li><strong>6. 작업완료</strong> <span>최종 작업후 문자가 발송됨.</span><li>
+            <li><strong>7. 매뉴얼 제공</strong> <span>작업완료문자를 반드시 확인바랍니다.</span><li>
+        </ul>
+        <a href="#section_00" class="btn_back">목록으로</a>
+    </div>
+</div>
+        
+</body>
+</html

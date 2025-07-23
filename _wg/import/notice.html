@@ -1,0 +1,30 @@
+<!-- 상단 공지사항 -->
+<div module="board_listpackage_1" class="header_notice">
+    <!-- 타이틀 -->
+    <div module="board_title_1"><a href="/board/free/list.html?board_no=1" class="-mov">NOTICE</a></div>
+
+    <!-- 일반공지글 롤링 -->
+    <div module="board_list_1" class="header_notice_slide">
+        <!--
+        	$count = 10
+        -->
+        <div class="DB_mask">
+            <ul class="DB_imgSet">
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico mColor">N</div>{$subject}</a></li>
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico">1</div>{$subject}</a></li>
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico">2</div>{$subject}</a></li>
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico">3</div>{$subject}</a></li>
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico">4</div>{$subject}</a></li>
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico">5</div>{$subject}</a></li>
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico">6</div>{$subject}</a></li>
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico">7</div>{$subject}</a></li>
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico">8</div>{$subject}</a></li>
+                <li><span class="date">{$write_date|cut:10,}</span><a href="/board/product/read.html{$param_read}"><div class="num_ico">9</div>{$subject}</a></li>
+            </ul>
+        </div>
+        <ul class="DB_dir">
+            <span class="arrow DB_prevBtn">이전</span>
+            <span class="arrow DB_nextBtn">다음</span>
+        </ul>
+    </div>
+</div>

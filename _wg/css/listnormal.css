@@ -1,0 +1,27 @@
+    .xans-product-normalmenu { position:relative; margin:50px 0; }
+
+    .xans-product-normalmenu .function {position:relative;padding:0 0 10px; border-bottom:1px solid #eee; }
+    .xans-product-normalmenu .function:after {display:block;clear:both;content:""}
+
+    /* 상품개수 */
+    .xans-product-normalmenu .prdCount { float:left; line-height:30px; padding:0 0 0 15px; font-size:14px; }
+    .xans-product-normalmenu .prdCount strong { display:inline-block; height:30px; margin:0 5px 0 0; padding:0 15px; background:#111; border-radius:25px; font-weight:400; color:#fff; text-align:center; }
+    
+    /* 상품정렬버튼 */
+	.xans-product-normalmenu .function select { position:relative; float:right; width:110px; height:28px; line-height:27px; margin:0 10px 0 0; border:2px solid #111; border-radius:25px; font-size:100%!important; font-size:14px!important; text-indent:10px; cursor:pointer; }
+
+    /* 상품비교버튼 */
+    .xans-product-normalmenu .compare { float:right; width:110px; height:28px; line-height:27px; margin:0 10px 0 0; border:2px solid #111; border-radius:25px; background:#111; font-size:100%!important; cursor:pointer; text-align:center; transition:all .3s ease; }
+    .xans-product-normalmenu .compare:hover { background:#555; }
+    .xans-product-normalmenu .compare a { display:block; color:#fff; }
+    @media all and (max-width:960px) {
+    	.xans-product-normalmenu .compare { display:none; }
+    }
+
+	#Product_ListMenu.anchor { position:absolute; top:0px; }
+
+
+	/* 베스트100 */
+    .ec-base-product .prdList { counter-reset: list_counter 0; /* 카운터 0로 초기화 */ }
+    .ec-base-product .prdList .num_ico { display:block; position:absolute; z-index:10; left:-3px; top:-3px; width:30px; height:30px; line-height:30px; background:#ff0000; box-shadow:0 1px 3px rgba(0,0,0,0.4); font-size:12px; font-weight:bold; color:#fff; text-align:center; transition:all .3s ease; list-style-type: decimal-leading-zero; }
+    .ec-base-product .prdList .num_ico:before { content: counter(list_counter); counter-increment: list_counter 1; }

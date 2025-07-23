@@ -1,0 +1,47 @@
+<!--@layout(/layout/basic/intro.html)-->
+<div id="titleArea">
+    <h2>회원전용 쇼핑몰 로그인</h2>
+</div>
+
+<div module="Intro_memberPackage">
+	<link href="//fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Noto+Sans+KR:400,700|Oswald:400,700|Roboto:400,700&display=swap&subset=korean" rel="stylesheet">
+	<!--@css(/_wg/css/xeicon.css)-->
+    <!--@css(/_wg/css/intro_memberPackage.css)-->
+    <!--@js(/js/module/intro/login.js)-->
+    <div module="member_login">
+        <!--
+            $forbidIpUrl = member/adminFail.html
+            $defaultReturnUrl = /index.html
+        -->
+        <fieldset>
+            <div class="formBox">
+                <p class="ec-base-help">회원전용 쇼핑몰은 로그인 후 구매가 가능합니다.</p>
+                <div class="form">
+                    <label class="id ePlaceholder" title="{$login_id_type_text}">{$form.member_id}</label>
+                    <label class="password ePlaceholder" title="비밀번호">{$form.member_passwd}</label>
+                </div>
+                <div class="option">
+                    <span class="auto">{$form.use_login_keeping}</span>
+                    <span class="save">{$form.check_save_id}</span>
+                    <span class="ssl"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_ssl.png" alt="보안접속"><em>보안접속</em></span>
+                </div>
+                <div class="ec-base-button gFull">
+                    <button type="button" class="-btn -block -xl -black" onclick="{$action_func_login}"><i class="xi-fingerprint"></i>로그인</button>
+                </div>
+                <div class="btn">
+                    <a href="/member/id/find_id.html" class="-btn -inline -md -white">아이디찾기</a>
+                    <a href="/member/passwd/find_passwd_info.html" class="-btn -inline -md -white">비밀번호찾기</a>
+                    <a href="/member/join.html" class="-btn -inline -md -white">회원가입</a>
+                </div>                
+                <div class="snsLogin">
+                    <a href="#none" class="btnNaver {$display_naver|display}" onclick="{$naver_func_login}"><span>네이버 로그인</span></a>
+                    <a href="#none" class="btnFacebook {$display_facebook|display}" onclick="{$facebook_func_login}"><span>Facebook으로 로그인</span></a>
+                    <a href="#none" class="btnGoogle {$display_google|display}" onclick="{$google_func_login}"><span>구글 로그인</span></a>
+                    <a href="#none" class="btnKakao {$display_kakao|display}" onclick="{$kakao_func_login}"><span>카카오계정 로그인</span></a>
+                    <a href="#none" class="btnLine {$display_line|display}" onclick="{$line_func_login}"><span>LINE 로그인</span></a>
+                    <a href="#none" class="btnApple {$display_apple|display}" onclick="{$apple_func_login}"><span>Apple로 로그인</span></a>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>

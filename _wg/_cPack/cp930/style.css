@@ -1,0 +1,73 @@
+
+    .cp930 { position:relative; width:90%; max-width:450px; margin:0 auto; }
+
+	.cp930 .titleBox { display:block; margin:0 0 30px; font-size:110%; }
+	.cp930 .titleBox p { margin:5px 0 0; color:#999; font-size:85%; }
+
+	/* 또는 라인 */
+	.cp930 .or_line { display:block; margin:25px 0; background:url('/_wg/img/_bar/hyphen_eee.png') repeat-x 50% 50%; text-align:center; color:#bbb; font-size:90%; }
+	.cp930 .or_line p { width:50px; margin:0 auto; background-color:#fff; text-align:center; }
+
+	/* 카카오 1초 로그인 */
+    .cp930 .kakao_login {  }
+    .cp930 .kakao_login .-btn { background-color:#fde500; border:1px solid #f0da0a; border-radius:5px; font-weight:bold; }
+    .cp930 .kakao_login i { position:absolute; top:50%; left:15px; line-height:42px; font-size:25px; transform:translate(0,-50%); }
+
+	/* 멤버탭 */
+    .cp930 .member_tab { position:relative; width:100%; max-width:450px; margin:0 auto 10px; overflow:hidden; }
+    .cp930 .member_tab ul { display:flex; flex-flow:wrap row; justify-content:space-between; position:relative; z-index:2; width:100%; }
+    .cp930 .member_tab li { flex:0 0 50%; align-self:flex-start; align-self:center; position:relative; width:100%; height:45px; line-height:45px; padding:0 10px; border:1px solid #eee; background-color:#f6f6f6; text-align:center; color:#aaa; font-size:95%; cursor:pointer; box-sizing:border-box; overflow:hidden; transition:background-color .3s, border .3s ease;  }
+    .cp930 .member_tab li:nth-child(1) { border-radius:5px 0 0 5px / 5px 0 0 5px; }
+    .cp930 .member_tab li:nth-child(2) { left:-1px; border-radius:0 5px 5px 0 / 0 5px 5px 0; }
+    .cp930 .member_tab li.on { z-index:1; background-color:#fff; border:1px solid #999; color:#111; } /* 타이머 라인 */
+    .cp930 .member_tab li a { display:block; }
+
+    .cp930 fieldset { position:relative; }
+    .cp930 fieldset .id,
+    .cp930 fieldset .password { overflow:hidden; display:block; margin:0 0 10px; }
+    .cp930 fieldset label input { display:block; width:100%; height:45px; line-height:42px; border-radius:5px; border:0; border:1px solid #ddd; background-color:#ff!important; font-size:14px!important; text-indent:10px; letter-spacing:0; overflow:hidden; }
+    .cp930 fieldset label input:focus { background-color:#f4f4f4; }
+
+    .cp930 ::-webkit-input-placeholder { color:#aaa; font-size:13px !important; letter-spacing:-0.02em !important; }
+	.cp930 ::-moz-placeholder { color:#aaa; font-size:13px !important; letter-spacing:-0.02em !important; }
+    .cp930 :-ms-input-placeholder { color:#aaa; font-size:13px !important; letter-spacing:-0.02em !important; }
+	.cp930 :-moz-placeholder { color:#aaa; font-size:13px !important; letter-spacing:-0.02em !important; }
+    .cp930 label.ePlaceholder > span { color:#aaa !important; font-size:13px !important; letter-spacing:-0.02em !important; }
+
+	/* 체크박스들 */
+    .cp930 .option { margin:0 0 10px 10px; }
+    .cp930 .option > span { display:inline-block!important; margin:0 10px 5px 0; font-size:95%; }
+    .cp930 .option > span i { top:2px; margin:0 2px 0 0; font-size:15px; color:#90173c; }
+    .cp930 .option > span.ssl {  }
+    .cp930 .option label { line-height:30px; }
+
+	/* 아이디찾기 */
+    .cp930 .user-login fieldset .btn { display:block; margin:15px 0 0; text-align:center; }
+    .cp930 .user-login fieldset .btn li { display:inline-block; *display:inline; *zoom:1; padding:0 5%; background:url('/_wg/img/_bar/bar_b_20.png') no-repeat 100% 50%; text-align:center; }
+    .cp930 .user-login fieldset .btn li:last-child { background:none; }
+    .cp930 .user-login fieldset .btn li a { width:100%; color:#777; }
+    .cp930 .user-login fieldset .btn li a:hover { width:100%; color:#111; }
+
+	/** 비회원 주문조회 **/
+    .cp930 .info { display:block; line-height:17px; margin:0 0 10px; padding:10px 20px; background:#f4f4f4; font-size:11px; color:#333; text-align:center; }
+	/* 주문번호 사이즈 */
+    .cp930 .unuser-login #order_id1 { width:172px; margin:0 17px 0 0; }
+    .cp930 .unuser-login #order_id2 { width:172px; margin:0 0 0 17px; }
+
+	/* SNS 로그인 */
+    .cp930 .snsArea { display:block; margin:0 0 80px; }
+    .cp930 .snsArea li a { display:block; height:40px; line-height:40px; margin:0 0 5px; border-radius:5px; border:1px solid #ddd; background:#fff; font-size:14px; color:#333; text-align:center; transition:all .3s ease; }
+    .cp930 .snsArea li a:hover { border:1px solid #999; text-decoration:none; }
+		/* SNS 아이콘 */
+    	.cp930 .snsArea li span { position:absolute; left:5px; width:50px; height:40px; }
+        .cp930 .snsArea li i { line-height:40px; font-size:20px; }
+        .cp930 .snsArea li span.naver i { color:#44ba2f; }/*네이버*/
+        .cp930 .snsArea li span.facebook i { color:#365bac; }/*페이스북*/
+        .cp930 .snsArea li span.google i { color:#d2281e; }/*구글플러스*/
+        .cp930 .snsArea li span.line i { color:#44ba2f; }/*라인*/
+        .cp930 .snsArea li span.yahoo i { color:#ff0033; }/*야후*/
+        .cp930 .snsArea li span.apple i { color:#aaa; }/*애플*/
+
+	/* 비회원 주문하기 */
+	.btn_unuser_buy {margin:10px 0 0;text-align:center;}
+	.btn_unuser_buy .-btn { display:block; margin:10px 0 0; }

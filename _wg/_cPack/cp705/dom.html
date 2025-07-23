@@ -1,0 +1,30 @@
+<!--------------------------------------------------------------------------------------------------------------
+
+	### cp705(팝업1) ###
+
+-------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/_cPack/cp705/style.css)-->
+<!--@js(/_wg/_cPack/cp705/option.js)-->
+
+<style>
+    .cp705.btn { bottom:115px; } /* 버튼의 위치설정 */
+</style>
+
+<div js-banner-module="cp705" js-hide>
+    <!-- 버튼 -->
+    <div class="scroll_check">
+        <div class="cp705 btn"><i class="xi-bell-o"></i> {$js-group-description}</div>
+    </div>
+    <!-- 팝업 -->
+    <div class="cp705 popup">
+        <!-- 슬라이드배너 -->
+        <div class="cp705_slide v32">
+            <div class="owl-carousel ul">
+                <li js-banner data-text="{$js-alt}"><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+                <li js-banner data-text="{$js-alt}"><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+            </div>
+        </div>
+        <button type="button" class="p-close" alt="닫기버튼">오늘하루 열지않음</button>
+    </div>
+</div>

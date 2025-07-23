@@ -1,0 +1,180 @@
+/* Font */
+.txtInfo { color:#707070; }
+.txtWarn { color:#f76560; }
+.txtEm { color:#008bcc; }
+.txtDel, .strike, .discount { text-decoration:line-through; font-weight:normal; }
+.strike strong, .discount strong { font-weight:normal; }
+.txtNormal { font-weight:normal; font-style:normal; }
+.txtNum { display:inline-block; font-size:11px; color:#939393; word-break:normal; }
+.txt11 { font-size:11px; }
+.txt12 { font-size:12px; }
+.txt14 { font-size:14px; }
+.txt16 { font-size:16px; }
+.txt18 { font-size:18px; letter-spacing:-1px; }
+.txtIcon { font-size:12px; font-style:normal; }
+.txtBreak { word-break:break-all; word-wrap:break-word; }
+  /* JP, TW, CN */
+  html:lang(ja) .txt11,
+  html:lang(zh) .txt11,
+  html:lang(zh-tw) .txt11 { font-size:12px; }
+
+/* grid */
+.gBlank5 { display:block; margin-top:5px; }
+.gBlank10 { display:block; margin-top:10px; }
+.gBlank20 { display:block; margin-top:20px; }
+.gBlank30 { display:block; margin-top:30px; }
+.gIndent10 { margin-left:10px; }
+.gIndent20 { margin-left:20px; }
+.gSpace10 { margin-right:10px; }
+.gSpace20 { margin-right:20px; }
+.gMerge { position:relative; z-index:1; margin-top:-1px; }
+
+/* ec-base-qty */
+.ec-base-qty { font-size:0 /*수량버튼 위치수정*/; }
+.ec-base-qty [type="text"] { width:49px; }
+.ec-base-qty [type="tel"] { width:49px; text-align:right; }
+.ec-base-qty button { margin:0; padding:0; border:0; vertical-align:top; background:transparent; }
+.ec-base-qty .qtyUp,
+.ec-base-qty .qtyDown { display:inline-block; }
+
+/* ec-base-chk */
+.ec-base-chk { display:inline-block; position:relative; margin:0 8px 0 0;vertical-align:top; cursor:pointer; }.xans-member-join .agreeAll label
+
+/* ec-base-field */
+.ec-base-field { display:-webkit-flex; display:-ms-flex; display:flex; }
+.ec-base-field input[type="text"] { -webkit-flex:1; -ms-flex:1; flex:1; }
+.ec-base-field input ~ [class*='btn'] { margin-left:5px; }
+
+/* form */
+input,textarea,select {
+    font-size: 100%;
+    font-family: 'Pretendard Variable', "맑은 고딕", "malgun gothic", "돋움", "dotum", sans-serif;
+    color: #000;
+    color: var(--font-color-base);
+    vertical-align: middle;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=tel],
+textarea {
+    padding:10px; font-size:14px; line-height:1.53; font-weight:inherit; color:#353535; border:1px solid #d7d5d5; border-radius:2px; outline-style:none;
+    -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=tel] { height:29px; }
+
+input[type="file"] { overflow:hidden; max-width:100%; }
+
+input[type="button"],
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="image"],
+textarea {-webkit-appearance:none;appearance:none;}
+button {outline: none;border: 0;background: rgba(0, 0, 0, 0);cursor: pointer;}
+
+select {
+    max-width: 100%;
+    height: 40px;
+    padding: 0 30px 0 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #fff url("/_wg/img/_ico/ico_arr_down.svg") no-repeat right 10px center;
+    background-size: 11px auto;
+    box-sizing: border-box;
+}
+select.disabled,
+select:disabled,
+textarea.disabled,
+textarea:disabled { color:#bcbcbc; }
+textarea { resize:none; line-height:1.2em; }
+textarea.disabled { background-color:#ffffff; color:#bfbfbf; }
+input[type="checkbox"] {
+    position: relative;
+    opacity: 1;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    vertical-align: text-top;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #000;
+    background: #fff;
+    outline: 0;
+}
+input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #d9d9d9;
+    background: url("/_wg/img/_ico/checkbox_off.svg") no-repeat center;
+    transition: none;
+}
+input[type="checkbox"]:checked {
+    border: 0;
+    background-image: url(//img.echosting.cafe24.com/skin/skin/common/bg_checkbox_checked.png);
+    background-size: 15px 15px;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
+
+input[type="radio"] {position: relative;opacity: 1;width: 18px;height: 18px;cursor: pointer;appearance: none;-webkit-appearance: none;-moz-appearance: none;border: 0;background: url("//img.echosting.cafe24.com/skin/skin/common/bg_radio.png") no-repeat 0 0;background-size: 18px 18px;outline: 0;}
+input[type="radio"]:checked {background-image: url("//img.echosting.cafe24.com/skin/skin/common/bg_radio_checked.png");-webkit-transition: .2s ease-out;transition: .2s ease-out;}
+
+input[type=radio] + label,
+input[type=checkbox] + label { margin:0 7px 0 4px; }
+label input[type=radio],
+label input[type=checkbox] { margin:0 4px 0 0; }
+label:last-child,
+input[type=radio] + label:last-child,
+input[type=checkbox] + label:last-child { margin-right:0; }
+
+.ec-base-label { display:inline-block; margin:0 7px 0 0; }
+.ec-base-label input[type=radio] + label,
+.ec-base-label input[type=checkbox] + label { margin-right:0; }
+
+.fList.typeHor .gLabel { margin-right:20px; }
+.fList.typeVer .gLabel { display:block; }
+
+
+/****** 수정 ********************************************************************************************************************************************************************/
+.ec-base-chk .checkbox { background:url("/_wg/img/_ico/bg_join_check.png") no-repeat 0 0; transition:all .3s ease; }
+input[type="checkbox"]:checked {background: url("/_wg/img/_ico/checkbox_on.svg") no-repeat center;transition: none;border: 1px solid #d9d9d9;}
+
+input[type=text]:focus,
+input[type=password]:focus {
+	outline:0;
+    border-color: #154493;
+    transition: .3s;
+}
+
+/* 인풋폼 */
+#postcode1 {width:140px;}
+.frmInp {display:table;position:relative;width:100%;}
+.frmInp > span {display:inline-block;width:170px;vertical-align:top;}
+.formList .frmInp {padding:16px 0;}
+
+.formList .frmInp .icoRequired {margin-left:12px;}
+.formList .frmInp > span {padding: 0 15px;font-weight: 500;}
+.formList > li {border-bottom:1px solid #eaeaea}
+.frmInp .inpA {display:inline-block;position:relative;width:calc(100% - 400px);}
+.frmInp .inpA.phone {width:calc(100% - 190px);}
+
+@media all and (max-width:960px) {
+    .emailCheck .inpA,
+    .frmInp .inpA,
+    .frmInp .inpA.phone {width:100%}
+    .frmInp > span {height:28px;}
+    .formList .frmInp > span {padding-left:0;}
+}
+
+/* title */
+.h3ctit {position:relative;padding:0 0 10px;font-size:19px;font-weight:700;color:#2e2e2e;border-bottom:2px solid #666}

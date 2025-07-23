@@ -1,0 +1,6 @@
+
+	.cp201 { position:relative; max-width:1260px; margin:0 auto 50px; }
+	.cp201 .titleArea2 { margin:0 0 0; }
+    .cp201 .DB_btn { position:absolute; right:12px; top:9px; cursor:pointer; }
+    .cp201 .DB_banner { display:block;/*열린상태*/ }
+    .cp201 .DB_banner img { max-width:1260px; width:100%; }

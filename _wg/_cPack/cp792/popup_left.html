@@ -1,0 +1,106 @@
+<div class="d_panel left loadhtml">
+	<div class="scrollbar_box">
+        
+        <!-- 멀티쇼핑몰 -->
+        <!--@import(/_wg/import/JS_multiBtn.html)-->
+
+        <div class="member_adm">
+            
+            <!-- 상단문구 -->
+            <ul module="Layout_stateLogoff" class="intro">
+                <p>WELCOME TO SHOP</p>
+                회원가입을 하시면 다양한 혜택과 이벤트를 제공합니다.
+            </ul>
+            <ul module="Layout_stateLogon" class="intro">
+                <p>WELCOME BACK</p>
+                다시 찾아주셔서 감사합니다 즐거운 쇼핑되세요~
+            </ul>
+    
+            <!-- 버튼 -->
+            <ul module="Layout_stateLogoff" class="member_btn">
+                <li><a href="/member/login.html" class="-btn -md -black">로그인</a></li>
+                <li><a href="/member/join.html" class="-btn -md -white">회원가입</a></li>
+            </ul>
+            <ul module="Layout_stateLogon" class="member_btn">
+                <li><a href="{$action_logout}" class="-btn -md -black">로그아웃</a></li>
+                <li><a href="/member/modify.html" class="-btn -md -white">정보수정</a></li>
+            </ul>
+            
+            <!-- 회원정보 -->
+            <div class="member_info">
+                <ul module="myshop_main" class="btn">
+                    <li><a href="/myshop/wish_list.html" class="-btn -sm -white">관심상품</a></li>
+                    <li><a href="/myshop/recent_list.html" class="-btn -sm -white">최근본상품</a></li>
+                    <li><a href="/myshop/order/list.html" class="-btn -sm -white">주문조회</a></li>
+                </ul>
+                <!--
+                <ul module="myshop_orderstate" class="order_info2">
+                    <li><a href="{$shppiedBeforeUrl}"><strong>입금전</strong><span class="count">{$shppiedBeforeCount}</span></a></li>
+                    <li><a href="{$shppiedStandbyUrl}"><strong>배송준비중</strong><span class="count">{$shppiedStandbyCount}</span></a></li>
+                    <li><a href="{$shppiedBeginUrl}"><strong>배송중</strong><span class="count">{$shppiedBeginCount}</span></a></li>
+                    <li><a href="{$shppiedComplateUrl}"><strong>배송완료</strong><span class="count">{$shppiedComplateCount}</span></a></li>
+                </ul>-->
+            </div><!-- //회원정보 -->
+            
+        </div>
+        
+        
+        <h2><i class="xi-ellipsis-v"></i>카테고리 전체보기</h2>
+		<aside id="aside" module="layout_slidePackage">
+			<div id="slideCateList">
+                        
+                <!-- 추가메뉴1.. -->
+                <ul class="categorySub m01">
+                    <!--@import(/_wg/import/categorySub1.html)-->
+                </ul>
+
+                <!-- 상품분류 -->
+                <ul module="layout_category" class="categoryList">
+                    <li id="cate{$cate_no}">
+                        <a href="/product/list.html{$param}" class="cate" cate="{$param}">{$name}</a>
+                        <a href="/product/list.html{$param}" class="view">바로가기</a>
+                    </li>
+                    <li id="cate{$cate_no}">
+                        <a href="/product/list.html{$param}" class="cate" cate="{$param}">{$name}</a>
+                        <a href="/product/list.html{$param}" class="view">바로가기</a>
+                    </li>
+                </ul>
+
+                <!-- 기획전 -->
+                <ul class="categorySub m04" module="layout_project">
+                    <!--@import(/_wg/import/categorySub4.html)-->
+                </ul>
+
+                <!-- 추가메뉴2 -->
+                <ul class="categorySub m02">
+                    <!--@import(/_wg/import/categorySub2.html)-->
+                </ul>
+
+                <!-- 커뮤니티 -->
+                <ul class="categorySub comm">
+                    <li><a href="/board/index.html">링크</a>커뮤니티
+                        <ul module="Layout_BoardInfo">
+                            <li><a href="{$board_list_url}">링크</a>{$board_name} {$board_adult_icon}</li>
+                            <li><a href="{$board_list_url}">링크</a>{$board_name} {$board_adult_icon}</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 기타메뉴 -->
+                <ul class="categorySub etc">
+                    <!--@import(/_wg/import/full_menu.html)-->
+                </ul>
+
+			</div>
+		</aside>
+	</div>
+    
+    <!-- 닫기버튼 -->
+    <div class="d_toggle p-close"><i class="xi-close"></i></div>
+    
+    <script>
+        (function(){
+            onoffLoad();
+        }());
+    </script>
+</div>

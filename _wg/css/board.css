@@ -1,0 +1,41 @@
+
+	.board_list { display:flex; flex-wrap:wrap; flex-direction:row; }
+	.board_part { position:relative;width:32%; margin:0 2% 30px 0; vertical-align:top; }
+	.board_part h3.title { line-height:40px; margin:0 0 7px; padding:0 0 0 6px; border-bottom:1px solid #ddd; }
+
+	.board_part .more { position:absolute; top:8px; right:5px; }
+	.board_part .more:hover { text-decoration:none; }
+	.board_part .more i { font-size:23px; color:#111; }
+	.board_part .more i:hover { color:#999; }
+
+    .board_part ul { display:flex; flex-wrap:wrap; flex-direction:row; justify-content:space-between; position:relative; min-height:38px; border-bottom:1px solid #eee; cursor:pointer; transition:background-color .3s ease; }
+    .board_part ul:hover { background:rgba(0,0,0,.02); }
+
+	.board_part .notice li.subject a { color:#111; }
+	.board_part .notice i { color:#ff0000; }
+
+	.board_part li { align-self:flex-start; position:relative; line-height:38px;word-break:break-all; }
+	.board_part li.subject { flex:0 1 70%; position:relative; text-indent:2px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+	.board_part li.subject a { display:inline-block; color:#777; transition:all .3s ease; }
+	.board_part li.subject a:hover { color:#111; text-decoration:none; }
+	.board_part li.subject img { vertical-align:middle; }
+	.board_part li.date { flex:0 1 25%; padding:0 7px 0 0;color:#aaa; text-align:right; }
+	.board_part li i { margin:0 5px 0 0;color:#999; }
+
+	/* 갤러리게시판 - fixcafe.css의 게시판에서 공통으로 사용됨 */
+
+	@media all and (max-width:575px) {
+		.board_part,
+        .board_part.gallery { width:96%!important; margin:0 2% 20px!important; }
+        .board_part:nth-child(3n) { margin:0 2% 20px; }
+	}
+	@media all and (min-width:576px) and (max-width:960px) {
+        .board_part.gallery { width:96%!important; margin:0 2% 20px!important; }
+	}
+	@media all and (min-width:576px) and (max-width:1200px) {
+        .board_part { width:46%; margin:0 2% 20px; }
+        .board_part.gallery { width:96%!important; margin:0 2% 20px!important; }
+	}
+	@media all and (min-width:1201px) {
+		.board_part:nth-child(3n) { margin:0 0 20px 0; }
+	}

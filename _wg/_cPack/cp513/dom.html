@@ -1,0 +1,22 @@
+<!------------------------------------------------------------------------------
+
+	cp513 - 상세페이지 슬라이드 배너
+
+	===== 설정 =====
+	배너이미지 사이즈 : 500 x 150 픽셀
+	ON/OFF 기능으로 숨김가능.(디자인매뉴얼 12페이지 참조)
+	옵션설정 : 아래 js 파일에서 가능.
+	src="이미지주소"
+	href="링크주소"
+
+------------------------------------------------------------------------------>
+
+<!--@css(/_wg/_cPack/cp513/style.css)-->
+<!--@js(/_wg/_cPack/cp513/option.js)-->
+
+<div class="cp513" js-banner-module="cp513" js-hide>
+    <div class="owl-carousel ul normal">
+        <li js-banner><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+        <li js-banner><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+    </div>
+</div>

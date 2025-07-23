@@ -1,0 +1,48 @@
+@charset "utf-8";
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img {margin:0; padding:0; }
+body { padding:40px 20px; font:13px Pretendard Variable,Pretendard,jost,Roboto,Verdana,Open Sans,Dotum,AppleGothic,돋움,Dotum,Helvetica,sans-serif; color:#333; background:#fff;}
+table { width:100%; border-spacing:0; border-collapse:collapse; border:0; }
+th, td { padding:4px 2px; border:1px solid #000; height:20px; }
+caption { visibility:hidden; position:absolute; left:-1000px; top:-1000px; height:0; width:0; display:none; }
+ul, ul li {list-style:none;}
+p { clear:both; }
+p.title {text-align:center;padding:20px;}
+p.info {padding:10px; margin:0 auto; }
+.xans-myshop-orderprintspec { margin:0 auto;border:1px solid green;}
+.xans-myshop-orderprintspec .grid {margin:0 auto;width:670px;background-position:86% 5% !important;}
+.xans-myshop-orderprintspec h1 {position:relative;font-size:38px;line-height:40px;font-weight:700;letter-spacing:0.25em;color:#000;}
+.xans-myshop-orderprintspec h1 .logo {width:120px;position:absolute;top:0px;right:12px;}
+.xans-myshop-orderprintspec h1 .logo img {width:100%;}
+
+thead th,
+tfoot th,
+tfoot td { border-top:2px solid #000; }
+.first th,
+.first td { border-top:2px solid #000; }
+.first th.outer { border-left:2px solid #000; }
+table.issue { float:left; width:200px; }
+table.issue th,
+table.issue td { border:0; text-align:left; }
+table.provider {}
+table.content { margin:-1px 0 0; }
+table.content td { text-align:center; }
+table.content td.product { padding:4px; text-align:left; }
+table.content td.price { text-align:right; }
+table.content tfoot th { border-right:0; }
+table.content tfoot td { padding:0 10px 0 0; border-left:0; text-align:right; }
+
+.xans-myshop-orderprintguide {padding:10px 40px;width:670px; margin:11px auto 0; border:1px solid green; }
+.xans-myshop-orderprintguide ul { margin:5px 0 0 10px; list-style:none; }
+ul.spec_header {display:flex;justify-content:space-between;}
+ul.spec_header li {display:flex;width:47%;min-height:150px;}
+ul.spec_header li:first-child {flex-wrap:wrap;align-content:space-between;}
+ul.spec_header li:first-child p,
+ul.spec_header li:first-child table {width:100%;border-collapse:collapse;}
+ul.spec_header li table th,
+ul.spec_header li table td {border:1px solid #d5d5d5;border-width:1px 0 1px;border-collapse:collapse;}
+.user_name {margin-top:4px;font-size:24px;font-weight:500}
+
+@media print {
+    .xans-myshop-orderprintspec {border:0 !important}
+    .xans-myshop-orderprintguide {border:0 !important}
+}

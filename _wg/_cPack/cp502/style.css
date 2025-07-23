@@ -1,0 +1,12 @@
+.cp502 { position:absolute; z-index:1; top:0px; left:0%; width:100%; max-width:280px; opacity:1; transition:all .1s ease; }
+.cp502:after { content:""; display:block; *zoom:1; clear:both; }
+
+.cp502 .owl-carousel.ul li { width:280px; margin:0 auto; }
+.cp502 .owl-carousel.ul li img { width:280px; }
+
+#header .header_wrap.fixed .part_02 .cp502 { visibility: hidden; top:-10px; opacity:0; transform:scale(0.6,0.6); }
+
+/* 스마트폰 세로 */
+@media all and (max-width:960px) {
+	.cp502 { display:none!important; }
+}

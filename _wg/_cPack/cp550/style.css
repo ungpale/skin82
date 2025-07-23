@@ -1,0 +1,79 @@
+
+.cp550 {position:fixed;z-index:300;top:1px;right:0;width:0;height:0;}
+.cp550_inner {
+	position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    padding: 15px 0 5px;
+    border-radius: 20px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+    background-color: rgba(255,255,255,0.40);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    vertical-align: bottom;
+    font-size: 0;
+    overflow: hidden;
+    transition: width .4s ease;
+    transition-timing-function: cubic-bezier(0.80,0,0.20,1)!important;
+}
+.cp550_inner:hover {width:110px;}
+
+@media all and (max-width:960px) {
+	.cp550_inner {transform:scale(.7);}
+    .cp550_inner:hover {width:40px;}
+}
+
+.cp550 a { display:block; position:relative; width:110px; height:30px; line-height:30px; margin:0 0 12px; font-size:13px; cursor:pointer; }
+.cp550 a i { margin:0 15px 0 8px; line-height:28px; font-size:25px; color:#111; }
+.cp550 a img { display:inline-block; position:relative; width:27px; height:27px; margin:0 0 0 8px; }
+.cp550 a.on .-caption { display:none; }
+.cp550 a span { position:absolute; left:40px; line-height:28px; font-size:12px; color:#666; }
+.cp550 a:hover span { color:#000; }
+
+/* 화면모드 버튼 */
+.cp550 .switch-button { display:block; position:relative; font-size:13px; }
+.cp550 .switch-button input { opacity:0; width:0; height:0; }
+.cp550 .onoff-switch { background:none; }
+.cp550 .onoff-switch:after { position:absolute; }
+.cp550 .onoff-switch:before { content:""; position:absolute; top:50%; left:12px; width:12px; height:17px; background-color:#none; border:2px solid #000; transform:translate(0,-50%); transition:all .3s ease; } /* HD 디자인 */
+.cp550 .load .onoff-switch:before { transition:all .3s ease; }
+.cp550 .switch-button.on .onoff-switch {background-color:#none;}
+.cp550 .switch-button.on .onoff-switch:before { width:17px; height:12px; } /* 풀HD 디자인 */
+.cp550 .switch-button .onoff-switch:after { content:''; left:15px; top:4px; }
+.cp550 .switch-button.on .onoff-switch:after { content:''; left:5px; }
+
+@media all and (max-width:1260px) {
+	.cp550 .switch-button { display:none; }
+}
+
+/* 위아래버튼 */
+.cp550 .updown { position:relative; right:-5px; height:0; opacity:0; visibility:hidden; transition:all .3s ease; }
+.cp550.fixed .updown { right:0; height:75px; opacity:1; visibility:visible; }
+
+/* SNS 아이콘 */
+.cp550 .p_naverTalk { background:none !important; } /* 네이버톡톡 */
+.cp550 .p_kakaoCh { background:none !important; } /* 카카오톡 */
+
+/****** woojin 수정 ******/
+.cp550 .talk_expose_white {background:none;border:none;}
+.cp550 .talk_preview_area  {text-align:left !important;}
+.cp550 .talk_preview_area .talk_banner_preview  {margin:0;height:30px !important;min-width:130px;min-height:30px;vertical-align:bottom;;}
+.cp550 .talk_preview_area .talk_banner_preview.on  {padding:0 !important}
+.cp550 .talk_preview_area .ico_talk_banner {position:relative;margin:0 0 0 8px;width:27px !important;left:0;height:27px !important;background:url(/_wg/img/_ico/naver_talk_50_green.png) round;vertical-align:middle;}
+.cp550 .talk_preview_area .talk_banner_desc {margin-left:0;position:absolute;left:40px;line-height:28px;font-size:12px;color:#666;font-weight:normal;font-family:'Pretendard';}
+.cp550 .talk_preview_area a .talk_banner_desc {
+	-khtml-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.cp550 .talk_preview_area a:hover .talk_banner_desc {
+	color:#000;
+	-khtml-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}

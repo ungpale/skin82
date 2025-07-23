@@ -1,0 +1,54 @@
+
+	/* 타이틀 */
+	.cp572_titleImg { display:block; width:100%; margin:0 0 30px; }
+	.cp572_titleImg img { width:100%; }
+
+	.JS_brand_copy { display:none; width:100%; }    
+    .JS_brand .clear:after { display:block;content:'';clear:both; }
+    
+    /* 버튼 */
+    .JS_brand .btn_area { width:96%; max-width:1260px; margin:0 auto 30px; border-bottom:1px solid #eee; }
+    .JS_brand .btn_area ul { margin:0 0 10px; letter-spacing:-4px; }
+
+    .JS_brand .btn_area li { float:left; width:32px; height:32px; line-height:30px; margin:0 5px 5px 0; border:1px solid #ddd; border-radius:6px; text-align:center; color:#ddd; font-size:16px; cursor:default; box-sizing:border-box; letter-spacing:0; transition:all .3s ease; }
+    .JS_brand .btn_area li.on { color:#000; font-weight:bold; cursor:pointer; }
+    .JS_brand .btn_area li.on:hover { background:#f4f4f4; color:#111; }
+	.JS_brand .btn_area li.current { background:#333!important; color:#fff!important; }
+    .JS_brand .btn_area li.all { width:69px; color:#000; font-weight:bold; cursor:pointer; }
+	.JS_brand .btn_area li.other { width:69px; }
+
+    /* 리스트 */    
+    .JS_brand .list_area { display:block; width:96%; max-width:1260px; margin:0 auto; overflow:hidden; }
+    .JS_brand .list_area .list .tit { line-height:30px; margin:0 0 15px; font-size:30px; font-weight:bold; }/* 초성타이틀 */
+    .JS_brand .list_area .list { display:none; width:105%; margin:0 0 20px; padding:0 0 20px; border-bottom:1px solid #eee; }
+    .JS_brand .list_area .list.on { display:block; }
+
+    /* 갤러리형 */
+    .JS_brand .list_area.gallery .list li { display:inline-block; vertical-align:top; width:10.55%; line-height:18px; margin:0 1% 1% 0; padding:1%; border:1px solid #eee; border-radius:10px; color:#333; text-align:center; transition:all .3s ease; }
+    .JS_brand .list_area.gallery .list li:hover { border:1px solid #999; }
+    .JS_brand .list_area.gallery .list li .subject,
+    .JS_brand .list_area.gallery .list li .con { display:none; }
+    .JS_brand .list_area.gallery .list li div { width:100%; line-height:18px; color:#333; white-space:normal; word-break:break-all; }
+    .JS_brand .list_area.gallery .list li .thumb { display:block; margin:0 0 10px; padding:0 0 10px; border-bottom:1px solid #eee; }
+    .JS_brand .list_area.gallery .list li .thumb img { width:100%; }
+    .JS_brand .list_area.gallery .list li .info a { text-decoration:none; }
+
+    /* 스마트폰 세로 */
+    @media all and (max-width:575px) {
+		.JS_brand .list_area.gallery .list li { width:20.5%; }
+    }
+    /* 스마트폰 가로 + 테블릿 세로 */
+    @media all and (min-width:576px) and (max-width:960px) {
+		.JS_brand .list_area.gallery .list li { width:16%; }
+    }
+    /* 테블릿 가로 */
+    @media all and (min-width:961px) and (max-width:1200px) {
+		.JS_brand .list_area.gallery .list li { width:12.8%; }
+    }
+
+    /* 텍스트형 */
+    .JS_brand .list_area.text .list li { display:inline-block; line-height:18px; margin:0 30px 20px 0; padding:0; color:#333; transition:all .3s ease; }
+    .JS_brand .list_area.text .list li:hover { color:#888; }
+    .JS_brand .list_area.text .list li .subject,
+    .JS_brand .list_area.text .list li .con { display:none; }
+    .JS_brand .list_area.text .list li .thumb { display:none; }

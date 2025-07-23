@@ -1,0 +1,87 @@
+<!------------------------------------------------------------------------------
+
+	### cp793 (검색) ###
+
+------------------------------------------------------------------------------>
+
+<div class="loadhtml">
+    <div class="scrollbar_box">
+		<h2 class="title ms">─ &nbsp; Smart Search &nbsp; ─</h2>
+        <ul module="search_form">
+            <!-- 검색창 -->
+            <li class="keyword">{$form.keyword}<button><i class="xi-search"></i></button></li>
+
+            <li id="{$except_keyword_wrap_id}">
+                <p><i class="xi-check-min"></i> 제외검색어<p>
+                {$form.exceptkeyword}
+            </li>
+            <li>
+                <p><i class="xi-check-min"></i> 검색조건</p>
+                {$form.search_type}
+            </li>
+            <li>
+                <p><i class="fa xi-check-min"></i> 상품분류</p>
+                {$form.category_no}
+            </li>
+            <li>
+                <p><i class="fa xi-check-min"></i>판매가격대(&#8361;)</p>
+                {$form.product_price1} ~ {$form.product_price2}
+            </li>
+            <li>
+                <p><i class="fa xi-check-min"></i>정렬기준</p>
+                {$form.order_by}
+            </li>
+            <li module="search_hotkeyword">
+                <p><i class="fa xi-check-min"></i>인기 #해시태그</p>
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a> 
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a> 
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a> 
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a> 
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a>
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a>
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a>
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a>
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a>
+                <a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a>
+            </li>
+            <li class="color_list">
+                <p><i class="fa xi-check-min"></i>색상</p>
+                <div>
+                    <ul>
+                        <li><a style="background:#ff0000" href="/product/search.html?banner_action=&keyword=레드"></a><p>레드</p></li>
+                        <li><a style="background:#ffc0cb" href="/product/search.html?banner_action=&keyword=핑크"></a><p>핑크</p></li>
+                        <li><a style="background:#ff69b4" href="/product/search.html?banner_action=&keyword=핫핑크"></a><p>핫핑크</p></li>
+                        <li><a style="background:#ffa500" href="/product/search.html?banner_action=&keyword=오렌지"></a><p>오렌지</p></li>
+                        <li><a style="background:#eee2a9" href="/product/search.html?banner_action=&keyword=아이보리"></a><p>아이보리</p></li>
+                        
+                        <li><a style="background:#fbd007" href="/product/search.html?banner_action=&keyword=옐로우"></a><p>옐로우</p></li>
+                        <li><a style="background:#965521" href="/product/search.html?banner_action=&keyword=브라운"></a><p>브라운</p></li>
+                        <li><a style="background:#5f3d22" href="/product/search.html?banner_action=&keyword=다크브라운"></a><p>D.브라운</p></li>
+                        <li><a style="background:#acf019" href="/product/search.html?banner_action=&keyword=라이트그린"></a><p>L.그린</p></li>
+                        <li><a style="background:#2aa527" href="/product/search.html?banner_action=&keyword=그린"></a><p>그린</p></li>
+                        
+                        <li><a style="background:#0c6245" href="/product/search.html?banner_action=&keyword=다크그린"></a><p>D.그린</p></li>
+                        <li><a style="background:#e0cc71" href="/product/search.html?banner_action=&keyword=카키"></a><p>카키</p></li>
+                        <li><a style="background:#9fab4e" href="/product/search.html?banner_action=&keyword=올리브"></a><p>올리브</p></li>
+                        <li><a style="background:#add8e6" href="/product/search.html?banner_action=&keyword=라이트블루"></a><p>L.블루</p></li>
+                        <li><a style="background:#1c7be5" href="/product/search.html?banner_action=&keyword=블루"></a><p>블루</p></li>
+                        
+                        <li><a style="background:#1d2985" href="/product/search.html?banner_action=&keyword=네이비"></a><p>네이비</p></li>
+                        <li><a style="background:#7d217c" href="/product/search.html?banner_action=&keyword=퍼플"></a><p>퍼플</p></li>
+                        <li><a style="background:#6a3dce" href="/product/search.html?banner_action=&keyword=바이올렛"></a><p>바이올렛</p></li>
+                        <li><a style="background:#ffffff; border:1px solid #ddd;" href="/product/search.html?banner_action=&keyword=화이트"></a><p>화이트</p></li>
+                        <li><a style="background:#dddddd" href="/product/search.html?banner_action=&keyword=라이트그레이"></a><p>L.그레이</p></li>
+
+                        <li><a style="background:#999999" href="/product/search.html?banner_action=&keyword=그레이"></a><p>그레이</p></li>
+                        <li><a style="background:#555555" href="/product/search.html?banner_action=&keyword=e다크그레이"></a><p>D.그레이</p></li>
+                        <li><a style="background:#000000" href="/product/search.html?banner_action=&keyword=블랙"></a><p>블랙</p></li>
+                        <li><a style="background:#c3c7cb" href="/product/search.html?banner_action=&keyword=실버"></a><p>실버</p></li>
+                        <li><a style="background:#dbc31f" href="/product/search.html?banner_action=&keyword=골드"></a><p>골드</p></li>
+
+                        <!-- 더 추가하시면 디자인상에 한줄이 더 생기겠습니다. -->
+                    </ul>
+                </div>
+            </li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+/* 수정 */
+	/* 가입 > 정보 */
+	.xans-member-join th { width:20%; vertical-align:middle; }
+	.xans-member-join .ec-base-table.typeWrite td { padding:12px 13px 11px; line-height:35px; color:#999; }
+	.xans-member-join #member_id,
+	.xans-member-join #user_passwd_confirm,
+    .xans-member-join #passwd { margin:0 10px 0 0; }
+	.xans-member-join .agreeArea .content p { padding:0 0 17px; }
+	/* 가입 > 약관 */
+    .xans-member-join .agreeArea {}
+    .xans-member-join .agreeArea .content { border:1px solid #eee!important; }
+    .xans-member-join .agreeArea .check {display:inline-block;}
+    .xans-member-join .agreeArea ul.check { border:0; background:none; margin:0; padding:0; }
+    .xans-member-join .agreeArea ul.check li { display:block; height:38px; line-height:35px; margin:7px 0 0; padding:0 15px 0 0; background:#fafafa; border:1px solid #f1f1f1; text-align:right; }
+    .xans-member-join .agreeArea ul.check li span { display:inline-block; margin:0 10px 0 0; }
+    .xans-member-join .agreeArea ul.check li input,
+    .xans-member-join .agreeArea ul.check li label { display:inline-block; }
+
+	@media all and (max-width:960px) {
+        .xans-member-join { font-size:75%; }
+        .xans-member-join h3, .xans-member-join .agreeArea h3 { font-size:110%; }
+		.xans-member-join #member_id,
+		.xans-member-join #user_passwd_confirm,
+        .xans-member-join #passwd { width:100%; }
+		.xans-member-join .ec-base-table.typeWrite td { line-height:20px!important; }
+	}

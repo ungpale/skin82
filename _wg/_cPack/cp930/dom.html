@@ -1,0 +1,100 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>로그인</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<!--@css(/_wg/_cPack/cp930/style.css)-->
+<!--@js(/_wg/_cPack/cp930/option.js)-->
+
+<div module="member_login" class="cp930">
+    <!--
+        $defaultReturnUrl = /index.html
+        $forbidIpUrl = member/adminFail.html
+    -->
+    <div class="user-login">
+        <fieldset>
+            <div class="kakao_login {$display_kakao|display}">
+                <legend>카카오 1초 로그인</legend>
+                <div class="titleBox">
+                    <h3>간편 로그인</h3>
+                    <p>아이디와 비밀번호 입력하기 귀찮으시죠?<br>카카오로 1초 만에 로그인 하세요.</p>
+                </div>
+                <a href="#none" onclick="{$kakao_func_login}" class="-btn -block -xl -kakao"><i class="xi-kakaotalk"></i>카카오 1초 로그인 / 회원가입</a>
+                <div class="or_line"><p>또는</p></div>
+            </div>
+            
+            <div class="member_tab">
+                <ul>
+                    <li class="member on"><a href="/member/login.html">기존 회원이세요?</a></li>
+                    <li class="no-member"><a href="/member/login.html?noMemberOrder&returnUrl=%2Fmyshop%2Forder%2Flist.html">비회원 주문조회</a></li>
+                </ul>
+            </div>
+
+            <div class="login_form member">
+                <legend>회원로그인</legend>
+                <label class="id ePlaceholder" title="{$login_id_type_text}">{$form.member_id}</label>
+                <label class="password ePlaceholder" title="비밀번호">{$form.member_passwd}</label>
+                <div class="option">
+                    <span class="ssl"><i class="xi-lock-o"></i>보안접속</span>
+                    <span class="ip {$display_useloginkeeping_ip|display}">IP보안 {$form.is_use_login_keeping_ip}</span><br>
+                    <span class="save">{$form.check_save_id}</span>
+                    <span class="auto">{$form.use_login_keeping}</span>
+                </div>
+                <a href="#none" onclick="{$action_func_login}" class="-btn -block -xl -black">기존 회원 로그인</a>
+                
+                <ul class="btn">
+                    <li><a href="/member/id/find_id.html">아이디찾기</a></li>
+                    <li><a href="/member/passwd/find_passwd_info.html">비밀번호찾기</a></li>
+                    <li><a href="/member/join.html">회원가입</a></li>
+                </ul>
+			</div>
+
+            <p class="btn_unuser_buy {$display_nomember|display}" id="noMemberWrap">
+                비회원님도 상품구매가 가능하나 다양한 회원혜택에서 제외됩니다.
+                <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="-btn -block -xl -lgrey">비회원 주문하기</a>
+            </p>
+        </fieldset>
+	</div>
+</div>
+<div class="cp930">
+    <div module="MyShop_OrderHistoryNologin" class="login_form no-member">
+        <div class="unuser-login">
+            <fieldset>
+                <legend>비회원로그인</legend>
+                <label class="id ePlaceholder" title="{$form_label.order_name}">{$form.order_name}</label>
+                <label class="password ePlaceholder" title="{$form_label.order_id}">{$form.order_id}</label>
+                <label class="password ePlaceholder" title="{$form_label.order_password}">{$form.order_password}</label>
+                <button class="-btn -block -xl -black">비회원 주문조회</button>
+            </fieldset>
+        </div>
+    </div>
+    
+    <div class="or_line"><p>또는</p></div>
+
+    <ul class="snsArea">
+        <div class="titleBox">
+            <h3>SNS 로그인</h3>
+            <p>아이디와 비밀번호 입력하기 귀찮으시죠?<br>SNS계정으로 간편하게 로그인이 가능합니다.</p>
+        </div>
+
+        <li class="{$display_naver|display}">
+            <a href="#none" onclick="{$naver_func_login}"><span class="naver"><i class="xi-naver"></i></span>네이버 로그인</a>
+        </li>
+        <li class="{$display_facebook|display}">
+            <a href="#none" onclick="{$facebook_func_login}"><span class="facebook"><i class="xi-facebook"></i></span>페이스북 로그인</a>
+        </li>
+        <li class="{$display_google|display}">
+            <a href="#none" onclick="{$google_func_login}"><span class="google"><i class="xi-google-plus"></i></span>구글플러스 로그인</a>
+        </li>
+        <li class="{$display_line|display}">
+            <a href="#none" onclick="{$line_func_login}"><span class="line"><i class="xi-line-messenger"></i></span>라인 로그인</a>
+        </li>
+        <li class="{$display_apple|display}">
+            <a href="#none" onclick="{$apple_func_login}"><span class="apple"><i class="xi-apple"></i></span>애플 로그인</a>
+        </li>
+    </ul>
+    
+</div>

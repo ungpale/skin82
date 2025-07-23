@@ -1,0 +1,8 @@
+
+    /* 버튼 */
+    .cp795.btn { position:fixed; top:0; left:0; z-index:1000; float:left; height:40px; margin:0 10px 0 0; cursor:pointer; opacity:1; vertical-align:bottom; transition:all .3s 1s ease-in-out; }
+    .cp795.btn.on { opacity:.9; }
+
+	/* 팝업 */
+    .cp795.popup { display:none; position:relative; float:left; top:0; left:-100%; bottom:0; width:1000px; height:100px; transition:opacity .3s, transform .3s .2s ease-in-out; font-size:100px; }
+    .cp795.popup.on { left:0; opacity:1; }

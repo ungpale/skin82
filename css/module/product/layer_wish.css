@@ -1,0 +1,13 @@
+body.load .layer_bg {-webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;}
+body.load .layer_container {-webkit-transition: transform 0.2s ease-in-out;transition: transform 0.2s ease-in-out;}
+.xans-myshop-layerwish {position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index:101;background:none;opacity: 1;visibility: visible;}
+.xans-myshop-layerwish .layer_bg {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, .7);z-index: 1;opacity: 1;visibility: visible;}
+.xans-myshop-layerwish .layer_title {font-size: 18px;font-weight: bold;text-align: left;padding-bottom: 20px;border-bottom: 1px solid #e0e0e0;padding-left: 24px;}
+.xans-myshop-layerwish .layer_container {position:relative;width:370px;border-radius: 4px;background: #fff;padding:20px 0 0;box-sizing: border-box;position: relative;z-index: 2;transform: translateY(0);}
+.xans-myshop-layerwish .layer_inner {background: #fff;border-radius: 8px;max-height: 40vh;overflow: auto;-ms-overflow-style: none;scrollbar-width: none;min-height: 130px;padding: 24px 24px 0;}
+.xans-myshop-layerwish .layer_close {width: 40px;height: 40px;position: absolute;top: -20px;right: -20px;background-color: #fff;color: #000;border-radius: 100%;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);cursor: pointer;}
+
+.xans-myshop-layerwish .content { text-align:center; }
+.xans-myshop-layerwish .content p {color:#353535;font-size:14px;}
+.xans-myshop-layerwish .content p strong { color:#008bcc; }
+.xans-myshop-layerwish .btnSubmitFix {margin-left:8px;}

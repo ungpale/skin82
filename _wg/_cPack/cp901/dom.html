@@ -1,0 +1,155 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--@css(/_wg/_cPack/cp901/style.css)-->
+
+<script src="//ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+window.jQuery12 = jQuery.noConflict(true);
+</script>
+<!--@js(/_wg/_cPack/cp901/core.js)-->
+
+<div class="inquiry-form">
+    <form id="boardWriteForm" name="" action="/exec/front/Board/write/101" method="post" enctype="multipart/form-data">
+        <div module="board_write_101" id="customizing_form">
+            <input type="hidden" name="subject" value="빠른 견적 문의"/>
+            <input type="hidden" name="content" value=""/>
+            <input type="hidden" name="secure" value="T"/>
+            <!--
+            <select id="board_category" name="board_category" fw-filter="" fw-label="" fw-msg="" >
+                <option value="2">카테고리</option>
+            </select>
+            -->
+
+            <div class="titleArea">
+                <h3>빠른 견적 문의</h3>
+                <span style="float:right; line-height:0px; color:#ff0000; font-weight:bold;"> * 는 필수 작성입니다.</span>
+            </div>
+
+            <div module="board_InquiryHead" class="ec-base-box typeProduct">
+                <p class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_img}" alt="" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" /></a></p>
+                <div class="information">
+                    {$user_icon}{$new_icon}{$recommend_icon}{$soldout_icon}{$mileage_icon}
+                    <h3><a href="/product/detail.html{$param_product}">{$product_name}</a></h3>
+                    <p class="price">{$product_price} {$product_tax_type_text}</p>
+                    <p class="button"><a href="/product/detail.html{$param_product}" class="btnEm" title="새창으로 이동">상품상세보기</a></p>
+                </div>
+            </div>
+
+            <div class="ec-base-table typeWrite">
+                <table border="1" summary="">
+                    <caption>디자인 주문서 정보 입력</caption>
+                    <colgroup>
+                        <col style="width:200px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">렌탈/구매 선택 <strong>*</strong></th>
+                            <td>
+                                <input type="radio" id="make_choice" name="make_choice" value="렌탈" checked><label for="make_set1">렌탈</label>
+                                <input type="radio" id="make_choice" name="make_choice" value="구매"><label for="make_set2">구매</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">주문자명 <strong>*</strong></th>
+                            <td><input name="writer" class="inputTypeText" id="writer" type="text" max-length="50" fw-msg="" fw-label="주문자명" value="" style="width:150px;"/></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">핸드폰번호 <strong>*</strong></th>
+                            <td><select name="make_phone1_num" id="make_phone1" style="width:55px;">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                -
+                                <input type="text" name="make_phone2_num" id="make_phone2" maxlength="4" style="width:40px;">
+                                -
+                                <input type="text" name="make_phone3_num" id="make_phone3" maxlength="4" style="width:40px;">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">메일주소</th>
+                            <td><input type="text" name="make_mail" id="make_mail" style="width:200px;"/></td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="2" scope="row">설치주소 <strong>*</strong></th>
+                            <td><input type="text" name="make_add_num" id="make_add_num" style="width:60px;"/ disabled><p class="search_zip" onclick="search_zip()">검색</p></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="make_add01" id="make_add01" style="width:350px; margin:0 5px 0 0;"/ disabled><input type="text" name="make_add02" id="make_add02" style="width:250px;"/></td>
+                        </tr>
+
+                        <tr module="Mall_Urgencycall">
+                            <th scope="row" >상품 / 주문 검색</th>
+                            <td>{$form.prd_ord} <a href="#none" id="opensearch" class="btnEm" name="opensearch" onClick="{$Open_SearchLayer}">검색</a> {$form.hiddenPrdOrd}</td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">설치요청일자 <strong>*</strong></th>
+                            <td><input type="text" name="make_date" id="make_date"  style="width:150px;"/> <span>* 당일 설치는 불가능합니다.</span></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">예산 <strong>*</strong></th>
+                            <td><input type="text" name="make_money" id="make_money" style="width:150px;"/> <span>예시) 월 110,000원</span></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">월사용량 <strong>*</strong></th>
+                            <td>
+                                <input type="text" name="make_month" id="make_month" style="width:150px;"/> <span>예시) 컬러 200매 / 흑백 500매</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">요청사항</th>
+                            <td>
+                                <div class="order_info">
+                                    <textarea type="text" name="make_cont" id="make_cont" /></textarea>
+                                    <p>* 위 내용에 없는 사항이 있으시면 남겨주세요.</p>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="attach {$config.use_attach|display}">
+                            <th style="vertical-align:middle;">첨부파일</th>
+                            <td>
+                                {$form.attach_file} <span>*1M이하 파일로 업로드해주세요.</span>
+                            </td>
+                        </tr>
+
+                        <tr class="agree {$config.is_login|display}">
+                            <th scope="row" style="vertical-align:middle;">개인정보 수집 및 이용 동의</th>
+                            <td>
+                                {$form.privacy_agreement}<br />
+                                개인정보 수집 및 이용에 동의하십니까? {$form.privacy_agreement_radio}
+                            </td>
+                        </tr>
+
+                        <!-- 비밀번호는 작성하지 않고 접수합니다. -->
+                        <tr class="displaynone">
+                            <th scope="row">비밀번호</th>
+                            <td><input name="password" id="password" type="password" value="f92fj19f9ja0" fw-msg="" fw-label="비밀번호" fw-filter="isFill"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ec-base-button">
+                <span class="gRight">
+                    <a href="#none" onclick="contact_ok()"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/btn_register.gif" alt="등록" /></a>
+                </span>
+            </div>
+        </div>
+	</form>
+</div>

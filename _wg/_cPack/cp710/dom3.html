@@ -1,0 +1,90 @@
+<!--@css(/_wg/_cPack/cp710/style.css)-->
+<!--@js(/_wg/_cPack/cp710/core3.js)-->
+
+<div class="panel_cp710">
+    
+    <!-- 패널하단 버튼 -->
+    <div class="d_toggle">
+        <a href="#none"><span class="bar l01"></span><span class="bar l02"></span> 간편상담신청</a>
+    </div>
+
+    <div class="cp710">
+        <form id="boardWriteForm" name="" action="/exec/front/Board/write/1002" method="post" enctype="multipart/form-data">
+            <div module="board_write_1002" id="customizing_form">
+                <input type="hidden" name="subject" value="간편상담신청"/>
+                <input type="hidden" name="content" value=""/>
+                <input type="hidden" name="secure" value="T"/>
+
+                <div class="left_section">
+                    <span><img src="/_wg/_cPack/cp710/img/logo.png" alt="" /></span>
+                    <span>
+                        <h3>렌탈상담신청 대표번호는</h3>
+                        <p module="Layout_footer">{$phone}</p>
+                    </span>
+                    <span><img src="/_wg/_cPack/cp710/img/01.png" alt="" /></span>
+                </div>
+
+                <div class="right_section">
+                    <div class="confirm-wrapper">
+                        <div class="alert">내용을 작성하시고 개인정보취급 동의를 해주세요</div>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <input name="writer" class="inputTypeText confirm" id="writer" type="text" max-length="20" placeholder="고객명" value="" style="width:70px;" /><label></lable>
+                            </li>
+                            <li>
+                                <select name="make_phone1_num" id="make_phone1" style="width:55px;" class="confirm">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>-<input type="text" name="make_phone2_num" id="make_phone2" maxlength="4" style="width:55px;" class="confirm">-<input type="text" name="make_phone3_num" id="make_phone3" maxlength="4" style="width:55px;" class="confirm">
+                                <label></lable>
+                            </li>
+                            <li>
+                                <select name="make_category" id="make_category" style="width:90px;" class="confirm">
+                                    <option value=" ">카테고리</option>
+                                    <option value=" ">=========</option>
+                                    <option value="정수기">정수기</option>
+                                    <option value="공기청정기">공기청정기</option>
+                                    <option value="비데">비데</option>
+                                    <option value="기타상품">기타상품</option>
+                                    <option value="B2B">B2B</option>
+                                </select>
+                                <label></lable>
+                            </li>
+                            <li class="clearboth"></li>
+                            <li class="ec-base-button">
+                                <a href="#none" class="-btn -line -xl -dgrey contact_ok">상담신청</a>
+                            </li>
+                            <li class="agree confirm-wrapper">
+                                <input type="checkbox" id="confirm_contact"><label for="confirm_contact">개인정보취급 동의</label>
+                                <a href="#none" class="cp710_btn -btn -line -xs -white">자세히보기</a>
+                            </li>
+                        </ul>
+
+                        <ul class="{$config.is_login|display} displaynone">
+                            <li>
+                                <input name="privacy_agreement_radio" id="privacy_agreement_radio0" type="radio" checked="checked" value="T" fw-label="개인정보보호정책" fw-msg="" fw-filter="isFill">
+                                <label for="privacy_agreement_radio0">동의함</label>
+                                <input name="privacy_agreement_radio" id="privacy_agreement_radio1" type="radio" value="F" fw-label="개인정보보호정책" fw-msg="" fw-filter="isFill">
+                                <label for="privacy_agreement_radio1">동의안함</label>
+                            </li>
+                        </ul>
+                        <!-- 비밀번호는 작성하지 않고 접수합니다. -->
+                        <ul class="displaynone">
+                            <td>비밀번호 <input name="password" id="password" type="password" value="f92fj19f9ja0" fw-msg="" fw-label="비밀번호" fw-filter="isFill"></td>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        <!-- 팝업 - /_wg/_cPack/cp710/popup.html 파일을 열어서 수정해주세요. -->
+		<div class="cp710_popup"><button type="button" class="p-close -cap2" alt="닫기버튼"></button></div>
+    </div><!-- //cp710 -->
+
+</div>

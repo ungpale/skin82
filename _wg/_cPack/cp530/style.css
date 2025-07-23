@@ -1,0 +1,55 @@
+
+	.cp530 { display:; position:relative; margin:0 auto 150px; }
+
+	.cp530 h2 { text-align:center; }
+
+	/* 로딩시 보이지 않는 상황 정리 */
+	.cp530 .owl-carousel.ul { text-align:center; }
+	.cp530 .owl-carousel.ul li:first-child { display:inline-block; }
+
+	.cp530 .item { position:relative; width:100%; height:100%; }
+	.cp530 .item > a { display:block; }
+	.cp530 .item > a .thumbnail { width:100%; border:1px solid #eee; }
+
+    /* 관심상품 */
+    .cp530 .wish { position:absolute; z-index:5; display:block; top:20%; left:50%; margin-left:-25px; opacity:0; cursor:pointer; transition:all .3s ease; }
+    .cp530 .item:hover .wish { top:23%; opacity:1; }
+    .cp530 .wish span { display:block; width:50px; margin:0 auto; }
+    .cp530 .wish span img { width:100%; }
+
+    /* 상품정보 */
+    .cp530 .info { position:absolute; z-index:1; left:0; top:0; bottom:0; width:100%; height:100%; line-height:1.4rem margin:0; background:rgba(0,0,0,0.4); text-align:center; color:#fff; opacity:0; -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px); }
+    .cp530 .item:hover .info { opacity:1; }
+    .cp530 .info .name { display:block; margin:44% 0 5px; padding:0 30px; text-decoration:none; }
+    .cp530 .item:hover .info .name { margin:43% 0 5px; }
+    .cp530 .info li { width:100%; text-align:center; }
+    .cp530 .info li span { font-weight:bold; }
+    .cp530 .info li img { position:relative; }
+    .cp530 .info span { color:#fff !important; } /* 리스트 텍스트 설정 */
+
+    /* 꾸미기 아이콘 보정 */
+    .cp530 .xans-product-imagestyle { left:0; }
+
+    /* 할인률 보정 */
+    .cp530 .dc_rate { top:5px; opacity:0; }
+    .cp530 .item:hover .dc_rate { opacity:1; }
+
+    /* 좋아요 보정 */
+    .cp530 .-likeButton { bottom:15px; }
+    .cp530 .-likeButton button { line-height:14px!important; }
+    .cp530 .-likeButton button img { margin:-3px 3px 0 0; }
+
+	/* 방향키와 버튼의 기본 속성은 /_wg/css/wg.css 에서 불러옵니다. */ 
+	/* 방향키 */
+    .cp530 .owl-carousel.ul.normal:hover .owl-nav .owl-prev { left:2.5%; }
+    .cp530 .owl-carousel.ul.normal:hover .owl-nav .owl-next { right:2.5%; }
+	/* 버튼 */
+    .cp530 .owl-carousel.ul .owl-dots { bottom:-25px; }
+
+	@media all and (max-width:575px) {
+        .cp530 .info { background:rgba(0,0,0,0.2); opacity:1; -webkit-backdrop-filter:blur(0); backdrop-filter:blur(0); }
+        .cp530 .info .name span { font-size:100%!important; }
+        .cp530 .info li span { font-size:110%!important; }
+        
+        .cp530 .dc_rate { opacity:1; }
+	}

@@ -1,0 +1,5 @@
+
+	.cp522 { display:; position:relative; width:100%; margin:0 auto 50px; }
+    .cp522 .DB_btn { position:absolute; right:10px; top:5px; cursor:pointer; }
+    .cp522 .DB_banner { display:block;/*열린상태*/ text-align:center; }
+    .cp522 .DB_banner img { max-width:100%; }

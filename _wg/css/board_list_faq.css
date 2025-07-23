@@ -1,0 +1,42 @@
+/* 목록 > 탭메뉴 추가 */
+.boardSort #board_category { display:none; }
+.board_tab_cate {margin:20px 0 30px;}
+.DB_board_cate { display:flex; flex-flow:wrap row; justify-content:center; position:relative; z-index:20; width:100%; }
+.DB_board_cate li { align-self:flex-start; position:relative; vertical-align:top; margin:0 0.5% 0; padding:0 0 10px; /*분류사이즈*/ }
+.DB_board_cate li a {display:block;line-height:40px; padding:0 15px; border-radius:7px; background-color:#f4f4f4; transition:background-color .3s ease; }
+.DB_board_cate li a:hover { background-color:#ddd; }
+.DB_board_cate li.true a { background-color:#333; color:#fff; }
+
+.xans-board-listpackage li.faq_sub .summary {width:100%;}
+.xans-board-listpackage li.faq_sub a {cursor: pointer;}
+.xans-board-listpackage li.faq_sub p {display:block;font-size:14px;line-height:1.5}
+.xans-board-listpackage li.faq_sub .cnt img {width:100%}
+.xans-board-listpackage li.faq_sub .qu {position:relative;padding:30px 0;font-size:15px;font-weight:600;cursor:pointer;}
+.xans-board-listpackage li.faq_sub .qu:after {content: '';display: block;width: 12px;height: 12px;background: url(/_wg/img/_ico/ico_arr_down.svg) no-repeat center;background-size: contain;position: absolute;top: 50%;right: 20px;margin-top: -6px;-webkit-transition: transform 0.3s ease;transition: transform 0.3s ease;}
+.xans-board-listpackage li.faq_sub.on .qu:after {-webkit-transform: rotate(180deg);transform: rotate(180deg);}
+.xans-board-listpackage li.faq_sub .check input {width:16px;height:16px;vertical-align: middle;}
+.xans-board-list li {padding:0}
+.xans-board-list .subject {display:inline-block;color:#222;padding:0;font-weight:600}
+.xans-board-listpackage li.faq_sub .category {display:inline-block;width:150px;margin-right:20px;text-align:center;font-weight:500;color:#777}
+
+@media all and (max-width:960px) {
+    .boardSort #board_category { display:block; }
+    .DB_board_cate { display:none; }
+}
+
+@media all and (max-width:767px){
+    .xans-board-listpackage li.faq_sub .category {
+        margin: 0 0 10px;
+        width: auto;
+        text-align: left;
+        background: #333;
+        border: 1px solid #9999;
+        color: #fff;
+        font-size: 11px;
+        padding: 6px 8px;
+        display: inline-block;
+        line-height: 1;
+        border-radius: 4px;
+    }
+    .xans-board-list .subject {display:block;width:calc(100% - 50px);font-size:14px;word-break:keep-all;}
+}

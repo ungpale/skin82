@@ -1,0 +1,39 @@
+
+    /* 버튼 */
+    .cp797.btn { }
+
+	/* 팝업 */
+    .cp797.popup { display:none; top:0; bottom:0; right:-30px; max-width:270px; width:100%; height:100%; padding:20px 0 0 20px; background:#fff; box-shadow:0 0 8px rgba(0,0,0,.7); opacity:0; transition:opacity .4s, right .3s .5s ease; }
+    .cp797.popup.on { opacity:1; right:0; }
+
+	/* 닫기 버튼 */
+    .cp797.popup .p-close { position:absolute; top:45%; left:-50px; width:40px; height:40px; background:none; cursor:pointer; text-align:center; transform:translate(0, -50%); transition:all .3s ease; }
+    .cp797.popup .p-close i { line-height:17px; font-size:21px; color:#fff; }
+
+    /* 스크롤바 생성을 위해 크기 고정 */
+    .cp797 .scrollbar_box { position:relative; max-width:260px; width:100%; height:calc(100vh - 20px); padding:0 10px 0 0; }
+
+	/* 타이틀 */
+    .cp797 h2 { text-align:center; margin:0 0 20px; }
+
+	/** 검색창 **/
+	/* 해시태그 */
+    .cp797 .xans-search-form .keyword { position:relative; width:95%; margin:0 0 20px; }
+    .cp797 .xans-search-form .keyword #keyword { display:block; width:100%; height:45px; line-height:42px; border-radius:30px; border:0; background-color:#111; font-size:15px!important; color:#fff; text-indent:10px; letter-spacing:0; overflow:hidden; }
+    .cp797 .xans-search-form .keyword button { position:absolute; right:5px; top:0; width:45px; height:45px; background:none; text-align:center; }
+    .cp797 .xans-search-form .keyword button i { font-size:20px; color:#fff; }
+
+	/* 검색옵션 */
+    .cp797 .xans-search-form li { margin:0 0 15px; }
+    .cp797 .xans-search-form li p { margin:0 0 7px; font-size:14px; }
+    .cp797 .xans-search-form li a { margin:0 0 4px; font-size:12px; }
+    .cp797 .xans-search-form li input,
+    .cp797 .xans-search-form li select { width:90%; }
+    .cp797 .xans-search-form li #product_price1,
+    .cp797 .xans-search-form li #product_price2 { width:41.7% }
+
+	/* 색상 */
+    .cp797 .color_list li { display:inline-block; width:18.5%; margin:0 0 5px; text-align:center; vertical-align:top; }
+    .cp797 .color_list li a { display:block; width:30px; height:30px; margin:0 auto 5px;  border-radius:50%; transition:all .1s ease; }
+    .cp797 .color_list li a:hover { box-shadow:inset 0 2px 3px rgba(0,0,0,0.5); }
+    .cp797 .color_list li p { font-size:10px; color:#666; }

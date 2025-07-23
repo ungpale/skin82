@@ -1,0 +1,43 @@
+<!--------------------------------------------------------------------------------------------------------------
+
+	cp500 (메인 슬라이드배너)
+
+	===== 명령어 =====
+	data-text			: 버튼의 메뉴명
+	href				: 링크(이동할 페이지의 주소를 적어주세요.)
+	src					: 이미지경로
+	left, center, right	: 글자의 좌측, 중앙, 우측 정렬
+	t1, t2, t3, t4		: 텍스트가 들어갑니다.
+	data-timer			: 롤링시간(유튜브용)
+	data-youtube		: 유튜브주소의 코드(아래설명참조)
+	전체롤링시간		   : 아래 option.js 에서 변경가능.
+
+-------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/_cPack/cp500/style.css)-->
+<!--@js(/_wg/_cPack/cp500/option.js)-->
+
+<div class="cp500" js-banner-module="cp500" js-hide>
+	<div class="owl-carousel ul normal">
+        <li js-banner data-text="{$js-alt}"><!-- 탭버튼 -->
+            <a href="{$js-href}" target="{$js-target}"><!-- 링크주소 / 타겟 -->
+                {$js-banner}
+                <p class="text left"><!-- left는 텍스트의 좌측정렬입니다. center=중앙정렬, right=우측정렬 입니다. -->
+                    <t1>{$js-banner-description1}</t1><!-- 부제목 -->
+                    <t2>{$js-banner-description2}</t2><!-- 제목 -->
+                    <t3>{$js-banner-description3}</t3><!-- 설명 -->
+                </p>
+            </a>
+        </li>
+        <li js-banner data-text="{$js-alt}"><!-- 탭버튼 -->
+            <a href="{$js-href}" target="{$js-target}"><!-- 링크주소 / 타겟 -->
+                {$js-banner}
+                <p class="text left">
+                    <t1>{$js-banner-description1}</t1><!-- 부제목 -->
+                    <t2>{$js-banner-description2}</t2><!-- 제목 -->
+                    <t3>{$js-banner-description3}</t3><!-- 설명 -->
+                </p>
+            </a>
+        </li>
+	</div>
+</div><div class="divClear"></div>

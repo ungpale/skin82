@@ -1,0 +1,20 @@
+
+    .cp013 { position:relative; margin:0 auto 40px/*하단여백*/; }
+    .cp013:after { content:""; display:block; *zoom:1; clear:both; }
+    .cp013 > ul { }
+    .cp013 > ul > li:nth-child(1) { margin:0; }
+    .cp013 > ul > li { position:relative; float:left; width:23.685%; margin:0 0 1.7% 1.7533%; font-size:0; overflow:hidden; }
+    .cp013 > ul > li img { width:100%; }
+
+    .cp013 > ul > li info { position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.5); text-align:center; opacity:0; transition:all .3s ease; }
+    .cp013 > ul > li:hover info { opacity:1; }
+    .cp013 > ul > li info h3 { margin:40% 0 10px; font-size:18px; color:#fff; }
+    .cp013 > ul > li info h4 { font-size:14px; color:#fff; }
+
+	/* 스마트폰 세로 */
+	@media all and (max-width:575px) {
+        .cp013 > ul > li:nth-child(1) { margin:0 0 2%; }
+        .cp013 > ul > li:nth-child(2) { margin:0 0 2% 2%; }
+		.cp013 > ul > li:nth-child(3) { margin:0 0 2%; }
+        .cp013 > ul > li { width:49%; margin:0 0 2% 2%; }
+	}

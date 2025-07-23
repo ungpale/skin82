@@ -1,0 +1,81 @@
+	/* 목록 > 리스트 */
+    .xans-board-listpackage li {display:flex; flex-wrap:wrap; flex-direction:row; flex-direction:row; min-height:40px; line-height:40px; font-size:14px; color:#111; }
+    .xans-board-listpackage .xans-record- { transition:all .3s ease; }
+    .xans-board-listpackage .xans-record-:hover { background:#f9f9f9; }
+	.xans-board-listpackage .boardSort { display:flex; flex-flow:wrap row; justify-content:flex-start; position:relative; width:100%; padding:0; }
+	.xans-board-listpackage .boardSort span { align-self:flex-start; position:relative; float:none; vertical-align:top; max-width:150px; }
+
+    .xans-board-listpackage li p,
+    .xans-board-listpackage li strong,
+    .xans-board-listpackage li span,
+    .xans-board-listpackage li .thumb,
+    .xans-board-listpackage li .right { display:inline-block; }
+    .xans-board-listpackage li .right { position:absolute; right:30px; }
+    .xans-board-listpackage li .right span { margin:0 10px; }
+
+    .xans-board-listpackage li .check { margin:0 0 0 10px; color:#111; }
+    .xans-board-listpackage li input[type=checkbox] { margin:0 4px 0 0; }
+    .xans-board-listpackage li .title { background:#f3f3f3; }
+    .xans-board-listpackage li .thumb { float:none; max-width:40px; max-height:40px; margin:0 10px 0 0; padding:0; border-radius:50%; overflow:hidden; }
+    .xans-board-listpackage li .thumb img { width:100%; margin:0; padding:0; }
+    .xans-board-listpackage li .category { line-height:20px; margin:0 10px 0 0; padding:4px 8px!important; border-radius:4px; background:#333; font-size:100%; color:#fff; }
+    .xans-board-listpackage li .subject { display:inline-block; line-height:40px; margin:0; padding:0; }
+		/* 갤러리 */
+    	.xans-board-8 li { margin:0 0 30px!important; }
+    	.xans-board-8 li .subject { line-height:20px; margin:0; padding:0; }
+	.xans-board-listpackage li .subject img { position:relative; top:-2px; margin:0 2px 0 0; }
+	.xans-board-listpackage li .comment { color:#000; font-weight:bold; }
+    .xans-board-listpackage li .name { padding:0 10px 0 0; }
+
+/* 토글 버튼 */
+.xans-board-list .view { right:0; top:50%; transform:translate(0,-50%); }
+.xans-board-list .view .btnToggle { position:relative; width:23px; height:23px; border:1px solid #777; border-radius:50%; background:#fff; }
+.xans-board-list .view .btnToggle img {width:11px; height:27px; padding:10px 0 11px 1px;-webkit-box-sizing: border-box;box-sizing: border-box;}
+/* 토글 내용 */
+.xans-board-listpackage .contentView { padding:30px; background:#f7f7f7; color:#111;}
+
+.xans-board-listpackage li.faq_sub .faq_cnt:after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(/_wg/img/_ico/ico_arr_down.svg) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -6px;
+    -webkit-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+.xans-board-listpackage li.open
+.xans-board-listpackage li.faq_sub .summary {width:100%;}
+.xans-board-listpackage li.faq_sub a {cursor: pointer;}
+.xans-board-listpackage li.faq_sub p {display:block;font-size:14px}
+.xans-board-listpackage li.faq_sub .cnt img {width:100%}
+
+	@media all and (max-width:960px) {
+    	.xans-board-listpackage li { line-height:25px; }
+    	.xans-board-listpackage li .right { display:block; position:relative; width:100%; right:0; }
+    	.xans-board-listpackage li .subject { display:block; width:100%; line-height:32px; margin:0 0 0 10px; }
+	}
+
+/* 목록 > 탭메뉴 추가 */
+.boardSort #board_category { display:none; }
+.DB_board_cate { display:flex; flex-flow:wrap row; justify-content:center; position:relative; z-index:20; width:100%; }
+.DB_board_cate li { align-self:flex-start; position:relative; vertical-align:top; margin:0 0.5% 0; padding:0 0 10px; /*분류사이즈*/ }
+.DB_board_cate li a { line-height:40px; padding:0 15px; border-radius:7px; background-color:#f4f4f4; transition:background-color .3s ease; }
+.DB_board_cate li a:hover { background-color:#ddd; }
+.DB_board_cate li.true a { background-color:#333; color:#fff; }
+@media all and (max-width:960px) {
+    .boardSort #board_category { display:block; }
+    .DB_board_cate { display:none; }
+}
+
+    /* 갤러리게시판 이미지타입, 리스트타입 보기 */
+    .xans-board-listheader-8 { margin:0; }
+    .xans-board-listheader-8 ul { height:auto; border:0; }
+    .xans-board-listheader-8 li { float:none; width:auto; height:auto; }
+    .xans-board-listheader-8 li a { display:inline-block; width:100%; border-left:0; border-bottom:0; color:#333; font-size:14px; line-height:0; }
+    .xans-board-listheader-8 li:first-child a { border-left:none; }
+    .xans-board-listheader-8 li.selected a { border-bottom:none; color:#333; font-weight:bold; }

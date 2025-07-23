@@ -1,0 +1,33 @@
+
+/** 버튼 **/
+    .cp701.btn { position:fixed; z-index:200; left:10px; height:35px; line-height:34px; padding:0 15px 0 10px; border-radius:20px; background-color:rgba(0,0,0,.8); -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); font-size:12px; color:#fff; cursor:pointer; text-align:center; opacity:1; transition:all .3s .5s ease; }
+    .cp701.btn.on { left:-45px; opacity:.4; }
+	.scroll_check.fixed .cp701.btn { left:0; opacity:0; visibility:hidden; }
+
+    .cp701.btn i { top:3px; font-size:14px; color:#fff; }
+    .cp701.btn img { display:block; position:relative; top:-1px; width:40px; height:40px; }
+
+/** 팝업 **/
+    .cp701.popup { display:none; position:relative; top:50%; left:50%; width:calc(100% - 10%); max-width:800px; height:calc(100% - 10%); max-height:700px; transform:translate(-50%,-46%); opacity:0; transition:opacity .3s, transform .3s .5s ease; }
+    .cp701.popup.on { opacity:1; transform:translate(-50%, -50%); }
+    @media all and (max-width:575px) {
+    	.cp701.popup { margin-top:30%; }
+    }
+
+/** 슬라이더 **/
+    .cp701_slide { position:relative; z-index:1; width:100%; }
+
+	/* 버튼 */
+    .cp701_slide .owl-dots .owl-dot { box-shadow:0 1px 3px rgba(0,0,0,.2); border-radius:5px; background:rgba(255, 255, 255, .9)!important; }
+    .cp701_slide .owl-dots .owl-dot span { position:absolute; z-index:2; left:0; top:0; width:0; height:100%; background:rgba(50,50,50,.6)!important; } /* 타이머 */
+    .cp701_slide .owl-dots .owl-dot.active { width:25px; background:rgba(255,255,255,.8)!important; }
+
+	/* 방향키 */
+    .cp701_slide .owl-carousel.ul.normal .owl-nav .owl-prev { left:-2%; }
+    .cp701_slide .owl-carousel.ul.normal:hover .owl-nav .owl-prev { left:-3%; }
+    .cp701_slide .owl-carousel.ul.normal .owl-nav .owl-next { right:-2%; }
+    .cp701_slide .owl-carousel.ul.normal:hover .owl-nav .owl-next { right:-3%; }
+
+	/* 팝업의 X버튼 */
+	.cp701.popup .p-close { position:relative; z-index:10; left:50%; bottom:0; width:80%; max-width:200px; height:40px; margin:0 auto; border-radius:20px; background:rgba(255,255,255,.8); color:#111; cursor:pointer; transform:translate(-50%,0); transition:all .3s ease; }
+	.cp701.popup .p-close:hover { background:rgba(255,255,255,1); }

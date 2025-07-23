@@ -1,0 +1,250 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--------------------------------------------------------------------------------------------------------------
+
+	### 폼메일설정 ###
+
+	[필수] 게시판설정 - 게시판 아이디 1002에서 정상적인 사용을 위해서 게시판관리창에서 설정을 해주셔야 되겠습니다.
+						HTML 태그 사용 - 내용에 체크
+                        스팸걸러내기 - 사용안함
+                        스팸 자동생성방지 기능 - 체크 다 빼고, 비회원으로 설정
+
+	[필수] 상품검색기능 - 쇼핑몰설정 > 게시판설정 > 긴급문의 설정 > 접근권한 설정 을 '사용함'으로 변경합니다.
+
+	[선택] 게시판변경 - 기본 게시판 아이디 1002에 설정되어 있습니다.
+                다른 게시판으로 변경하실려면 아래 html소스중
+                action="/exec/front/Board/write/1002" 와  module="board_write_1002"
+                를 원하시는 게시판 아이디로 변경해주세요.
+
+	***
+	해당 폼메일 설정에 대한 설명은 따로 제공해드리지 않습니다.
+	사용이 필요하신 경우 따로 코딩작업을 진행해주시기 바랍니다.
+	코딩작업이 필요하신 경우 디자인웹굿 홈페이지 고객센터 게시판에 견적을 요청해주시기 바랍니다.
+
+-------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/_cPack/cp720/style.css)-->
+<!-- 읽기 수정 /_wg/css/fix_cafe.css -->
+
+<script src="//ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+window.jQuery12 = jQuery.noConflict(true);
+</script>
+<!--@js(/_wg/_cPack/cp720/core2.js)-->
+
+<div id="titleArea">
+    <h2>무료방문견적</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div class="inquiry-form formMail">
+    <form id="boardWriteForm" name="" action="/exec/front/Board/write/1002" method="post" enctype="multipart/form-data">
+        <div module="board_write_1002" id="customizing_form">
+            <input type="hidden" name="subject" value="빠른 견적 문의"/>
+            <input type="hidden" name="content" value=""/>
+            <input type="hidden" name="secure" value="T"/>
+            <!--
+            <select id="board_category" name="board_category" fw-filter="" fw-label="" fw-msg="" >
+                <option value="2">카테고리</option>
+            </select>
+            -->
+
+            <div module="board_InquiryHead" class="ec-base-box typeProduct">
+                <p class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_img}" alt="" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" /></a></p>
+                <div class="description">
+                    <p class="icon">{$user_icon}{$new_icon}{$recommend_icon}{$soldout_icon}{$mileage_icon}</p>
+                    <p class="prdName"><a href="/product/detail.html{$param_product}" id="{$product_name_link_id}">{$product_name}</a>{$product_icon}</p>
+                    <p class="price mTxt">{$product_price} {$product_tax_type_text}</p>
+                    <p id="{$product_view_id}"><a href="/product/detail.html{$param_product}" id="{$product_link_id}" class="-btn -inblock -sm -dgrey">상품상세보기</a></p>
+                    <span class="{$display_product_select|display}"><a href="#none" onclick="{$action_product_select}" class="btnNormal mini">상품정보선택</a></span>
+                    <span class="{$display_order_select|display}"><a href="#none" onclick="{$action_order_select}" class="btnNormal mini">주문상품선택</a></span>
+                </div>
+            </div>
+
+            <div class="ec-base-table">
+                <table border="0" summary="">
+                    <caption></caption>
+                    <colgroup>
+                        <col style="width:25%;">
+                        <col style="">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">공간구분 <strong>*</strong></th>
+                            <td>{$form.board_category}
+                            <input type="radio" id="make_choice" name="make_choice" value="가정공간"  checked="checked"><label for="make_set1">가정공간</label>
+                            <input type="radio" id="make_choice" name="make_choice" value="상업공간"><label for="make_set2">상업공간</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">작성자 <strong>*</strong></th>
+                            <td><input name="writer" class="inputTypeText" id="writer" type="text" max-length="50" fw-msg="" fw-label="작성자" value="" /></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">핸드폰번호 <strong>*</strong></th>
+                            <td><select name="make_phone1_num" id="make_phone1" style="width:70px;">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                    <option value="070">070</option>
+                                    <option value="02">02</option>
+                                    <option value="031">031</option>
+                                    <option value="032">032</option>
+                                    <option value="033">033</option>
+                                    <option value="041">041</option>
+                                    <option value="042">042</option>
+                                    <option value="043">043</option>
+                                    <option value="044">044</option>
+                                    <option value="051">051</option>
+                                    <option value="052">052</option>
+                                    <option value="053">053</option>
+                                    <option value="054">054</option>
+                                    <option value="055">055</option>
+                                    <option value="061">061</option>
+                                    <option value="062">062</option>
+                                    <option value="063">063</option>
+                                    <option value="064">064</option>
+                                    <option value="0502">0502</option>
+                                    <option value="0503">0503</option>
+                                    <option value="0504">0504</option>
+                                    <option value="0505">0505</option>
+                                    <option value="0506">0506</option>
+                                    <option value="0507">0507</option>
+                                </select> - <input type="text" name="make_phone2_num" id="make_phone2" maxlength="4" style="width:70px;"> - <input type="text" name="make_phone3_num" id="make_phone3" maxlength="4" style="width:70px;">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">메일주소</th>
+                            <td><input type="text" name="make_mail" id="make_mail" /></td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="2" scope="row">설치주소 <strong>*</strong></th>
+                            <td><input type="text" name="make_add_num" id="make_add_num" style="width:100px;"/ disabled><p class="search_zip -btn -inblock -sm -dgrey" onclick="search_zip()">검색</p></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="make_add01" id="make_add01" / disabled><input type="text" name="make_add02" id="make_add02" /></td>
+                        </tr>
+
+                        <tr module="Mall_Urgencycall">
+                            <th scope="row" >상품 / 주문 검색</th>
+                            <td>{$form.prd_ord}<a href="#none" id="opensearch" class="-btn -inblock -sm -dgrey" name="opensearch" onClick="{$Open_SearchLayer}">검색</a>{$form.hiddenPrdOrd}</td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">원하는 날짜</th>
+                            <td><input type="text" name="make_date" id="make_date"> * 해피콜로 정확한 날짜와 시간대를 조정해드립니다.</td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">원하는 시간</th>
+                            <td>
+                                <span><input type="radio" id="make_time" name="make_time" value="모두가능" checked><label for="make_ti1">모두가능</label></span>
+                                <span><input type="radio" id="make_time" name="make_time" value="12시이전(오전)"><label for="make_ti2">12시이전(오전)</label></span>
+                                <span><input type="radio" id="make_time" name="make_time" value="12시이후(오후)"><label for="make_ti3">12시이전(오후)</label></span>
+                                <span><input type="radio" id="make_time" name="make_time" value="18시이후(저녁)"><label for="make_ti4">18시이후(저녁)</label></span>
+                                <span><input type="radio" id="make_time" name="make_time" value="특정시간"><label for="make_ti5">특정시간 <input type="text" name="make_time2" id="make_time2" /></label></span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">설치 장소</th>
+                            <td>
+                                <span><input type="checkbox" id="make_position1" name="make_position" value="거실"><label for="make_po1">거실</label></span>
+                                <span><input type="checkbox" id="make_position2" name="make_position" value="안방/침실"><label for="make_po2">안방/침실</label></span>
+                                <span><input type="checkbox" id="make_position3" name="make_position" value="작은방/서재"><label for="make_po3">작은방/서재</label></span>
+                                <span><input type="checkbox" id="make_position4" name="make_position" value="부엌/베란다"><label for="make_po4">부엌/베란다</label></span>
+                                <span><input type="checkbox" id="make_position5" name="make_position" value="아이방"><label for="make_po5">아이방</label></span>
+                                <span><input type="checkbox" id="make_position6" name="make_position" value="사무실"><label for="make_po6">사무실</label></span>
+                                <span><input type="checkbox" id="make_position7" name="make_position" value="상업공간(병원,학교 등)"><label for="make_po7">상업공간(병원,학교 등)</label></span>
+                                <span><input type="checkbox" id="make_position8" name="make_position" value="오피스텔"><label for="make_po8">오피스텔</label></span>
+                                <span><input type="checkbox" id="make_position9" name="make_position" value="기타"><label for="make_po9">기타</label></span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">제품</th>
+                            <td>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="암막커튼"><label for="make_po1">암막커튼</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="사계절커튼"><label for="make_po2">사계절커튼</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="속커튼"><label for="make_po3">속커튼</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="우드블라인드"><label for="make_po4">우드블라인드</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="콤비블라인드"><label for="make_po5">콤비블라인드</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="롤스크린"><label for="make_po6">롤스크린</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="허니홈쉐이드"><label for="make_po7">허니홈쉐이드</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="트리플쉐이드"><label for="make_po8">트리플쉐이드</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="알루미늄블라인드"><label for="make_po9">알루미늄블라인드</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="버티컬"><label for="make_po10">버티컬</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="홀딩도어(자바라)"><label for="make_po11">홀딩도어(자바라)</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="방영제품"><label for="make_po12">방영제품</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="전동시스템"><label for="make_po13">전동시스템</label></span>
+                                <span><input type="checkbox" id="make_item" name="make_item" value="기타"><label for="make_po14">기타</label></span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">평형</th>
+                            <td>
+                                <span><input type="checkbox" id="make_size" name="make_size" value="10평 대"><label for="make_si1">10평 대</label></span>
+                                <span><input type="checkbox" id="make_size" name="make_size" value="20평 대"><label for="make_si2">20평 대</label></span>
+                                <span><input type="checkbox" id="make_size" name="make_size" value="30평 대"><label for="make_si3">30평 대</label></span>
+                                <span><input type="checkbox" id="make_size" name="make_size" value="40평 대"><label for="make_si4">40평 대</label></span>
+                                <span><input type="checkbox" id="make_size" name="make_size" value="50평 대"><label for="make_si5">50평 대</label></span>
+                                <span><input type="checkbox" id="make_size" name="make_size" value="60평 대"><label for="make_si6">60평 대</label></span>
+                                <span><input type="checkbox" id="make_size" name="make_size" value="60평 대 이상"><label for="make_si7">60평 대 이상</label></span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">기타 요청사항</th>
+                            <td>
+                                <div class="order_info">
+                                    <textarea type="text" name="make_cont" id="make_cont" /></textarea>
+                                    <p>* 위 내용에 없는 사항이 있으시면 남겨주세요.</p>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="attach {$config.use_attach|display}">
+                            <th style="vertical-align:middle;">첨부파일</th>
+                            <td>
+                                {$form.attach_file} <span>*2M 이하 파일로 업로드해주세요.</span>
+                            </td>
+                        </tr>
+
+                        <tr class="agree {$config.is_login|display}">
+                            <th>개인정보 수집 및 이용 동의</th>
+                            <td>
+                                {$form.privacy_agreement}<br />
+                                개인정보 수집 및 이용에 동의하십니까? {$form.privacy_agreement_radio}
+                            </td>
+                        </tr>
+
+                        <!-- 비밀번호는 작성하지 않고 접수합니다. -->
+                        <tr class="displaynone">
+                            <th scope="row">비밀번호</th>
+                            <td><input name="password" id="password" type="password" value="f92fj19f9ja0!" fw-msg="" fw-label="비밀번호" fw-filter="isFill"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ec-base-button">
+                <span class="gRight">
+                    <a href="#none" onclick="contact_ok()"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/btn_register.gif" alt="등록" /></a>
+                </span>
+            </div>
+        </div>
+	</form>
+</div>

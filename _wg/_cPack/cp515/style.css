@@ -1,0 +1,63 @@
+
+	.cp515 { display:; position:relative; margin:50px auto 120px; padding:60px 0 55px; }
+	.cp515:after { content:""; display:block; *zoom:1; clear:both; }
+	.cp515 .-switch.st1 { max-width:1600px; }
+	.cp515 .-switch.st2 { max-width:1900px; }
+	.cp515 .bg { position:absolute; top:0; bottom:0; left:-50%; width:200%; height:100%; background-repeat:no-repeat; background-attachment:fixed; background-size:cover; }
+
+	.cp515 h2 { text-align:center; }
+
+	.cp515 .owl-stage-outer { padding:10px 0; }
+	.cp515 .owl-item { position:relative; }
+	.cp515 .owl-item li { position:relative; border-radius:15px; background:#fff; box-shadow:0 5px 15px rgba(0,0,0,0.20); opacity:0.4; overflow:hidden; transform:scale(0.90,0.90); transition:all 1s ease; }
+	.cp515 .owl-item.center li { opacity:1; /*box-shadow:0 3px 10px rgba(0,0,0,0.6);*/ transform:scale(0.96,0.96); }
+	.cp515 .owl-item img { width:50%; margin:0 0 0 8%; }
+
+        /* 텍스트 애니메이션 */
+		/* 기본 구조 및 정렬 */
+        .cp515 .owl-carousel.ul li .text { display:block; position:absolute; top:25%; left:60%; width:50%; height:0; padding:0; white-space:break-space; transform:translate(0%,-50%); }
+        .cp515 .owl-carousel.ul li .text.left { }
+        .cp515 .owl-carousel.ul li .text.center { text-align:center; }
+        .cp515 .owl-carousel.ul li .text.right { text-align:right; }
+		/* 텍스트 기본 설정 */
+        .cp515 .owl-carousel.ul li t1,
+        .cp515 .owl-carousel.ul li t2,
+        .cp515 .owl-carousel.ul li t3 { display:block; position:relative; width:100%; color:#111; letter-spacing:-0.05em; opacity:0; white-space:break-space; }
+		/* 글자 설정 */
+        .cp515 .owl-carousel.ul li t1 { margin:0 0 5px; font-size:140%; }
+        .cp515 .owl-carousel.ul li t2 { line-height:120%; margin:0; font-size:220%; }
+        .cp515 .owl-carousel.ul li t3 span { display:inline-block; min-width:90px; width:13%; line-height:230%; margin:9% 0 0; border-radius:5px; background:rgba(0,0,0,.8); font-size:100%; color:#fff; text-align:center; }
+        .cp515 .owl-carousel.ul li b { font-weight:700; }
+		/* 모바일 */
+        @media all and (max-width:960px) {
+        	.cp515 .owl-carousel.ul li .text { font-size:63%; }
+        	.cp515 .owl-carousel.ul li .text.left { width:55%; padding:0 40% 0 5%; }
+        	.cp515 .owl-carousel.ul li .text.center { }
+        	.cp515 .owl-carousel.ul li .text.right { width:55%; padding:0 5% 0 40%; }
+		}
+		.cp515 .owl-item.center t1 { animation-name:move_in_center; animation-delay:1.0s; }
+		.cp515 .owl-item.center t2 { animation-name:move_in_center; animation-delay:1.2s; }
+		.cp515 .owl-item.center t3 { animation-name:move_in_center; animation-delay:1.4s; }
+		.cp515 .owl-item.center t1,
+		.cp515 .owl-item.center t2,
+		.cp515 .owl-item.center t3 { animation-duration:0.6s; animation-direction:alternative; animation-iteration-count:1; animation-fill-mode:both; }
+        @keyframes move_in_center {
+            0% { top:20px; opacity:0; }
+            70% { top:-5px; opacity:0.85; }
+            100% { top:0px; opacity: 1; }
+        }
+
+	/* 방향키와 버튼의 기본 속성은 /_wg/css/wg.css 에서 불러옵니다. */ 
+	/* 방향키 */
+    .cp515 .owl-nav { position:absolute; top:50%; left:50%; max-width:1000px; width:60%; height:0;transform:translate(-50%,0); }
+	/* 버튼 */
+    .cp515 .owl-carousel.ul.normal .owl-dots { bottom:-10px; }
+
+	@media all and (max-width:575px) {
+		.cp515 .owl-item img { width:75%; margin:0 auto; }
+                
+        .cp515 .owl-carousel.ul li .text { position:relative; top:0; left:0; width:100%!important; height:100%; padding:0 0 30px!important; transform:translate(0%,0%); text-align:center!important; }
+        
+		.cp515 .owl-nav { display:none; }
+        .cp515 .owl-dots { opacity:1; }
+	}

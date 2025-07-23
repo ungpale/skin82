@@ -1,0 +1,30 @@
+
+    .cp307 { margin:0 auto 100px; }
+    .cp307:after { content:""; display:block; *zoom:1; clear:both; }
+
+/** 배너 영역 **/
+    .cp307 top { display:block; margin:0 0 1.2%; overflow:hidden; }
+    .cp307 top img { width:100%; }
+
+	.cp307 section { position:relative; float:left; width:28.175%; margin:0 1.19% 0 0; }
+	.cp307 section:nth-child(4) { margin:0 0 0 1.19%; }
+	.cp307 section a { display:block; margin:0 0 3.3%; overflow:hidden; }
+	.cp307 section img { width:100%; }
+
+/** 슬라이드 영역 **/
+    .cp307_slide { position:relative; z-index:1; float:left; width:41.27%; overflow:hidden; }
+
+	/* 방향키와 버튼의 기본 속성은 /_wg/css/wg.css 에서 불러옵니다. */ 
+
+	/* 스마트폰 세로 */
+	@media all and (max-width:575px) {
+        .cp307 { width:96%; margin:0 auto 40px; }
+        .cp307 top { margin:0 0 1.5%;}
+        .cp307 section { display:block; float:none; width:100%; margin:0 1.18% 1.5% 0; }
+        .cp307 section:after { content:""; display:block; *zoom:1; clear:both; }
+        .cp307 section:nth-child(3) { margin:0 0 1.5%; }
+        .cp307 section:nth-child(4) { margin:0; }
+        .cp307 section a:nth-child(1) { margin:0; }
+        .cp307 section a { float:left; width:49.207%; margin:0 0 0 1.586%; overflow:hidden; }
+        .cp307_slide { float:none; width:100%; margin:0 0 1.5%; }
+	}

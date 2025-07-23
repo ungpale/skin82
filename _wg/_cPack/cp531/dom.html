@@ -1,0 +1,46 @@
+<!-------------------------------------------------------------------------------------------------------------------------------
+
+	### cp531 갤러리 ###
+
+	===== 설정 =====
+
+------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!--@css(/_wg/_cPack/cp531/style.css)-->
+<!--@js(/_wg/_cPack/cp531/option.js)-->
+
+<div id="cp531" module="board_listpackage_8">
+    <h3 module="board_title_8">{$board_name}</h3>
+    <div module="board_list_8" class="owl-carousel ul">
+        <!--
+            $count = 20
+            $main_list = yes
+            $main_list_reply_view = no
+        -->
+        <li class="item">
+            <a href="/board/gallery/read.html{$param_read}">
+                <div class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" alt="" /></div>
+                <div class="info -mov">
+                    <p class="name -mov">{$icon_mobile} {$subject}</p>
+                    <ul>
+                        <li>{$writer}</li>
+                        <li>{$write_date|cut:10,}</li>
+                    </ul>
+                </div>
+            </a>
+        </li>
+        <li class="item">
+            <a href="/board/gallery/read.html{$param_read}">
+                <div class="thumbnail"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" alt="" /></div>
+                <div class="info -mov">
+                    <p class="name -mov">{$icon_mobile} {$subject}</p>
+                    <ul>
+                        <li>{$writer}</li>
+                        <li>{$write_date|cut:10,}</li>
+                    </ul>
+                </div>
+            </a>
+        </li>
+	</div>
+</div>

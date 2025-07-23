@@ -1,0 +1,17 @@
+    .header_search { position:absolute; z-index:11; top:50%; right:110px; width:150px; height:33px; border:1px solid rgba(0,0,0,.08); border-radius:30px; background:rgba(0,0,0,.03); transition:background .3s, width .3s ease; transform:translateY(-50%);}
+    .header_search:hover { background:rgba(0,0,0,.15); }
+	.header_search.long { width:200px; background:rgba(0,0,0,.15); }
+    .header_search #keyword { position:relative; width:calc(100% - 30px); min-height:33px; height:33px; line-height:30px; border:0; background:none; font-size:90%; color:#111; text-indent:10px; text-decoration:none; transition:background .3s ease; }
+    .header_search input[type=button] { position:absolute; top:5px; right:8px; width:22px; height:22px; background:url('/_wg/img/_btn/btn_search_b_50.png') no-repeat; background-size:22px 22px; border:0; cursor:pointer; transition:opacity .3s ease; }
+    .header_search input[type=button]:hover { opacity:.6; }
+	/* 버튼 */
+	.btn_header_search { display:none; position:fixed; bottom:20px; right:20px; width:35px; width:35px; }
+	.btn_header_search img { width:100%; }
+	.btn_header_search.on { right:5px; }
+
+	@media all and (min-width:575px) {
+        .header_icon li.cp797.btn { display:none; } /* 스마트폰 이상의 화면에선 스마트서치버튼이 안보이게 */
+	}
+	@media all and (max-width:575px) {
+		.header_search { display:none; } /* 스마트폰 화면에서 검색창이 안보이게 */
+	}

@@ -1,0 +1,30 @@
+
+	.cp505 { position:relative; width:1260px; height:80px; margin:0 auto 40px; }
+    .cp505 .mask { position:relative; height:100%; overflow:hidden; }
+    .cp505 .img { position:absolute; width:100%; height:100%; }
+    .cp505 .img li { float:left; width:145px; height:80px; margin:0 14.5px 0 0; }
+    .cp505 .img li a { display:block; }
+    .cp505 .img li img { max-width:100%; }
+
+	/* 더보기 */
+    .cp505:hover .more {
+        position:relative;
+        top:-25px;
+        width:100px;
+        height:25px;
+        margin:0 auto;
+        background:rgba(0,0,0,.3) no-repeat 50% 50%;
+        background-image:url('/_wg/img/_arrow/arrowVRW_21.gif');
+        text-align:center;
+        cursor:pointer;
+        opacity:1;
+        transition:opacity .3s ease;
+	}
+    .cp505 .more:hover { opacity:.7; }
+
+	/* 펼침 */
+    .cp505.undo { height:auto; }
+    .cp505.undo .img { position:static; width:102%; }
+    .cp505.undo .img li { position:static !important; left:0 !important; width:145px; margin:0 14.5px 14.5px 0; }
+    .cp505.undo .jsDir.low  { display:none; transition:all 3s 1s ease; }
+    .cp505.undo .more { top:-10px; background-image:url('/_wg/img/_arrow/arrowVLW_21.gif'); }

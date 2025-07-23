@@ -1,0 +1,47 @@
+<div class="loadhtml">
+    <div module="Layout_category" id="category-full">
+        
+		<h2><i class="xi-ellipsis-v"></i>카테고리 전체보기</h2>
+        
+        <div class="scrollbar_box">
+
+            <!-- 추가메뉴1 -->
+            <span class="categorySub m01">
+                <!--@import(/_wg/import/categorySub1.html)-->
+            </span>
+
+            <!-- 상품분류 -->
+            <span class="d1-wrap">
+                <li class="d1" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="d1" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="d1" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+            </span>
+
+            <!-- 기획전 -->
+            <span class="categorySub m04" module="layout_project">
+                <!--@import(/_wg/import/categorySub4.html)-->
+            </span>
+
+            <!-- 추가메뉴2 -->
+            <span class="categorySub m02">
+                <!--@import(/_wg/import/categorySub2.html)-->
+            </span>
+            
+            <!-- 커뮤니티 -->
+            <span class="categorySub comm">
+                <li><a href="/board/index.html">링크</a>커뮤니티
+                    <ul module="Layout_BoardInfo">
+                        <li><a href="{$board_list_url}">링크</a>{$board_name} {$board_adult_icon}</li>
+                        <li><a href="{$board_list_url}">링크</a>{$board_name} {$board_adult_icon}</li>
+                    </ul>
+                </li>
+            </span>
+            
+            <!-- 기타메뉴 -->
+            <span class="categorySub etc">
+                <!--@import(/_wg/import/full_menu.html)-->
+            </span>
+                        
+        </div><!-- //scrollbar_box -->
+	</div><!-- //category-full -->
+</div>

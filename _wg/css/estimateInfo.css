@@ -1,0 +1,69 @@
+@charset "utf-8";
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img {list-style: none;margin: 0;padding: 0;}
+html {width: 100%;height: 100%;}
+body,code,button,input,label,select,td,textarea {
+    zoom:1;
+    line-height: 1.4em;
+    font-size:12px;
+    font-family:'나눔고딕','Nanum Gothic', "Pretendard", "Roboto", "Noto Sans KR", "PingFang SC", "Apple SD Gothic Neo", "Microsoft YaHei UI", "Malgun Gothic", sans-serif,'xeicon';
+    color: #333;
+}
+
+.xans-estimate-print { overflow:hidden; padding:20px 30px; border-bottom:1px solid #6c6c6c; background:#eee; }
+.xans-estimate-print strong { display:block; color:#353535; }
+.xans-estimate-print ul { float:left; margin:7px 0 0; width:410px; color:#757575; font-size:12px; line-height:1.5; }
+.xans-estimate-print li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_dash.gif") no-repeat 0 7px; }
+.xans-estimate-print p { float:right; width:257px; }
+.xans-estimate-print p [class^='btn'] { position:relative; display:inline-block; box-sizing:border-box; width:80px; height:80px; padding:54px 2px 4px; font-weight:bold; font-size:12px; line-height:18px; color:#fff; text-decoration:none; text-align:center; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; border:1px solid transparent; border-radius:2px; }
+.xans-estimate-print p .btnPrint { background-color:#4a5164; }
+.xans-estimate-print p .btnDownload { background-color:#84868b; }
+.xans-estimate-print p .btnEmail { background-color:#84868b; }
+.xans-estimate-print p [class^='btn'] img { position:absolute; top:14px; left:50%; margin:0 0 0 -16px; }
+.xans-estimate-print p [class^='btn'].gBreak { padding-top:46px; line-height:15px; }
+.xans-estimate-print p [class^='btn'].gBreak img { top:7px; }
+
+.xans-estimate-estimateinfo {position:relative;padding:20px;}
+.xans-estimate-estimateinfo h1 {position:relative;font-weight:700;font-size:38px;line-height:40px;}
+.logo {width:120px;position:absolute;top:0px;right:12px;}
+.logo img {width:100%;}
+.estimate_header:after {display:block;clear:both;content:""}
+.estimate_header li {float:left;position:relative;width:49%;font-size:13px;height:147px;}
+.estimate_header li.right {float:right;}
+.estimate_header li .user_name {margin-top:4px;font-size:24px;font-weight:500;}
+.estimate_header li dl {position:absolute;left:0;bottom:0;width:100%;border-top:1px solid #d1d1d1;}
+.estimate_header li dl dt,
+.estimate_header li dl dd {float:left;padding:4px;border-bottom:1px solid #d1d1d1}
+.estimate_header li dl dt {width:25%;font-weight:bold;}
+.estimate_header li dl dd {width:70%;}
+
+table {width:100%;table-layout:fixed;border-collapse:collapse;border-spacing:0;}
+table th,
+table td {padding:4px 12px;border:1px solid #d1d1d1;border-collapse:collapse;}
+table caption {display:none;}
+span.seal {position:absolute;top:-9px;left:90px;}
+table.tbl th {border-left:0;}
+table.tbl td {position:relative;border-right:0;}
+
+.ment {text-align:center;padding:12px;}
+
+.tal {text-align:left;}
+.mt10 {margin-top:10px;}
+.mt20 {margin-top:20px;}
+.mt30 {margin-top:30px;}
+
+.xans-estimate-purchaselist td {text-align:center;}
+.xans-estimate-purchaselist td.prdName {text-align:left;}
+.xans-estimate-purchaselist td img {width:100%}
+
+.xans-estimate-totalsummary {padding:30px 0;}
+.xans-estimate-totalsummary th,
+.xans-estimate-totalsummary td {font-size:14px;}
+
+
+/* For Print */
+@media print {
+    .xans-estimate-print { display:none; }
+    .xans-estimate-estimateinfo {padding:0;}
+    table th,
+    table td {border:1px solid #999; }
+}

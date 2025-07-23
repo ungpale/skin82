@@ -1,0 +1,71 @@
+
+    /* 버튼 */
+    .cp793.btn { }
+
+	/* 팝업 */
+    .cp793.popup { display:none; top:0; bottom:0; right:-30px; width:240px; height:100%; padding:20px 0 20px 20px; background:#fff; box-shadow:0 0 8px rgba(0,0,0,.7); opacity:0; transition:opacity .4s, right .3s .5s ease; }
+    .cp793.popup.on { opacity:1; right:0; }
+
+    /* 스크롤바 생성을 위해 크기 고정 */
+    .cp793 .scrollbar_box { position:relative; width:246px; height:calc(100vh - 40px); margin:0 0 0 -5px; }
+
+	/* 닫기 버튼 */
+    .cp793.popup .p-close { position:absolute; top:45%; left:-50px; width:40px; height:40px; background:none; cursor:pointer; text-align:center; transform:translate(0, -50%); transition:all .3s ease; }
+    .cp793.popup .p-close i { line-height:17px; font-size:21px; color:#fff; }
+
+	.cp793.popup .cp793 { width:230px; }
+
+
+/** 패널 슬라이드 배너 **/
+	.cp793_slide { position:relative; width:100%; margin:0 0 10px; }
+	.cp793_slide .owl-carousel.ul li { height:270px; }
+
+
+/** 배너 3개 **/
+	.cp793_bnr { margin:0; }
+	.cp793_bnr li { display:block; margin:0 0 10px; }
+	.cp793_bnr img {  }
+
+
+/** 출석체크 **/
+    .cp793.popup .attendBnr { margin:0 0 15px; padding:0; }
+    .xans-layout-attendbanner { display:block; padding:30px 14px 40px; background-color:#fff; }
+    .xans-layout-attendbanner img { width:100%; }
+
+
+/** 자주찾는메뉴 **/
+.cp793.popup .793_menu { margin:0 0 20px; }
+.cp793.popup .793_menu h4.title { margin:0 0 15px 5px; }
+.cp793.popup ul.menu {margin:0 0 10px; padding:0 0 10px; border-bottom:1px solid #eee; }
+.cp793.popup ul.menu:after { content:""; display:block; *zoom:1; clear:both; }
+.cp793.popup ul.menu { letter-spacing:-4px; }
+.cp793.popup ul.menu li {float:left; width:103px; height:32px; margin-bottom:8px; letter-spacing:0; }
+.cp793.popup ul.menu li:nth-child(2n+1) { margin:0 6px 0 0; }
+.cp793.popup ul.menu li a { display:block; line-height:32px; border-radius:4px; background:#f4f4f4;color:#555; text-align:center; transition:all .3s ease; }
+.cp793.popup ul.menu li a:hover { background:#eee; }
+
+	.cp793.popup li,
+	.cp793.popup li a { color:#999; }
+	.cp793.popup strong { font-weight:normal; color:#111; }
+
+/** 고객센터 **/
+	.cp793.popup .oper_time { line-height:20px; margin:0 0 20px; padding:0 0 10px 5px; border-bottom:1px solid #eee; }
+	.cp793.popup .oper_time h4.title { margin:0 0 15px; }
+	.cp793.popup .oper_time .left { margin:0 0 10px; }
+	.cp793.popup .oper_time li {min-height:0;}
+	.cp793.popup .oper_time .phone { min-height:0; line-height:25px; margin:0 0 15px; font-weight:bold; font-size:20px; color:#111; letter-spacing:0; }
+	.cp793.popup .oper_time strong { min-height:0; padding-right:10px; }
+	.cp793.popup .oper_time span { min-height:0; }
+	.cp793.popup .oper_time .right { vertical-align:top; letter-spacing:0; }
+	.cp793.popup .oper_time .right a:first-child { display:none; }
+	.cp793.popup .oper_time .right a { width:100%; max-width:70%; margin:0 0 5px; }
+
+
+/** 입금계좌 **/
+	.cp793.popup .bank_info { line-height:20px; padding:0 0 10px 5px; }
+	.cp793.popup .bank_info h4.title { margin:0 0 15px; }
+	.cp793.popup .bank_info ul { margin:0 0 10px; }
+	.cp793.popup .bank_info li { min-height:0;}
+	.cp793.popup .bank_info strong { min-height:0; }
+	.cp793.popup .bank_info span { position:relative; left:10px; min-height:0; }
+	.cp793.popup .bank_info .alter { display:inline-block; padding:7px 10px; border:1px solid #eee; background:#f4f4f4; font-size:.8rem; letter-spacing:0; }

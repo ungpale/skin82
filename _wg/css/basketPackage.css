@@ -1,0 +1,68 @@
+.ec-base-prdInfo .cell-info .list_price {margin:12px 0 10px;}
+.ec-base-prdInfo .cell-info .list_price .price_area:first-child {margin-top:0;}
+.ec-base-prdInfo .cell-info .list_price .price_area {position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;min-width:0;margin-top:8px;line-height:18px;letter-spacing:-0.5px;}
+.ec-base-prdInfo .cell-info .list_price .price_area .stit,
+.ec-base-prdInfo .cell-info .list_price .price_area em {font-size:15px;font-weight:600;color:#222;}
+.ec-base-prdInfo .cell-info .list_price .price_area em {-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;padding:0 30px 0 10px;white-space:nowrap;font-weight:500;color:#333;letter-spacing:-0.5px;text-align:right;}
+.ec-base-prdInfo .cell-info .list_price .price_area.delivery span {color:#777;font-weight:400;font-size:14px;}
+.ec-base-prdInfo .cell-info .xans-order-optionall {position:relative;padding:0 12px 12px;background-color:#f6f7f8;border-radius:3px;}
+
+.xans-order-basketpackage .ec-base-fold .ec-base-prdInfo:first-child {border-top:0}
+.xans-order-basketpackage .ec-base-fold .ec-base-prdInfo .option > li .name {padding:12px 0 0;margin:0 0 0 2px;line-height:18px;word-wrap:break-word;word-break:break-all;color:#222;letter-spacing:-0.5px;}
+.xans-order-basketpackage .ec-base-fold .ec-base-prdInfo .option > li .btnBasic {top:5px;}
+.xans-order-basketpackage .move_oversea {display:none;}
+
+.ec-base-prdInfo .cell-info .layerOptionModify .ec-base-button.gCenter {position:relative;bottom:0;left:0}
+.ec-base-prdInfo .product-info {position:relative;padding-left:30px;}
+.xans-order-list .check-wrap {position:absolute;top:15px;left:-30px;}
+.xans-order-list .ec-base-prdInfo .prd_description {position:relative;padding:15px 0 10px;}
+.xans-order-list .ec-base-prdInfo .layerOptionModify {margin-top:8px;}
+
+.ec-base-prdInfo .cell-info .order_buttons {display:-webkit-box;display:-ms-flexbox;display:flex;min-width:0;margin:0 -2px 20px;}
+.ec-base-prdInfo .cell-info .order_buttons button {-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-negative:0;flex-shrink:0;-ms-flex-preferred-size:0;flex-basis:0;margin:0 2px;border:1px solid #d5d9dc;border-radius:2px;color:#333;line-height:34px;vertical-align:top;}
+.ec-base-prdInfo .cell-info .order_buttons .btn_order {border:1px solid #154493;font-weight:600;color:#154493}
+
+.pc_type .xans-order-list .check-wrap {position:absolute;top:15px;left:-30px;}
+.pc_type .xans-order-list .ec-base-prdInfo .cell-info {position:relative;}
+.pc_type .xans-order-list .ec-base-prdInfo .cell-info .list_price {margin:12px 0 10px 0;}
+.pc_type .xans-order-list .ec-base-prdInfo .cell-info .list_price > span {font-size:12px;}
+.pc_type .xans-order-list .ec-base-prdInfo .cell-info .list_price em {font-size:16px;}
+.pc_type .xans-order-list .ec-base-prdInfo .prd_description {position:relative;padding:15px 0 10px;}
+.pc_type .xans-order-list .ec-base-prdInfo .layerOptionModify .ec-base-button.gCenter {position:relative;left:0;bottom:0}
+.pc_type .xans-order-basketpackage .ec-base-fold .ec-base-prdInfo .order_buttons {display: -webkit-box;display: -ms-flexbox;display: flex;min-width: 0;margin: 0 -2px 20px;}
+.pc_type .xans-order-basketpackage .ec-base-fold .ec-base-prdInfo .order_buttons .btnStrong {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-preferred-size: inherit;
+    flex-basis: inherit;
+    margin: 0 auto;
+    padding: 0 12px;
+    line-height: 26px;
+    border-radius: 4px;
+}
+
+.pc_type .ec-base-prdInfo .option > li .optionDesc {display:block;word-wrap:break-word;}
+.pc_type .xans-order-list .ico_delete {width:12px;height:12px;}
+.xans-order-list .btn_delete {position: absolute;top: 18px;left:619px;display: block;width: 22px;height: 22px;padding: 5px;}
+.xans-order-list .btn_delete {display:none;}
+.pc .mobile_type {display:none;}
+.mobile .pc_type {display:none;}
+
+@media all and (max-width:1270px) {
+    #contents {}
+}
+
+@media all and (min-width:1152px){
+    .pc_type .xans-order-list .check-wrap {top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+    .pc_type .xans-order-list .ec-base-prdInfo .prd_description {padding:20px 20px 20px 0;}
+    .pc_type .xans-order-basketpackage .ec-base-fold .ec-base-prdInfo .order_buttons {margin:0}
+}
+
+@media all and (max-width:1024px){
+    .xans-order-selectorder [class^='btn'].sizeS {padding:10px;height:34px;}
+}
+
+@media all and (max-width:400px){
+    .xans-order-selectorder [class^='btn'].sizeS {padding:10px 8px;height:34px;}
+}

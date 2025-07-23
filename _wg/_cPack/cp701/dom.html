@@ -1,0 +1,30 @@
+<!--------------------------------------------------------------------------------------------------------------
+
+	### cp701(팝업2) ###
+
+-------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/_cPack/cp701/style.css)-->
+<!--@js(/_wg/_cPack/cp701/option.js)-->
+
+<style>
+    .cp701.btn { bottom:75px; } /* 버튼의 위치설정 */
+</style>
+
+<div js-banner-module="cp701" js-hide>
+    <!-- 버튼 -->
+    <div class="scroll_check">
+        <div class="cp701 btn"><i class="xi-bell-o"></i> <span>{$js-group-description}</span></div>
+    </div>
+    <!-- 팝업 -->
+    <div class="cp701 popup">
+        <!-- 슬라이드배너 -->
+        <div class="cp701_slide">
+            <ul class="owl-carousel ul normal">
+                <li js-banner><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+                <li js-banner><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+            </ul>
+        </div>
+        <button type="button" class="p-close" alt="닫기버튼">오늘하루 열지않음</button>
+    </div>
+</div>

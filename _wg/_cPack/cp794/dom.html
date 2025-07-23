@@ -1,0 +1,64 @@
+<!------------------------------------------------------------------------------
+
+	### cp794 (카테고리 전체보기) ###
+
+------------------------------------------------------------------------------>
+
+<!--@css(/_wg/_cPack/cp794/style.css)-->
+
+<div id="d_full_btn" class="categoryAll">
+    <div class="cp792 btn_pc"><i class="xi-bars mColor tab272"></i><i class="xi-close mColor tab272"></i></div><!-- pc용 -->
+    <div class="cp792 btn"><i class="xi-bars"></i></div><!-- 테블릿용 -->
+    <div id="category-full" module="Layout_category">
+
+        <div class="scrollbar_box">
+
+            <!-- 추가메뉴1 -->
+            <span class="categorySub m01">
+                <!--@import(/_wg/import/categorySub1.html)-->
+            </span>
+
+            <!-- 상품분류 -->
+            <span class="d1-wrap">
+                <li class="d1" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="d1" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+                <li class="d1" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+            </span>
+
+            <!-- 기획전 -->
+            <span class="categorySub m04" module="layout_project">
+                <!--@import(/_wg/import/categorySub4.html)-->
+            </span>
+
+            <!-- 추가메뉴2 -->
+            <span class="categorySub m02">
+                <!--@import(/_wg/import/categorySub2.html)-->
+            </span>
+            
+            <!-- 커뮤니티 -->
+            <span class="categorySub comm">
+                <li><a href="/board/index.html">링크</a>커뮤니티
+                    <ul module="Layout_BoardInfo">
+                        <li><a href="{$board_list_url}">링크</a>{$board_name} {$board_adult_icon}</li>
+                        <li><a href="{$board_list_url}">링크</a>{$board_name} {$board_adult_icon}</li>
+                    </ul>
+                </li>
+            </span>
+            
+            <!-- 기타메뉴 -->
+            <span class="categorySub etc">
+                <!--@import(/_wg/import/full_menu.html)-->
+            </span>
+                        
+        </div><!-- //scrollbar_box -->
+        
+        <div class="close">닫기</div> 
+    </div>
+</div>
+
+<!-- 모바일용 -->
+<!--@css(/_wg/_cPack/cp792/popup_left.css)-->
+<!--@js(/_wg/_cPack/cp792/option.js)-->
+
+<!-- 팝업 (/_wg/_cPack/cp792/popup_left.html 파일을 열어서 수정해주세요.) -->
+<div class="cp792 popup idx1"></div>

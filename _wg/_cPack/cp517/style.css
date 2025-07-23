@@ -1,0 +1,20 @@
+
+	#cp517 { position:relative; width:100%; max-width:500px; height:10000px; overflow:hidden; }
+	#cp517:after { content:""; display:block; *zoom:1; clear:both; }
+
+	/* 버튼 */
+    #cp517 .owl-dots { position:absolute; z-index:10; bottom:10px; width:100%; text-align:center; opacity:0; transition:opacity .3s 8s ease; }
+    #cp517:hover .owl-dots { opacity:1.0; transition-delay:0s; }
+    #cp517 .owl-dots .owl-dot { display:inline-block; position:relative; width:15px; height:3px; margin:0 2px; box-shadow:0 1px 3px rgba(0,0,0,.2); border-radius:20px; background:rgba(255, 255, 255, 0.5); cursor:pointer; box-sizing:border-box; overflow:hidden; }
+    #cp517 .owl-dots .owl-dot span { position:absolute; z-index:2; left:0; top:0; width:0; height:3px; background:rgba(255,255,255,.5); } /* 타이머 */
+    #cp517 .owl-dots .owl-dot.active { width:25px; background:rgba(0,0,0,.8); color:#fff; }
+
+	/* 화살표 */
+    #cp517 .owl-nav { position:absolute; z-index:10; top:50%; width:100%; height:0; margin-top:-22.5px; opacity:0; cursor:pointer; transition:all .3s ease; }
+    #cp517:hover .owl-nav { opacity:1; }
+        #cp517 .owl-prev { position:absolute; left:-5px; width:35px; height:45px; background-image:url('/_wg/img/_arrow/arrowLW_21.gif'); background-color:rgba(0,0,0,.2); background-repeat:no-repeat; background-position:50% 50%; transition:all .3s ease; text-indent:-9999px; }
+        #cp517:hover .owl-prev { left:0; opacity:1.0; }
+        #cp517:hover .owl-prev:hover { background-color:rgba(0,0,0,.4); }
+        #cp517 .owl-next { position:absolute; right:-5px; width:35px; height:45px; background-image:url('/_wg/img/_arrow/arrowRW_21.gif'); background-color:rgba(0,0,0,.2); background-repeat:no-repeat; background-position:50% 50%; transition:all .3s ease; text-indent:-9999px; }
+        #cp517:hover .owl-next { right:0; opacity:1.0; }
+        #cp517:hover .owl-next:hover { background-color:rgba(0,0,0,.4); }

@@ -1,0 +1,6 @@
+.ec-base-product .description .spec li span {font-size:14px !important}
+.ec-base-product .description .spec li.price {display:none;}
+
+@media all and (max-width:960px) {
+    .description .list_button.mo {display:none !important;}
+}

@@ -1,0 +1,48 @@
+
+	.cp590 { position:relative; z-index:1; width:100%; background:#fff; overflow:hidden; }
+	.cp590 .owl-carousel { display:block; }
+
+	/* 버튼 */
+    .cp590 .owl-dots { position:relative; z-index:10; width:100%; border-right:1px solid #ddd; }
+    .cp590 .owl-dots .owl-dot { display:table; position:relative; float:left; margin:0 -1px -1px 0; border:1px solid #ddd; background:#eee; cursor:pointer; transition:all .3s ease; }
+    .cp590 .owl-dots .owl-dot span { position:absolute; z-index:2; left:0; top:0; width:0; height:2px; background:rgba(0,0,0,.2); } /* 타이머 */
+    .cp590 .owl-dots .owl-dot > div.text { line-height:19px; font-size:13px; color:#777; vertical-align:middle; }
+    .cp590 .owl-dots .owl-dot.active { background:#fff; color:#111; font-weight:bold; }
+
+/** 멀티팝업 V14 **/
+    .cp590.v14 { max-width:300px; }
+    .cp590.v14 .owl-dots .owl-dot { width:25.2%; min-height:83px; }
+
+/** 멀티팝업 V21 **/
+    .cp590.v21 { max-width:300px; }
+    .cp590.v21 .owl-dots .owl-dot { width:50.1%; min-height:83px; }
+
+/** 멀티팝업 V22 **/
+    .cp590.v22 { max-width:300px; }
+    .cp590.v22 .owl-dots .owl-dot { width:50.1%; min-height:83px; }
+
+/** 멀티팝업 V31 **/
+    .cp590.v31 { max-width:300px; }
+    .cp590.v31 .owl-dots .owl-dot { width:33.6%; min-height:83px; }
+
+/** 멀티팝업 V32 **/
+    .cp590.v32 { max-width:300px; }
+    .cp590.v32 .owl-dots .owl-dot { width:33.6%; min-height:83px; }
+
+	/* 방향키 */
+    .cp590 .owl-nav { position:absolute; z-index:10; top:50%; width:100%; height:0; margin-top:-10%; opacity:0; transition:opacity .4s ease; }
+    .cp590:hover .owl-nav { opacity:1; }
+        .cp590 .owl-prev { position:absolute; left:2px; width:35px; height:45px; border-radius:8px; background-image:url('/_wg/img/_arrow/arrowLW_21.gif') !important; background-color:rgba(0,0,0,.2) !important; background-repeat:no-repeat !important; background-position:50% 50% !important; transition:left .3s .5s, background .3s ease; text-indent:-9999px; }
+        .cp590:hover .owl-prev { left:7px; }
+        .cp590:hover .owl-prev:hover { background-color:rgba(0,0,0,.4) !important; }
+        .cp590 .owl-next { position:absolute; right:2px; width:35px; height:45px; border-radius:8px; background-image:url('/_wg/img/_arrow/arrowRW_21.gif') !important; background-color:rgba(0,0,0,.2) !important; background-repeat:no-repeat !important; background-position:50% 50% !important; transition:right .3s .5s, background .3s ease; text-indent:-9999px; }
+        .cp590:hover .owl-next { right:7px; }
+        .cp590:hover .owl-next:hover { background-color:rgba(0,0,0,.4) !important; }
+
+    /* 팝업하단 */
+    .popup_footer { position:fixed; bottom:0; width:100% !important; }
+    .popup_footer > div { width:100% !important; height:40px !important; padding:0 !important; overflow:hidden !important; background:#555 !important; font-family:'NanumGothic' !important; }
+    .popup_footer > div > span { position:relative; float:left; width:100%; line-height:40px; font-size:13px; color:#eee; text-align:left; text-indent:45px; }
+    .popup_footer > div > span > input { display:none; }
+    .popup_footer > div > span + span { position:absolute; top:0; right:0; width:100px; line-height:40px; background:#222 !important; font-size:13px; color:#fff; text-align:center; text-indent:0; transition:all .3s ease; }
+    .popup_footer > div > span + span:hover { background:#000 !important; color:#fff; }

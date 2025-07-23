@@ -1,0 +1,9 @@
+
+	#left_wrap { display:block!important; }
+
+	@media all and (max-width:1260px) {
+		#left_wrap.-switch.st1 { margin:0 0 0 10px; }
+	}
+	@media all and (max-width:1900px) {
+		#left_wrap.-switch.st2 { margin:0 0 0 20px; }
+	}

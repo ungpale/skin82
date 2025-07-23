@@ -1,0 +1,28 @@
+
+    /* 버튼 */
+    .cp790.btn { position:relative; z-index:1; float:left; height:40px; padding:0 10px; cursor:pointer; opacity:1; transition:all .3s 1s ease; }
+    .cp790.btn.on { opacity:.9; }
+        .cp790.btn { }
+        .cp790.btn ul { line-height:0; font-size:0; }
+        .cp790.btn li { display:inline-block; position:relative; margin:12px 6px 0 0; }
+        .cp790.btn li.selected { box-shadow:0 1px 2px rgba(0,0,0,.6); }
+        .cp790.btn li img { width:20px; vertical-align:middle; opacity:.4; transition:opacity .3s ease; }
+        .cp790.btn li img:hover { opacity:1; }
+        .cp790.btn li.selected img { opacity:1; }
+
+	/* 팝업 */
+    .cp790.popup { display:none; position:relative; top:calc(100vh/2 - 150px); left:calc(100vw/2 - 150px); width:600px; height:600px; padding:10px; opacity:0; transition:opacity .3s, top .3s .2s ease; }
+    .cp790.popup.on { opacity:1; top:calc(100vh/2 - 155px); }
+
+        .multishop_section { position:relative; width:250px; }
+        .multishop_section li { }
+        .multishop_section li a { display:block; line-height:26px; margin:0 0 25px; padding:0 0 0 20px; font-size:18px; color:#fff; text-decoration:none; }
+        .multishop_section li a img { width:40px; }
+        .multishop_section li.selected { background:url('/_wg/img/_dot/dotR_7.png') no-repeat 0 50%; }
+        .multishop_section li .name { margin:0 5px 0 0; }
+        .multishop_section li .unit { position:relative; top:0; padding:5px 10px 5px; border-radius:4px; background:rgba(255,255,255,.5); font-size:12px; color:#fff; vertical-align:middle; }
+
+	/* 스마트폰 세로 + 테블릿 세로 */
+	@media all and (max-width:575px) {
+		#header .cp790.btn { display:none; }
+	}

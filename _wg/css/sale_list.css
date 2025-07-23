@@ -1,0 +1,59 @@
+
+    /* 공통 */
+    .sale_list { position:relative; margin:0 auto 50px; }
+
+	/* 리스트 */
+    .sale_list img { vertical-align:middle; }
+    .sale_list a[href^='/product/detail.html'] > img { border:0; }
+
+    .sale_list ul.prdList { display:flex; flex-flow:wrap row; justify-content:space-between; position:relative; width:100%; }
+    .sale_list ul.prdList > li { flex:0 0 48.05%; margin:0 .87% 20px; align-self:flex-start; border:1px solid #ddd; background:#fafafa; vertical-align:top; }
+
+    .sale_list ul.prdList .thumbnail { position:relative; float:left; width:50%; }
+    .sale_list ul.prdList .thumbnail a { display:block; font-size:0; }
+    .sale_list ul.prdList .thumbnail a img { width:100%; font-size:0; }
+
+		/* 할인율 보정 */
+		.sale_list .dc_rate { top:5px; }
+
+    .sale_list ul.prdList .description { position:relative; float:right; width:45%; margin:5% 2% 0; text-align:left; }
+    .sale_list ul.prdList .description ul li { max-height:48px; line-height:18px; margin:0 0 5px; overflow:hidden; word-break:break-all; }
+    .sale_list ul.prdList .description ul li span { line-height:18px; }
+
+    .sale_list ul.prdList .description .name a:hover { text-decoration:none; }
+    .sale_list ul.prdList .description .name span { display:block; margin:0 2% 10px 0; text-align:left; letter-spacing:-0.05em; }
+		.sale_list.-switch.st2 .description .name span { font-size:1.1rem!important; }
+
+    .sale_list ul.prdList .description .status { margin:0; padding:0; line-height:0; *zoom:1; }
+    .sale_list ul.prdList .description .status:after { content:""; display:block; clear:both; }
+
+    /* 컬러칩 */
+    .sale_list ul.prdList .description .colorChip { margin:0 0 4px; text-align:left; }
+    .sale_list ul.prdList .description .chips { display:inline-block; *display:inline; *zoom:1; width:10px; height:10px; margin:0 2px 8px; border-radius:50%; border:1px solid #fafafa; vertical-align:top; }
+    .sale_list ul.prdList .description .chips:first-child { margin:0 -1px 8px 0 }
+
+    /* 아이콘 */
+    .sale_list .prdList .description .icon { margin:10px 0 0 0; vertical-align:middle; }
+    .sale_list .prdList .description .icon:after { content:""; display:block; clear:both; }
+    .sale_list .prdList .description .icon img { margin:0 7px 5px 0; }
+
+    .sale_list ul.prdList .description .mileage { display:block; }
+    
+    .xans-product-listitem li { text-align:left; }
+
+    /* module="product_ListItem" */
+    .sale_list .xans-product-listitem { margin:0; }
+    .sale_list .xans-product-listitem li .title { display:inline-block; font-weight:normal; vertical-align:top; }
+    .sale_list .xans-product-listitem li .title span { vertical-align:top; }
+		.sale_list.-switch.st2 .description .spec li span { font-size:1rem!important; }
+    
+	/* 좋아요 보정 */
+    .sale_list .-likeButton { bottom:15px; }
+    .sale_list .-likeButton button img { margin:-4px 3px 0 0; }
+
+	/* 스마트폰 세로 */
+	@media all and (max-width:960px) {
+    	.sale_list ul.prdList > li { flex:0 0 99%; }
+        .sale_list .dc_rate { transform:scale(0.8,0.8); }
+    	.sale_list ul.prdList .description .icon img { max-height:11px; }
+	}

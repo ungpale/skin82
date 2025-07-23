@@ -1,0 +1,64 @@
+<!--------------------------------------------------------------------------------------------------------------
+
+	### cp524 (금주의 잘나가는 아이템) ###
+
+	===== 설정 =====
+	탭명변경 : 상품관리 > 상품관리 > 메인 상품 진열관리 > (우측)메인분류 관리버튼 클릭후 수정가능합니다.
+			   공통매뉴얼 2번 글을 반드시 확인후 변경해주세요.
+	상품등록 : 상품관리 > 상품관리 > 메인 상품 진열관리 > (우측)메인분류 > 탭-01 ~ 탭-05 에 상품을 넣어주세요.
+	ON/OFF 기능으로 숨김가능.(공통매뉴얼 10번 글 참조)
+	옵션설정 : 아래 option.js 에서 변경가능
+
+-------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/_cPack/cp524/style.css)-->
+<!--@js(/_wg/_cPack/cp524/option.js)-->
+
+<div class="cp524">
+    <div class="bg" style="background-color:#e0e0e0;/* 버튼의 배경색 */" data-aos="fade-right"></div>
+    <div class="-switch move-page" data-aos="fade-left">
+        <h2 class="move-tit"><span>이번주 잘나가는 아이템</span>WEEKLY BEST ITEMS</h2>
+        <div class="owl-carousel ul grid5">
+            <li data-text="{$category_title_text}" module="product_listmain_9">
+                <!--
+                    $count = 5
+                -->
+                <div class="item_list">
+                    <!--@import(/_wg/_cPack/cp520/list_1_6.html)-->
+                </div>
+            </li>
+            <li data-text="{$category_title_text}" module="product_listmain_10">
+                <!--
+                    $count = 5
+                -->
+                <div class="item_list">
+                    <!--@import(/_wg/_cPack/cp520/list_1_6.html)-->
+                </div>
+            </li>
+            <li data-text="{$category_title_text}" module="product_listmain_11">
+                <!--
+                    $count = 5
+                -->
+                <div class="item_list">
+                    <!--@import(/_wg/_cPack/cp520/list_1_6.html)-->
+                </div>
+            </li>
+            <li data-text="{$category_title_text}" module="product_listmain_12">
+                <!--
+                    $count = 5
+                -->
+                <div class="item_list">
+                    <!--@import(/_wg/_cPack/cp520/list_1_6.html)-->
+                </div>
+            </li>
+            <li data-text="{$category_title_text}" module="product_listmain_13">
+                <!--
+                    $count = 5
+                -->
+                <div class="item_list">
+                    <!--@import(/_wg/_cPack/cp520/list_1_6.html)-->
+                </div>
+            </li>
+        </div>
+    </div>
+</div>

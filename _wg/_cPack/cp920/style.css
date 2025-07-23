@@ -1,0 +1,17 @@
+
+	.cp920 { position:relative; width:100%; max-width:1900px; margin:50px auto 10px; background-image:url('/_wg/_cPack/cp920/img/blank.jpg'); background-size:auto; background-repeat:no-repeat; background-position:center; text-align:center; }
+	#instagramWidgetManual { display:block; position:relative; width:96%; margin-right:2%; margin-left:2%; overflow:hidden; }
+	#instagramWidgetManual iframe { background:#fff; }
+
+	/* 스마트폰 세로 */
+	@media all and (max-width:1179px) {
+		#instagramWidgetManual { max-width:850px; height:750px; }
+	}
+	/* 스마트폰 가로 + 테블릿 세로 */
+	@media all and (min-width:1180px) and (max-width:1679px) {
+		#instagramWidgetManual { max-width:1200px; height:600px; }
+	}
+	/* 테블릿 가로 + 데스크탑 */
+	@media all and (min-width:1680px) {
+		#instagramWidgetManual { max-width:1650px; height:420px; }
+	}

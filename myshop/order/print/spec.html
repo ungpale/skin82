@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=1.0, user-scalable=yes, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>거래명세표</title>
+    <script type="text/javascript">
+    window.resizeTo(840,800)
+    </script>
+</head>
+
+<body><!-- popup size : 680px * auto -->
+<div module="MyShop_OrderPrintSpec">
+    <div class="grid" style="{$sign_image}">
+    <!--@css(/css/module/myshop/orderPrintSpec.css)-->
+    <h1>
+        거래명세표
+        <span class="logo"><img src="//wjpojang.cafe24.com/web/upload/logo_2_w.jpg"></span>
+    </h1>
+
+    <ul class="spec_header">
+        <li>
+            <p class="user_name">{$customer} 님</p>
+            <table class="issue" summary="">
+                <caption>발행정보</caption>
+                <tbody>
+                    <tr>
+                        <th>발급 No.</th>
+                        <td>{$order_id}</td>
+                    </tr>
+                    <tr>
+                        <th>발행일</th>
+                        <td>{$publish_date}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li class="right">
+            <table class="tbl" border="0" summary="">
+                <caption>공급자 사업자정보</caption>
+                <colgroup>
+                    <col style="width:25%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>사업자번호</th>
+                        <td>{$company_regno}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">회사명/대표</th>
+                        <td>{$company_name} / {$president_name}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">주소</th>
+                        <td>{$mall_addr1} {$mall_addr2}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">업태/종목</th>
+                        <td>{$company_condition}/{$company_line}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">전화/팩스</th>
+                        <td>02-2273-5068 / 02-2271-5068</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+ 
+    <p class="title">아래와 같이 계산합니다</p>
+
+    <table class="content" border="1" summary="">
+        <caption>거래명세표의 상세 내역</caption>
+        <colgroup>
+            <col width="4%" />
+            <col width="4%" />
+            <col width="auto" />
+            <col width="6%" />
+            <col width="6%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="auto" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">월</th>
+                <th scope="col">일</th>
+                <th scope="col">품목</th>
+                <th scope="col">규격</th>
+                <th scope="col">수량</th>
+                <th scope="col">단가</th>
+                <th scope="col">공급가액</th>
+                <th scope="col">세액</th>
+                <th scope="col">비고</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th colspan="3">총 합계금액</th>
+                <td colspan="6">{$total_price}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>{$month}</td>
+                <td>{$day}</td>
+                <td class="product">{$product_name}</td>
+                <td></td>
+                <td>{$quantity}</td>
+                <td class="price">{$product_price}</td>
+                <td class="price">{$supply_price}</td>
+                <td class="price">{$tax_amount}</td>
+                <td>{$etc}</td>
+            </tr>
+            <tr>
+                <td>{$month}</td>
+                <td>{$day}</td>
+                <td class="product">{$product_name}</td>
+                <td></td>
+                <td>{$quantity}</td>
+                <td class="price">{$product_price}</td>
+                <td class="price">{$supply_price}</td>
+                <td class="price">{$tax_amount}</td>
+                <td>{$etc}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p class="info {$show_info_text_display|display}">본 거래명세표는 영수증 용도로도 사용이 가능합니다.</p>
+</div>
+<div module="MyShop_OrderPrintGuide">
+    <span class="title">* 산출기준</span>
+    <ul>
+        <li>- 세액 = (단가*수량) * {$fraction_vat_rate} (세율 {$vat_rate}%기준, 소수점이하 반올림)</li>
+        <li>- 공급가액 = (단가*수량) - 세액</li>
+        <li>- 총합계금액 = 품목의 공급가액 합계 + 품목의 세액 합계</li>
+    </ul>
+</div>
+</body>
+</html>

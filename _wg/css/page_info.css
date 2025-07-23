@@ -1,0 +1,55 @@
+/* 상단이미지 */
+.page_top { min-height:30px; width:100%; margin:-10px 0 10px; }
+
+/* 분류메뉴 */
+.subMenu { display:flex; flex-wrap:wrap; flex-direction:row; justify-content:space-between; position:relative; width:100%; margin:0 0 80px; }
+.subMenu li { flex:0 1 19%; align-self:flex-start; margin:0 0 10px; border:1px solid #ddd; }
+.subMenu a { display:block; height:40px; line-height:40px; color:#555; font-size:105%; text-indent:15px; transition:background .3s ease; }
+.subMenu a:hover { text-decoration:none; color:#111; }
+.subMenu > li > a:hover,
+.subMenu > li.on {background:rgba(0,0,0,.05); color:#111; }
+@media all and (max-width:960px) {
+    .subMenu li { flex:0 1 48%; }
+}
+
+.page_info { display:block; width:100%; margin:0 auto; overflow:hidden; }
+.page_info h3 { width:80%; line-height:35px; margin:0 auto 50px; text-align:center; font-size:200%; color:#111; word-break:keep-all; }
+.page_info h4 { width:80%; line-height:27px; margin:0 auto 50px; text-align:center; font-size:130%; font-weight:normal; color:#333; word-break:keep-all; }
+.page_info .info_img { width:100%; margin:0 auto 30px; text-align:center; }
+.page_info .info_img img { max-width:100%; }
+.page_info .txt { display:block; width:80%; line-height:180%; margin:0 auto 70px; text-align:left; font-size:100%; color:#555; word-break:keep-all; }
+.page_info .sub_txt {margin:0 auto 50px;font-size:16px;line-height:22px;letter-spacing:-.3px;-webkit-box-sizing:border-box;box-sizing:border-box;word-break:keep-all;color:#555;}
+.page_info .signature { width:100%; text-align:right; }
+.page_info .signature s1 { display:block; margin:0 30px 5px 0; font-size:120%; }
+.page_info .signature s2 { display:block; margin:0 30px 20px 0; font-size:140%; font-weight:bold; }
+.page_info iframe { width:100%; height:600px; margin:0 auto 30px; border:none; }
+.page_info .section { text-align:left; line-height:30px; margin:0 0 40px; }
+.page_info .section ul { padding:15px 0; border-bottom:1px solid #eee; }
+.page_info .section li:first-child { margin:0 0 5px; font-size:130%; font-weight:700; color:#111; }
+.page_info .section li { display:block; line-height:20px; padding:0 0 0 10px; vertical-align:top; font-size:110%; color:#666; }
+
+/* 연혁 */
+.history .content { display:flex; flex-wrap:wrap; flex-direction:column; position:relative; padding:0 0 0 40px; }
+.history .content p { margin:40px 0 0 -20px; font-size:200%; font-weight:bold; }
+.history .content > li { line-height:200%; list-style-type:disc; font-size:110%; }
+
+/* 특허/인증 */
+.list_01 ul { display:flex; flex-wrap:wrap; flex-direction:row; justify-content:space-between; position:relative; width:100%; margin:0 0 40px/*하단여백*/; }
+.list_01 > ul > li { flex:0 1 23.5%; margin:0 0 20px; align-self:flex-start; }
+.list_01 > ul > li a { display:block; margin:0 0 10px; overflow:hidden; }
+.list_01 > ul > li img { width:100%; }
+.list_01 > ul > li p { line-height:20px; font-size:100%; }
+
+.grid2 > ul {display:flex;flex-wrap:wrap;flex-direction:row;justify-content:space-between;position:relative;width:100%;margin:0 0 40px}
+.grid2 > ul > li {flex:0 1 47.5%;margin:0 0 20px;}
+.grid2 > ul > li > ul > li {margin-bottom:4px;}
+.grid2 > ul > li > ul > li > ul > li {padding-left:17px;color:#999}
+.grid2 ul li i {color:#ffa000;background-color:#330000;}
+.grid2 li {font-size:16px;color:#555}
+.grid2 h5 {margin:0 0 14px;font-size:20px;letter-spacing:-0.05em;}
+
+@media all and (max-width:575px) {
+    .list_01 > ul > li {flex:0 1 47.5%; }
+    .page_info .sub_txt {font-size:14px;}
+    .grid2 > ul > li {flex:0 1 100%;margin:0 0 40px;}
+}

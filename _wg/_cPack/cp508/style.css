@@ -1,0 +1,79 @@
+
+	.cp508 { position:relative; }
+	.cp508 .owl-carousel.ul { position:relative; width:100%; max-width:2000px; margin:0 auto 100px; overflow:hidden; }
+	.cp508 .owl-carousel.ul li { position:relative; overflow:hidden; }
+	.cp508 .owl-carousel.ul li a { display:block; }
+	.cp508 .owl-carousel.ul li a img { position:absolute; bottom:0; left:50%; transform:translate(-50%,0); }
+
+
+        /* 텍스트 애니메이션 */
+		/* 기본 구조 및 정렬 */
+        .cp508 .owl-carousel.ul li .text { display:block; position:absolute; top:32%; left:50%; max-width:1100px; width:90%; height:0; padding:0 5%; white-space:break-space; transform:translate(-50%,-50%); }
+        .cp508 .owl-carousel.ul li .text.left { }
+        .cp508 .owl-carousel.ul li .text.center { text-align:center; }
+        .cp508 .owl-carousel.ul li .text.right { text-align:right; }
+		/* 텍스트 기본 설정 */
+        .cp508 .owl-carousel.ul li t1,
+        .cp508 .owl-carousel.ul li t2,
+        .cp508 .owl-carousel.ul li t3,
+        .cp508 .owl-carousel.ul li t4 { display:block; position:relative; width:100%; color:#111; letter-spacing:-0.05em; opacity:0; white-space:break-space; }
+		/* 글자 설정 */
+        .cp508 .owl-carousel.ul li t1 { font-size:220%; }
+        .cp508 .owl-carousel.ul li t2 { margin:0; font-size:130%; }
+        .cp508 .owl-carousel.ul li t3 { min-width:80px; width:10%; line-height:250%; margin:3% 0 0; border-radius:5px; background:rgba(0,0,0,.8); font-size:110%; color:#fff; text-align:center; }
+        .cp508 .owl-carousel.ul li b { font-weight:bold; }
+        @media all and (max-width:575px) {
+        	.cp508 .owl-carousel.ul li .text { top:25%; font-size:48%; }
+        	.cp508 .owl-carousel.ul li .text.left { width:55%; padding:0 40% 0 5%; }
+        	.cp508 .owl-carousel.ul li .text.center { }
+        	.cp508 .owl-carousel.ul li .text.right { width:55%; padding:0 17% 0 28%; }
+		}
+		@media all and (min-width:576px) and (max-width:960px) {
+        	.cp508 .owl-carousel.ul li .text { top:27%; font-size:70%; }
+        	.cp508 .owl-carousel.ul li .text.left { width:45%; padding:0 45% 0 10%; }
+        	.cp508 .owl-carousel.ul li .text.center { }
+        	.cp508 .owl-carousel.ul li .text.right { width:45%; padding:0 10% 0 45%; }
+		}
+		@media all and (min-width:961px) and (max-width:1200px) {
+        	.cp508 .owl-carousel.ul li .text { top:32%; font-size:85%; }
+        	.cp508 .owl-carousel.ul li .text.left { width:40%; padding:0 50% 0 10%; }
+        	.cp508 .owl-carousel.ul li .text.center { }
+        	.cp508 .owl-carousel.ul li .text.right { width:40%; padding:0 10% 0 50%; }
+		}
+
+		.cp508 .owl-item.active t1 { animation-name:move_in; animation-delay:1.0s; }
+		.cp508 .owl-item.active t2 { animation-name:move_in; animation-delay:1.2s; }
+		.cp508 .owl-item.active t3 { animation-name:move_in; animation-delay:1.4s; }
+		.cp508 .owl-item.active t1,
+		.cp508 .owl-item.active t2,
+		.cp508 .owl-item.active t3 { animation-duration:0.6s; animation-direction:alternative; animation-iteration-count:1; animation-fill-mode:both; }
+        @keyframes move_in {
+            0% { top:20px; opacity:0; }
+            70% { top:-5px; opacity:0.85; }
+            100% { top:0px; opacity: 1; }
+        }
+
+	/* 방향키와 버튼의 기본 속성은 /_wg/css/wg.css 에서 불러옵니다. */ 
+	/* 방향키 */
+    .cp508 .owl-carousel.ul.normal .owl-nav .owl-prev { top:58%; }
+    .cp508 .owl-carousel.ul.normal .owl-nav .owl-next { top:58%; }
+
+
+	@media all and (max-width:575px) {
+    	.cp508 .owl-carousel.ul li a { height:130px; }
+    	.cp508 .owl-carousel.ul li a img { width:866px; height:130px; }
+        .cp508 .owl-nav { display:none; }
+        .cp508 .owl-dots { opacity:1; }
+	}
+	@media all and (min-width:576px) and (max-width:960px) {
+    	.cp508 .owl-carousel.ul li a { height:200px; }
+    	.cp508 .owl-carousel.ul li a img { width:1335px; height:200px; }
+	}
+	@media all and (min-width:961px) and (max-width:1200px) {
+    	.cp508 .owl-carousel.ul li a { height:250px; }
+    	.cp508 .owl-carousel.ul li a img { width:1668px; height:250px; }
+	}
+	@media all and (min-width:1201px) {
+    	.cp508 .owl-carousel.ul li a { height:300px; }
+    	.cp508 .owl-carousel.ul li a img { width:2000px; height:300px; }
+	}

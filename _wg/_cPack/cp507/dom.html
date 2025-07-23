@@ -1,0 +1,48 @@
+<!--------------------------------------------------------------------------------------------------------------
+
+	cp507 (최상단 슬라이드 배너)
+
+	★ 디자인 보관함에 복구용 스킨이 추가되어 있으니 걱정하지 마시고, 얼마든지 연습하시면서 수정해보세요.
+
+	===== 설정 =====
+	배경이미지 경로 : /sde_design/skin번호/_wg/_cPack/cp507/img/
+	필요가 없는 배너는 <li>내용</li>을 삭제하시면 되겠습니다.
+	ON/OFF 기능으로 숨김가능.(공통매뉴얼 10번 글 참조)
+
+	===== 명령어 =====
+	href				: 링크(이동할 페이지의 주소를 적어주세요.)
+	url('이미지경로')	: 이미지경로
+	t1, t2				: 텍스트가 들어갑니다.
+	전체롤링시간		   : 아래 option.js 에서 변경가능.
+
+-------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/_cPack/cp507/style.css)-->
+<!--@js(/_wg/_cPack/cp507/option.js)-->
+
+<div class="cp507" js-banner-module="cp507" js-hide>
+    <div class="cp507_slide">
+		<ul class="owl-carousel ul normal">
+            <li js-banner>
+                <a href="{$js-href}" target="{$js-target}" style="background-image:url('{$js-src}'); background-color:#eee; color:#111;"><!-- 배경 이미지 / 배경색 / 글자색 -->
+                    <p class="text">
+                        <t1>{$js-banner-description1}</t1><!-- 부제목 -->
+                        <t2>{$js-banner-description2}</t2><!-- 제목 -->
+                    </p>
+                </a>
+            </li>
+            <li js-banner>
+                <a href="{$js-href}" target="{$js-target}" style="background-image:url('{$js-src}'); background-color:#eee; color:#111;"><!-- 배경 이미지 / 배경색 / 글자색 -->
+                    <p class="text">
+                        <t1>{$js-banner-description1}</t1><!-- 부제목 -->
+                        <t2>{$js-banner-description2}</t2><!-- 제목 -->
+                    </p>
+                </a>
+            </li>
+		</ul>
+    </div>
+    <!-- 닫기버튼 -->
+    <span class="close -cap" ></span>
+    <!-- 체크박스(사용안함) -->
+    <span class="checkbox"><input type="checkbox" /></span>
+</div><div class="divClear"></div>

@@ -1,0 +1,34 @@
+<!------------------------------------------------------------------------------
+
+	cp515 - 3단 슬라이드 배너
+	* UPDATE 2023.09.11
+
+------------------------------------------------------------------------------>
+
+<!--@css(/_wg/_cPack/cp515/style.css)-->
+<!--@js(/_wg/_cPack/cp515/option.js)-->
+
+<div class="cp515 xans-board-list -frame move-page" js-banner-module="cp515" js-hide>
+    <div class="bg" data-aos="fade-down" style="background-color:#f8f8f8;/*배경색*/"></div>
+    <h2 class="title lg move-tit">{$js-group-description}</h2>
+    <div class="owl-carousel ul normal -switch">
+        <li js-banner>
+            <a href="{$js-href}" target="{$js-target}">{$js-banner}
+                <p class="text left">
+                    <t1>{$js-banner-description1}</t1>
+                    <t2>{$js-banner-description2}</t2>
+                    <t3><span>바로가기</span></t3>
+                </p>
+            </a>
+        </li>
+        <li js-banner>
+            <a href="{$js-href}" target="{$js-target}">{$js-banner}
+                <p class="text left">
+                    <t1>{$js-banner-description1}</t1>
+                    <t2>{$js-banner-description2}</t2>
+                    <t3><span>바로가기</span></t3>
+                </p>
+            </a>
+        </li>
+    </div>
+</div>

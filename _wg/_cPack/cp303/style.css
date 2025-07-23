@@ -1,0 +1,50 @@
+
+    .cp303 { position:relative; margin:0 auto 70px; }
+    .cp303:after { content:""; display:block; *zoom:1; clear:both; }
+
+	.cp303 section a { overflow:hidden; }
+	.cp303 section img { width:100%; }
+
+
+
+/** 좌측 배너 영역 **/
+	.cp303 section { position:relatvie; float:left; width:66.8425%; }
+	.cp303 section img { width:100%; }
+	.cp303 section p:nth-child(1) { margin:0 0 2.35%; }
+	.cp303 section p:nth-child(2) { margin:0 0 2.35%; font-size:0; line-height:0; letter-spacing:-4px; }
+	.cp303 section p:nth-child(2) a { position:relative; float:right; width:31.103%; margin:0 0 2.378%; }
+	.cp303 section p:nth-child(2) a:nth-child(1) { float:left; width:66.536%; max-height:475px; margin:0 0 0 0; overflow:hidden; }
+		/* 유튜브로 사용시 */
+        .cp303 p a.youtube { position:relative; max-width:100%; height:0; padding:0 0 37.5%; overflow:hidden; }
+        .cp303 p a.youtube iframe,
+        .cp303 p a.youtube object,
+        .cp303 p a.youtube embed { position:absolute; top:0; left:0; bottom:0; width:100%; height:100%; border:0; }
+
+
+
+/** 우측 슬라이드 영역 **/
+    #cp303_slide { position:relative; z-index:1; float:right; width:31.579%; overflow:hidden; }
+
+	/* 버튼 */
+    #cp303_slide .owl-dots { position:absolute; z-index:10; bottom:10px; width:100%; text-align:center; opacity:0; transition:opacity .3s 8s ease; }
+    #cp303_slide:hover .owl-dots { opacity:1.0; transition-delay:0s; }
+    #cp303_slide .owl-dots .owl-dot { display:inline-block; position:relative; width:15px; height:3px; margin:0 2px; box-shadow:0 1px 3px rgba(0,0,0,.2); border-radius:20px; background:rgba(255, 255, 255, 0.5); cursor:pointer; box-sizing:border-box; overflow:hidden; }
+    #cp303_slide .owl-dots .owl-dot span { position:absolute; z-index:2; left:0; top:0; width:0; height:3px; background:rgba(255,255,255,.5); } /* 타이머 */
+    #cp303_slide .owl-dots .owl-dot.active { width:25px; background:rgba(0,0,0,.8); color:#fff; }
+
+	/* 방향키 */
+    #cp303_slide .owl-nav { position:absolute; z-index:10; top:50%; width:100%; height:0; margin-top:-22.5px; opacity:0; cursor:pointer; transition:all .3s ease; }
+    #cp303_slide:hover .owl-nav { opacity:1; }
+        #cp303_slide .owl-prev { position:absolute; left:2px; width:35px; height:45px; border-radius:8px; background-image:url('/_wg/img/_arrow/arrowLW_21.gif'); background-color:rgba(50,50,50,.2); background-repeat:no-repeat; background-position:50% 50%; -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px); transition:left .3s .5s, background .3s ease; text-indent:-9999px; }
+        #cp303_slide:hover .owl-prev { left:7px; }
+        #cp303_slide:hover .owl-prev:hover { background-color:rgba(50,50,50,.4); }
+        #cp303_slide .owl-next { position:absolute; right:2px; width:35px; height:45px; border-radius:8px; background-image:url('/_wg/img/_arrow/arrowRW_21.gif'); background-color:rgba(50,50,50,.2); background-repeat:no-repeat; background-position:50% 50%; -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px); transition:right .3s .5s, background .3s ease; text-indent:-9999px; }
+        #cp303_slide:hover .owl-next { right:7px; }
+        #cp303_slide:hover .owl-next:hover { background-color:rgba(50,50,50,.4); }
+
+	@media all and (max-width:575px) {
+		.cp303 {  }
+        .cp303 section { float:none; width:100%; margin:0 0 10px; }
+        .cp303 section:after { content:""; display:block; *zoom:1; clear:both; }
+        #cp303_slide { float:none; width:100%; }
+	}

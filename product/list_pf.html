@@ -1,0 +1,245 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Product_menupackage" class="product_menupackage">
+    <!--@css(/_wg/css/menupackage.css)-->
+    <div id="titleArea" module="product_headcategory">
+        <h2>{$title_text}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+        </span>
+    </div>
+
+    <div class="title" module="product_headcategory">
+        <p class="banner">{$top_image1_tag}{$top_image2_tag}{$top_image3_tag}</p>
+    </div>
+
+    <!--@import(/product/shoppQ/searchContent.html)-->
+   
+    <ul class="menuCategory p0202">
+        <li module="product_displaycategory" style="display:{$display};" class="{$selected} dm2 li">
+            <a href="/product/list_pf.html?{$param_cate_no}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+            <ul module="product_children" class="dm3-wrap">
+                <li class="{$selected} dm3 li">
+                    <a href="/product/list_pf.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>                   
+                    <ul module="product_children" class="subCategory dm4-wrap">
+                        <li class="{$selected} dm4"><a href="/product/list_pf.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                        <li class="{$selected} dm4"><a href="/product/list_pf.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                    </ul>
+                </li>
+                <li class="{$selected} dm3 li">
+                    <a href="/product/list_pf.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>                   
+                    <ul module="product_children" class="subCategory dm4-wrap">
+                        <li class="{$selected} dm4"><a href="/product/list_pf.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                        <li class="{$selected} dm4"><a href="/product/list_pf.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div><div class="divClear"></div>
+
+<!-- 추천상품-->
+<div module="product_listrecommend" class="ec-base-product normal">
+    <!--
+        $count = 4
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2 class="title lg">BEST ITEMS</h2>
+    <ul class="prdList grid4">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div>
+
+<!-- 신상품 (New arrivals) -->
+<div module="product_listnew" class="ec-base-product normal">
+    <!--
+        $count = 4
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2 class="title lg">NEW ITEMS</h2>
+    <ul class="prdList grid4">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div>
+
+<!-- 일반상품 -->
+<div module="product_normalpackage">
+    <!--@css(/_wg/css/list_pf.css)-->
+    <div id="Product_ListMenu" class="anchor"></div><!-- 앵커변경 -->
+    <div module="product_normalmenu" id="{$listmenu_position}">
+        <!--
+            $compare_page = /product/compare.html
+        -->
+        <div class="function">
+            <p class="prdCount"><strong>{$total_count}</strong> ITEMS</p>
+            <select id="selArray" name="selArray" module="product_Orderby">
+                <option value="#none">정렬방식</option>
+                <option value="{$param}">{$sort_name}</option>
+                <option value="{$param}">{$sort_name}</option>
+            </select>
+            <div class="compare {$product_compare_display|display}"><a href="#none" onclick="{$product_compare_action}">상품비교</a></div>
+        </div>
+
+        <fieldset class="condition {$select_search_display|display}">
+            <legend>조건별 검색</legend>
+            <p>
+                <!--@js(/js/module/product/product_selectsearch.js)-->
+                <select class="FirstSelect" module="product_FirstSelect">
+                    <option value="">-조건선택-</option>
+                    <option value="{$value}" {$selected}>{$title}</option>
+                    <option value="{$value}" {$selected}>{$title}</option>
+                </select>
+                <select class="SecondSelect" module="product_SecondSelect">
+                    <option value="">-조건선택-</option>
+                    <option value="{$value}" {$selected}>{$title}</option>
+                    <option value="{$value}" {$selected}>{$title}</option>
+                </select>
+                <a href="#SelectSearch" class="btnSubmit">검색</a>
+            </p>
+        </fieldset>
+    </div>
+
+    <div module="product_listnormal" class="ec-base-product normal">
+        <!--
+            $count = 64
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+        -->
+        <ul class="prdList pf grid4">
+            <li class="item DB_rate" id="anchorBoxId_{$product_no}" data-price="{$product_custom}^{$product_price}">
+                <div class="thumbnail">
+                    <span class="chk"><input type="checkbox" class="{$product_compare_class} {$product_compare_display|display}" /></span><!-- 체크박스 -->
+                    <div class="dc_rate md -mov"><span class="sale">{$prd_price_sale}</span><div class="per"></div></div><!-- 할인률 -->
+                    <div class="-likeButton {$disp_likeprd_class} -mov"><button type="button" class="-mov">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div><!-- 좋아요 -->
+                    <div class="list_button -mov">
+                        <span class="zoom"><a href="/product/detail.html{$param}" target="_blank"><img src="/_wg/img/_btn/list_blank.png"></a></span><!-- 새창보기 -->
+                        <span class="basket">{$basket_icon}</span><!-- 장바구니 -->
+                        <span class="option">{$option_preview_icon}</span><!-- 옵션보기 -->
+                        <span class="wish">{$list_wish_icon}</span><!-- 관심상품 -->
+                    </div>
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+                        <span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span><!-- 꾸미기 아이콘 -->
+            
+                        <!-- 추가이미지 -->
+                        <div class="add_thumb">
+                            <img src="{$image_medium}" id="{$image_medium_id}" class="off" alt="{$seo_alt_tag}" />
+                            <div class="d_thumb">
+                                <ul class="img ul normal">
+                                    <li><img src="{$image_medium}" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src1}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src2}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src3}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src4}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src5}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                </ul>
+                                <ul class="btn displaynone"></ul>
+                                <span class="arrow prev displaynone">이전</span>
+                                <span class="arrow next displaynone">다음</span>
+                            </div>
+                        </div><!-- //추가이미지 -->
+                        
+                    </a>
+                </div>
+                <div class="description">
+                    <!-- 컬러칩 -->
+                    <p class="color {$colorchip_display|display}">
+                        <div module="product_Colorchip" class="colorChip">
+                            <span class="chips" style="background-color:{$color}"></span>
+                            <span class="chips" style="background-color:{$color}"></span>
+                        </div>
+                    </p>
+                    <p class="name">
+                        <a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a>
+                    </p>
+                    <ul module="product_ListItem" class="spec">
+                        <li class="{$item_display|display}" rel="{$item_title|striptag}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        <li class="{$item_display|display}" rel="{$item_title|striptag}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                    <!-- <div class="status">
+                        <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</div>
+                    </div> -->
+                    <div class="list_button mo"><!-- 모바일용 -->
+                        <span class="option">{$option_preview_icon}</span><!-- 옵션보기 -->
+                        <span class="basket">{$basket_icon}</span><!-- 장바구니 -->
+                        <span class="wish">{$list_wish_icon}</span><!-- 관심상품 -->
+                        <span class="zoom"><a href="/product/detail.html{$param}" target="_blank"><img src="/_wg/img/ico_blank.png"></a></span><!-- 새창보기 -->
+                    </div>
+                </div>
+            </li>
+            <li class="item DB_rate" id="anchorBoxId_{$product_no}" data-price="{$product_custom}^{$product_price}">
+                <div class="thumbnail">
+                    <span class="chk"><input type="checkbox" class="{$product_compare_class} {$product_compare_display|display}" /></span><!-- 체크박스 -->
+                    <div class="dc_rate md -mov"><span class="sale">{$prd_price_sale}</span><div class="per"></div></div><!-- 할인률 -->
+                    <div class="-likeButton {$disp_likeprd_class} -mov"><button type="button" class="-mov">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div><!-- 좋아요 -->
+                    <div class="list_button -mov">
+                        <span class="zoom"><a href="/product/detail.html{$param}" target="_blank"><img src="/_wg/img/_btn/list_blank.png"></a></span><!-- 새창보기 -->
+                        <span class="basket">{$basket_icon}</span><!-- 장바구니 -->
+                        <span class="option">{$option_preview_icon}</span><!-- 옵션보기 -->
+                        <span class="wish">{$list_wish_icon}</span><!-- 관심상품 -->
+                    </div>
+                    <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+                        <span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span><!-- 꾸미기 아이콘 -->
+            
+                        <!-- 추가이미지 -->
+                        <div class="add_thumb">
+                            <img src="{$image_medium}" id="{$image_medium_id}" class="off" alt="{$seo_alt_tag}" />
+                            <div class="d_thumb">
+                                <ul class="img ul normal">
+                                    <li><img src="{$image_medium}" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src1}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src2}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src3}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src4}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                    <li><img data-src="{$add_image_src5}" class="lazy" loading="lazy" alt="{$seo_alt_tag}" /></li>
+                                </ul>
+                                <ul class="btn displaynone"></ul>
+                                <span class="arrow prev displaynone">이전</span>
+                                <span class="arrow next displaynone">다음</span>
+                            </div>
+                        </div><!-- //추가이미지 -->
+                        
+                    </a>
+                </div>
+                <div class="description">
+                    <!-- 컬러칩 -->
+                    <p class="color {$colorchip_display|display}">
+                        <div module="product_Colorchip" class="colorChip">
+                            <span class="chips" style="background-color:{$color}"></span>
+                            <span class="chips" style="background-color:{$color}"></span>
+                        </div>
+                    </p>
+                    <p class="name">
+                        <a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a>
+                    </p>
+                    <ul module="product_ListItem" class="spec">
+                        <li class="{$item_display|display}" rel="{$item_title|striptag}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        <li class="{$item_display|display}" rel="{$item_title|striptag}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                    <!-- <div class="status">
+                        <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</div>
+                    </div> -->
+                    <div class="list_button mo"><!-- 모바일용 -->
+                        <span class="option">{$option_preview_icon}</span><!-- 옵션보기 -->
+                        <span class="basket">{$basket_icon}</span><!-- 장바구니 -->
+                        <span class="wish">{$list_wish_icon}</span><!-- 관심상품 -->
+                        <span class="zoom"><a href="/product/detail.html{$param}" target="_blank"><img src="/_wg/img/ico_blank.png"></a></span><!-- 새창보기 -->
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div module="product_normalpaging" class="ec-base-paginate">
+    <a href="{$param_first}" class="first"><img src="/_wg/img/_btn/btn_page_first.png" alt="첫 페이지" /></a>
+    <a href="{$param_before}"><img src="/_wg/img/_btn/btn_page_prev.png" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="/_wg/img/_btn/btn_page_next.png" alt="다음 페이지" /></a>
+    <a href="{$param_last}" class="last"><img src="/_wg/img/_btn/btn_page_last.png" alt="마지막 페이지" /></a>
+</div>

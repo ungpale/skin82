@@ -1,0 +1,120 @@
+<!------------------------------------------------------------------------------
+
+	### cp793 (패널) ###
+
+	===== 옵션 클래스 =====
+	-mov : 부드러운 효과
+	-scl : 살짝커짐
+	-opt : 투명효과
+
+	===== 출석체크설정 =====
+	프로모션 >  이벤트 관리 > 출석체크 이벤트 에서 설정이 가능합니다.
+
+------------------------------------------------------------------------------>
+
+<div class="loadhtml">
+
+    <div class="scrollbar_box">
+		<div class="cp793">
+            
+            <!-- 패널 슬라이드 배너 -->
+            <div class="cp793_slide" js-banner-module="cp793_slide" js-hide>
+                <ul class="owl-carousel ul normal">
+                    <li js-banner><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+                    <li js-banner><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+                </ul>
+            </div>
+           
+            
+            
+            <!-- 패널배너 -->
+            <ul class="cp793_bnr" js-banner-module="cp793_bnr" js-hide>
+                <li js-banner><a href="{$js-href}" target="{$js-target}" class="-mov -opt">{$js-banner}</a></li>
+                <li js-banner><a href="{$js-href}" target="{$js-target}" class="-mov -opt">{$js-banner}</a></li>
+            </ul>
+
+            
+    
+            <!-- 패널 메뉴 -->
+    		<div class="793_menu">
+                <ul class="menu">
+                    <li><a href="/board/free/list.html?board_no=1">공지사항</a></li>
+                    <li><a href="/board/product/list.html?board_no=6">문의하기</a></li>
+
+                    <li><a href="/board/product/list.html?board_no=4">상품후기</a></li>
+                    <li><a href="/_wg/_cPack/cp576/dom.html">포토후기</a></li>
+
+                    <!-- <li><a href="/board/gallery/list.html?board_no=8">이벤트</a></li> -->
+                    <li><a href="/board/index.html">고객센터</a></li>
+
+                    <li><a href="/myshop/index.html">마이쇼핑</a></li>
+                    <li><a href="/myshop/order/list.html">배송조회</a></li>
+
+                    <li><a href="/order/basket.html">장바구니</a></li>
+                    <li><a href="/myshop/board_list.html">내게시물</a></li>
+
+                    <li><a href="/myshop/mileage/historyList.html">적립금</a></li>
+                    <!-- <li><a href="/myshop/deposits/historyList.html">예치금</a></li> -->
+
+                    <!-- <li><a href="#none">등급안내</a></li> -->
+                    <li><a href="/myshop/coupon/coupon.html">쿠폰관리</a></li>
+
+                    <li><a href="/myshop/likeit/product.html">좋아요</a></li>
+                    <li><a href="/product/search.html">상품검색</a></li>
+                    <li><a href="/product/list.html?cate_no=52">개인결제창</a></li>
+                </ul>
+            </div><!-- //패널 메뉴 -->
+
+    
+
+            <!-- 고객센터 -->
+            <div class="cp793_customer">
+            	<!--@import(/_wg/import/oper_time.html)-->
+			</div>
+    
+    
+            <!-- 계좌안내 -->
+            <div class="cp793_bank">
+            	<!--@import(/_wg/import/bank_info.html)-->
+            </div>
+		</div>
+    </div>
+   
+    <script>
+    function loadDataSuccess (data, mallId) {
+      for (var i = 0; i < data.length; i++) {
+        const brUseBoolean = !!(data[i].br_use === 'y' || data[i].br_use === 'Y');
+        if ($('[js-banner-module="' + data[i].br_call_id + '"]').html() && (data[i].br_call_id == "cp793_bnr" || data[i].br_call_id == "cp793_slide")) {
+          var bannerName = data[i].br_name;
+          var bannerMemo = data[i].br_memo;
+          $('[js-banner-module="' + data[i].br_call_id + '"]').each(function (index, value) {
+            var data = $(value).clone().wrap('<div/>').parent().html();
+            data = data.replace(/%7B/gi, '{');
+            data = data.replace(/%7D/gi, '}');
+            data = data.replace(/%24/gi, '$');
+            data = data.replace(/{\$js-group-title}/gi, bannerName);
+            data = data.replace(/{\$js-group-description}/gi, bannerMemo);
+            $(value).replaceWith(data);
+          });
+          getBannderData(mallId, data[i], brUseBoolean);
+        }
+      }
+      setTimeout(() => {
+        $('[js-banner-module]').removeAttr('js-hide');
+      }, 300);
+      return false;
+    }
+    (function(){
+      var scriptArray = [];
+      var scripts = document.getElementsByTagName('script');
+      for (var i = 0; i < scripts.length; i++) {
+        var idx = scripts[i].src.indexOf('/web/upload/appfiles');
+        if (idx !== -1) {
+          scriptArray.push(scripts[i].src.split('/web/upload/appfiles/')[1]);
+        }
+      }
+      onoffLoad();
+      return loadData(scriptArray);
+    }());
+    </script>
+</div>

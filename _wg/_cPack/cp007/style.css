@@ -1,0 +1,6 @@
+
+    .cp007 { position:relative; margin:0 auto 40px/*하단여백*/; }
+    .cp007:after { content:""; display:block; *zoom:1; clear:both; }
+    .cp007 > ul > li:first-child { margin:0; }
+    .cp007 > ul > li { float:left; width:50%; overflow:hidden; }
+    .cp007 > ul > li img { width:100%; }

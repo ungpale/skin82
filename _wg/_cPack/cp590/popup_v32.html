@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title></title>
+    <!--@css(/layout/basic/css/common.css)--><!-- 수정 -->
+    <!--@import(/_wg/base.html)--><!-- 베이스 -->
+</head>
+<body>
+
+<!--------------------------------------------------------------------------------------------------------------
+
+	cp590 - V32 (멀티팝업V32)
+
+-------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/_cPack/cp590/style.css)-->
+<!--@js(/_wg/_cPack/cp590/option.js)-->
+
+<div class="cp590 v32" js-banner-module="cp590" js-hide>
+	<div class="owl-carousel ul">
+        <li js-banner data-text="{$js-alt}"><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+        <li js-banner data-text="{$js-alt}"><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+	</div>
+</div>
+<div class="popup_footer" module="Popup_Footer">{$footer}</div>
+<!-- 배너앱 코드 -->
+<!--@import(/_wg/import/bnrApp.html)-->
+</body>
+</html>

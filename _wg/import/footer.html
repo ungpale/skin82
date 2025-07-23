@@ -1,0 +1,109 @@
+<!--------------------------------------------------------------------------------------------------------------------------------------
+
+    ### 하단정보 ###
+    
+    • 상점관리 > 기본정보관리 > 내쇼핑몰 정보 에 회사정보를 기재해주세요. 기재한 사항은 사이트 하단에 노출됩니다.
+
+    • 아이콘 및 반품주소지는 직접 입력해주세요.
+
+--------------------------------------------------------------------------------------------------------------------------------------->
+<!--@css(/_wg/css/footer.css)-->
+
+<div module="Layout_footer" class="footer_wrap">
+    
+	<!-- cp920 (인스타그램) -->
+	<!--@import(/_wg/_cPack/cp920/dom.html)-->
+    
+	<!--<div class="bar type1"><img src="/_wg/img/_bar/bar_point1.png" alt="" /></div>-->
+
+    <!-- cp005 (하단배너) -->
+    <!-- @import(/_wg/_cPack/cp005/dom.html) -->
+
+    <div id="footer" class="-switch">
+
+        <!-- 하단메뉴 -->
+        <!--@import(/_wg/import/footer_menu.html)-->
+
+        <!-- 고객센터안내 -->
+        <!--@import(/_wg/import/oper_time.html)-->
+
+        <!-- 입금계좌안내 -->
+        <!--@import(/_wg/import/bank_info.html)-->
+
+        <!-- 인쇄제작안내 -->
+        <!--@import(/_wg/import/footer_produce.html)-->
+
+        <!-- 배송안내 -->
+        <!--@import(/_wg/import/delivery_info.html)-->
+
+        <!-- 구매안전서비스 -->
+        <!--@import(/_wg/import/escrow_info.html)-->
+
+        <line></line>
+
+        <!-- 회사정보 ( 상점관리 > 기본정보관리 > 내쇼핑몰 정보에 기재하신 내용이 자동으로 출력됩니다. ) -->
+        <div class="footer_company">
+    		<h4 class="title sm">회사정보</h4>
+            <ul>
+                <li><strong>회사명</strong><span>{$company_name}</span></li>
+                <li><strong>대표</strong><span>{$president_name}</span></li>
+                <li><strong>대표전화</strong><span>{$phone}</span></li>
+                <li><strong>팩스</strong><span>{$fax}</span></li>
+                <li><strong>주소</strong><span>{$mall_addr1} {$mall_addr2}</span></li>
+                <li><strong>사업자 등록번호</strong><span>{$company_regno}</span></li>
+                <li><strong>통신판매업 신고</strong><span>{$network_regno} &nbsp;{$biz_no_link}</span></li>
+                <li><strong>개인정보관리책임자</strong><span>{$cpo_name} (<a href="mailto:{$cpo_email}">{$cpo_email}</a>)</span></li>
+                <li><strong>이메일</strong><span><a href="mailto:{$email}"><i class="xi-mail-o"></i> help@wjpackage.com</a></span></li>
+            </ul>
+        </div>
+
+        
+
+        
+
+    </div>
+
+    <div class="footer_end">
+        <div class="footer_end_inner -switch">
+            <p class="copyright"><i class="xi-copyright"></i> <strong>{$mall_name}</strong>. ALL RIGHTS RESERVED. Hosting by Cafe24 Corp.</p>
+        </div>
+    </div>
+</div>
+
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <p class="graph">현재 결제가 진행중입니다.</p>
+        <p class="txt">
+            본 결제 창은 결제완료 후 자동으로 닫히며, <br>
+            결제 진행 중에 본 결제 창을 닫으시면<br>
+            주문이 되지 않으니 <br>
+            결제 완료 될 때 까지 닫지 마시기 바랍니다.
+        </p>
+    </div>
+</div>
+
+<div module="Layout_multishopShipping" class="ec-base-layer typeModal">
+    <!--@css(/css/module/layout/multishopShipping.css)-->
+    <!--@js(/js/module/layout/multishopShipping.js)-->
+    <h1>WORLD SHIPPING</h1>
+    <div class="wrap worldshipLayer">
+        <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+        <div class="select">
+            <select module="Layout_multishopShippingCountrylist">
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+            </select>
+        </div>
+        <div class="select">
+            <select module="Layout_multishopShippingLanguagelist">
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+            </select>
+        </div>
+    </div>
+    <div class="ec-base-button gFull">
+        <a href="#none" class="btnSubmit">GO</a>
+    </div>
+    <a href="#none" class="btnClose">닫기</a>
+</div>

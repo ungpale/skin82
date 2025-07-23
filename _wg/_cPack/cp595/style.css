@@ -1,0 +1,24 @@
+
+    .cp595 { position:relative; float:left; top:5px; margin:0 0 0 20px; }
+	#header.fixed .cp595 { top:56px; }
+
+    .cp595 li { display:inline-block; }
+    .cp595 li a { position:relative; display:block; font-size:90%; text-decoration:none; font-size:90%; color:rgba(255,255,255,0); }
+    .cp595 li a i { width:27px; height:27px; line-height:27px; margin:0 3px 0 0; border-radius:50%; background:rgba(150,150,150,0.2); font-size:16px; color:#333; text-align:center; transition:all .3s ease; }
+    .cp595 li:hover a i { color:#fff; }
+    .cp595 li .-caption { bottom:-5px; }
+
+    .cp595 li.ico a { background:none; }
+    .cp595 li.ico a img { line-height:23px; width:23px; }
+		/* 아이콘컬러 */
+        .cp595 li:hover a.facebook i { background:#3b5998; } /* 페이스북 */
+        .cp595 li:hover a.insta i { background:url('/_wg/img/_bg/insta_bg.jpg') no-repeat; background-size:35px 35px; } /* 인스타그램 */
+        .cp595 li:hover a.naverblog i { background:#03cf5d; } /* 네이버블로그 */
+        .cp595 li:hover a.youtube i { background:#ff0000; } /* 유튜브 */
+        .cp595 li:hover a.twitter i { background:#1da1f3; } /* 트위터 */
+        .cp595 li:hover a.kakaostory i { background:#f2d51e; color:#111; } /* 카카오스토리 */
+        .cp595 li:hover a.kakao i { background:#f2d51e; color:#111; } /* 카카오톡 */
+
+    @media all and (max-width:959px) {
+        .cp595 { display:none }
+    }

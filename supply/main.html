@@ -1,0 +1,76 @@
+<!--@layout(/layout/basic/main_supply.html)-->
+
+<!--@css(/_wg/css/supply_mini.css)-->
+
+<div module="Mall_SupplyMainimage">
+    <!--@css(/css/module/mall/supplyMainimage.css)-->
+    {$supply_main_image}
+</div>
+
+<div module="Mall_SupplySearch">
+    <!--@js(/js/module/mall/supplySearch.js)-->
+    <fieldset>
+        <legend>샵상품 검색</legend>
+        {$form.searchSupply}
+        <button type="button" onclick="{$action_search_submit}" class="btnStrong">검색</button></fieldset>
+</div>
+
+<!-- 분류 -->
+<div module="Layout_CategorySupplyList"  id="category">
+    <div class="mainDirect {$main_title_display|display}"><a href="{$main_url}"><i class="xi-home-o"></i> {$main_title}</a></div>
+    <div class="position" id="{$category_list}">
+        <ul>
+            <li module="Layout_Second" id='{$category_no}'><a href='{$category_url}' class="second">{$category_name}</a>
+                <ul module="Layout_Third">
+                    <li id='{$category_no}' class="depth2"  onmouseover="{$sub_category_show}" onmouseout="{$sub_category_hide}"><a href='{$category_url}'>{$category_name}</a>
+                        <div class='sub-category' style='display:none;'>
+                            <ul>
+                                <li module="Layout_Fourth" id='{$category_no}'><a href='{$category_url}'>{$category_name}</a>
+                                    <ul module="Layout_Fifth">
+                                        <li  id='{$category_no}'><a href='{$category_url}'>{$category_name}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div module="product_listmain_1" class="ec-base-product">
+    <!--
+        $count = 8
+            ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+            ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <ul class="prdList grid4">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div>
+
+<div module="product_normalpaging" class="ec-base-paginate">
+    <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
+    <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+    <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+</div>
+
+<!-- 공급사:판매사정보 -->
+<div module="Mall_SupplyInfo" class="supplyInfo {$supply_info_display|display}">
+    {$supply_info}
+</div>
+<!-- //공급사:판매사정보 -->
+
+<!--@define(cmc_log)-->

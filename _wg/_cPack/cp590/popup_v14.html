@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title></title>
+    <!--@css(/layout/basic/css/common.css)--><!-- 수정 -->
+    <!--@import(/_wg/base.html)--><!-- 베이스 -->
+</head>
+<body>
+
+<!--------------------------------------------------------------------------------------------------------------
+
+	cp590 - V14 (멀티팝업V14)
+
+	===== 팝업설정 =====
+	경로 : 디자인 > 팝업/배너 > 팝업등록
+	팝업크기 : 가로 300픽셀 x 세로 502픽셀
+
+	===== 디자인수정 =====
+	이미지 수정방법 : http://webgood.co.kr/board/free/read.html?no=31975&board_no=3
+	이미지경로 : /sde_design/skin번호/_wg/_cPack/cp590/img/
+	이미지사이즈 : 300 X 380 픽셀 ( 원본PSD를 참고해주세요. )
+
+	===== 명령어 =====
+	data-text			: 배너명
+	href				: 링크(이동할 페이지의 주소를 적어주세요.)
+	target				: target="_parent"(메인창에 띄움)
+	src					: 이미지경로(PC와 모바일 각각 넣어주세요.)
+	롤링시간		    : 아래 option.js 에서 변경가능.
+
+-------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/_cPack/cp590/style.css)-->
+<!--@js(/_wg/_cPack/cp590/option.js)-->
+
+<div id="cp590" class="multiPopup v14">
+	<div class="owl-carousel ul">
+        
+        <!-- 1번 배너 -->
+        <li data-text="풀HD<br>쇼핑가능">
+            <a href="#none" target="_parent"><img src="/_wg/_cPack/cp590/img/01.jpg" alt=""/></a>
+        </li>
+
+        <!-- 2번 배너 -->
+        <li data-text="멀티팝업<br>제공">
+            <a href="#none" target="_parent"><img src="/_wg/_cPack/cp590/img/02.jpg" alt=""/></a>
+        </li>
+
+        <!-- 3번 배너 -->
+        <li data-text="추석연휴<br>배송지연">
+            <a href="#none" target="_parent"><img src="/_wg/_cPack/cp590/img/03.jpg" alt=""/></a>
+        </li>
+        
+        <!-- 4번 배너 -->
+        <li data-text="포토후기<br>이벤트">
+            <a href="#none" target="_parent"><img src="/_wg/_cPack/cp590/img/04.jpg" alt=""/></a>
+        </li>
+
+	</div>
+</div>
+
+<div class="popup_footer" module="Popup_Footer">{$footer}</div>
+</body>
+</html>

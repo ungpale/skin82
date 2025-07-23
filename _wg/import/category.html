@@ -1,0 +1,16 @@
+<!-- 
+    쉬운주소방식 == {$link_product_list}
+    페이지경로방식 == /{$design_page_url}{$param} 혹은 /product/list.html{$param}
+-->
+<div id="category-lnb" class="product_category swiper-slide" module="Layout_category" style="height:50px;">
+    <ul class="d1-wrap d_ratio" data-maxHeight="480" data-maxHeight2="460"><!--★중,소분류 줄바꿈 최고높이-->
+        <li class="d1 li" data-param="{$param}"><a href="/{$design_page_url}{$param}">{$name}</a></li>
+        <li class="d1 li" data-param="{$param}"><a href="/{$design_page_url}{$param}">{$name}</a></li>
+        <li class="d1 li" data-param="{$param}"><a href="/{$design_page_url}{$param}">{$name}</a></li>
+    </ul>
+    <!-- 상품분류배너 -->
+    <ul class="category_img" js-banner-module="cp801" js-hide style="display:none">
+        <li js-banner><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+        <li js-banner><a href="{$js-href}" target="{$js-target}">{$js-banner}</a></li>
+    </ul>
+</div>

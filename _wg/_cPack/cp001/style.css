@@ -1,0 +1,10 @@
+
+	.cp001 { position:relative; display:block; width:100%; max-width:1000px; height:200px; margin:0 auto 40px; overflow:hidden; }
+    .cp001 li { position:absolute; top:0; left:50%; width:1000px; height:200px; transform:translate(-50%, 0); overflow:hidden; }
+    .cp001 li img { width:100%; }
+
+	/* 테블릿 가로 + 데스크탑 */
+	@media all and (min-width:961px) {
+        .cp001 { max-width:2000px; height:400px; }
+        .cp001 li { width:2000px; height:400px; }
+	}

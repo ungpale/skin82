@@ -1,0 +1,34 @@
+<ul class="JS_topMenu menuOver">
+    <!-- 로그인전 -->
+	<li module="Layout_statelogoff"><a href="/member/login.html" class="log">로그인</a></li>
+	<li module="Layout_statelogoff">
+        <a href="/member/join.html">회원가입
+        <p class="point_ico"><strong class="-spring_x">+2,000 P</strong></p><!-- 아이콘 -->
+        </a>
+    </li>
+    
+    <!-- 로그인후 -->
+	<li module="Layout_statelogon"><a href="{$action_logout}">로그아웃</a></li>
+	<li module="Layout_statelogon"><a href="/member/modify.html">정보수정</a></li>
+
+	<li module="Layout_BoardInfo"><a href="/board/index.html">커뮤니티</a>
+		<ul>
+            <li><a href="{$board_list_url}">{$board_name}</a></li>
+            <li><a href="{$board_list_url}">{$board_name}</a></li>
+		</ul>
+	</li>
+    
+	<li><a href="/myshop/index.html">나의 쇼핑</a>
+		<ul>
+            <li><a href="/order/basket.html">장바구니</a></li>
+            <li><a href="/myshop/wish_list.html">관심상품</a></li>
+            <li><a href="/myshop/order/list.html">주문조회</a></li>
+            <li><a href="/myshop/mileage/historyList.html">적립금</a></li>
+            <li><a href="/myshop/likeit/product.html">좋아요</a></li>
+            <li><a href="/myshop/coupon/coupon.html">쿠폰관리</a></li>
+            <li><a href="/myshop/board_list.html">내게시물</a></li>
+		</ul>
+	</li>
+    <li><a href="/product/list.html?cate_no=52">개인결제창</a></li>
+
+</ul>

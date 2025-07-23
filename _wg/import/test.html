@@ -1,0 +1,134 @@
+
+<style>
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+.container{
+    padding: 20px;
+    background: #23f2fd;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.container .card{background: #fff;}
+
+.container > div:first-of-type{
+width: 100%;
+height: 100%;
+display: flex;
+gap: 24px;
+}
+
+.container > div:first-of-type > .first-area:first-of-type{
+width: calc(100% - 33.33%);
+display: flex;
+gap: 24px;
+}
+
+.container > div:first-of-type > .first-area:first-of-type div{
+width: 50%;
+}
+
+.container > div:first-of-type > .first-area:last-of-type{
+width: 30%
+}
+
+.container > div:first-of-type > .first-area:last-of-type{
+width: 30%;
+}
+
+.container .card3{
+height: 186px;
+width: 33.33%;
+}
+
+
+
+.container > div:last-of-type{
+width: 100%;
+height: 100%;
+display: flex;
+gap: 24px;
+}
+
+.container > div:last-of-type > .second-area{
+width: calc(100% - 33.33%);
+gap: 24px;
+}
+
+.container .card4{
+height: 200px;
+}
+
+.container .card5{
+height: 200px;
+width: 33.33%;
+}
+
+</style>
+
+<div class="container">
+    <div>
+        <div class="first-area">
+            <div class="card card1">card1</div>
+            <div class="card card2">card2</div>
+    	</div>
+        
+        <div class="card card3">card3</div>
+    </div>
+
+    <div>
+        <div class="second-area">
+            <div class="card card4">card4</div>
+        </div>
+
+        <div class="card card5">card5</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<style>
+/* container query card-holder 라는 이름으로 설정 */
+.card_holder {
+    container-name: card-holder;
+  	container-type: inline-size;
+    background:#ff0000;
+    display:grid;
+    gap:10px 30px;
+    grid-template: repeat(2,1fr) / repeat(3,1fr);
+}
+
+.card {
+    display:block;
+    background:#999;
+}
+/* 부모 박스인 .card_holder 사이즈가 200px 보다 작아지면 */
+/* 자식 박스의 flex-dirction 을 column 으로 바꾸어 준다. */
+@container card-holder (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+      background:#333;
+  }
+}
+</style>
+
+<div class="card_holder">
+    <div class="card">1111111111</div>
+    <div class="card">2222222222</div>
+    <div class="card">3333333333</div>
+    <div class="card">1111111111</div>
+    <div class="card">2222222222</div>
+    <div class="card">3333333333</div>
+</div>
+

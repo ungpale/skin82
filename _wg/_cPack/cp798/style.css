@@ -1,0 +1,24 @@
+
+    /* 버튼 */
+    .cp798.btn { }
+
+	/* 팝업 */
+    .cp798.popup { display:none; top:0; bottom:0; right:-30px; max-width:270px; width:100%; height:100%; padding:20px 0 0 10px; background:#fff; box-shadow:0 0 8px rgba(0,0,0,.7); opacity:0; transition:opacity .4s, right .3s .5s ease; }
+    .cp798.popup.on { opacity:1; right:0; }
+
+	/* 닫기 버튼 */
+    .cp798.popup .p-close { position:absolute; top:45%; left:-50px; width:40px; height:40px; background:none; cursor:pointer; text-align:center; transform:translate(0, -50%); transition:all .3s ease; }
+    .cp798.popup .p-close i { line-height:17px; font-size:21px; color:#fff; }
+
+    /* 스크롤바 생성을 위해 크기 고정 */
+    .cp798 .scrollbar_box { position:relative; max-width:260px; width:100%; height:calc(100vh - 70px); padding:0 10px 0 0; }
+
+	/* 타이틀 */
+    .cp798 h2 { text-align:center; margin:0 0 20px; }
+
+    .cp798 .ec-base-prdInfo { margin:0!important; padding:5px!important; border:0!important; }
+    .cp798 .prdBox { min-height:10px!important; margin-top:0 !important; }
+    .cp798 .prdBox .thumbnail { border-radius:5px; overflow:hidden; }
+    .cp798 .prdBox .prdName a { font-size:100%; }
+
+	.cP_today_empty { width:100%; margin:50px 0 0; text-align:center; }

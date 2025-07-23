@@ -1,0 +1,46 @@
+
+/** 버튼 **/
+    .cp705.btn { position:fixed; z-index:200; left:10px; height:35px; line-height:34px; padding:0 15px 0 10px; border-radius:20px; background-color:rgba(0,0,0,.8); -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); font-size:12px; color:#fff; cursor:pointer; text-align:center; opacity:1; transition:all .3s .5s ease; }
+    .cp705.btn.on { left:-45px; opacity:.4; }
+	.scroll_check.fixed .cp705.btn { left:0; opacity:0; visibility:hidden; }
+
+    .cp705.btn i { top:3px; font-size:14px; color:#fff; }
+    .cp705.btn img { display:block; position:relative; top:-1px; width:40px; height:40px; }
+
+/** 팝업 **/
+    .cp705.popup { display:none; position:fixed; left:20px; top:70px; /* 팝업위치 */ border-radius:16px; background-color:#fff; box-shadow:0 3px 10px rgba(0,0,0,0.2); opacity:0; overflow:hidden; transition:opacity .3s, top .3s .5s ease; }
+    .cp705.popup.on { top:80px; opacity:1; }
+
+/** 슬라이더 **/
+    .cp705_slide { position:relative; z-index:1; width:100%; overflow:hidden; }
+
+	/** 멀티팝업 V32 **/
+    .cp705_slide.v32 { width:300px; }
+
+	/* 방향키 */
+    .cp705 .owl-nav { position:absolute; z-index:10; top:50%; width:100%; height:0; margin-top:-27%; opacity:0; transition:opacity .4s ease; }
+    .cp705:hover .owl-nav { opacity:1; }
+        .cp705 .owl-prev { position:absolute; left:2px; width:35px; height:45px; border-radius:8px; background-image:url('/_wg/img/_arrow/arrowLW_21.gif') !important; background-color:rgba(0,0,0,.2) !important; background-repeat:no-repeat !important; background-position:50% 50% !important; transition:left .3s .5s, background .3s ease; text-indent:-9999px; }
+        .cp705:hover .owl-prev { left:7px; }
+        .cp705:hover .owl-prev:hover { background-color:rgba(0,0,0,.4) !important; }
+        .cp705 .owl-next { position:absolute; right:2px; width:35px; height:45px; border-radius:8px; background-image:url('/_wg/img/_arrow/arrowRW_21.gif') !important; background-color:rgba(0,0,0,.2) !important; background-repeat:no-repeat !important; background-position:50% 50% !important; transition:right .3s .5s, background .3s ease; text-indent:-9999px; }
+        .cp705:hover .owl-next { right:7px; }
+        .cp705:hover .owl-next:hover { background-color:rgba(0,0,0,.4) !important; }
+
+	/* 버튼 */
+    .cp705_slide .owl-dots { container-type:inline-size; display:grid; position:relative; z-index:20; width:100%; grid-template-columns:auto auto auto; gap:0; }
+    .cp705_slide .owl-dots .owl-dot { display:block; position:relative; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; display:table; margin:0 -1px -1px 0; padding:15% 0; border:1px solid #ddd; background:#eee; text-align:center; cursor:pointer; transition:all .3s ease; }
+    .cp705_slide .owl-dots .owl-dot span { position:absolute; z-index:2; left:0; top:0; width:0; height:2px; background:rgba(0,0,0,.2); } /* 타이머 */
+    .cp705_slide .owl-dots .owl-dot > div.text { line-height:17px; color:#777; font-size:90%; vertical-align:middle; }
+    .cp705_slide .owl-dots .owl-dot.active { background:#fff; color:#111; font-weight:bold; }
+
+	/* 팝업의 X버튼 */
+	.cp705.popup .p-close { position:relative; z-index:10; top:0; left:0; width:100%; height:40px; border-radius:0; background:#111; color:#fff; cursor:pointer; transition:all .3s ease; }
+	.cp705.popup .p-close:hover { background:#555; }
+
+	/* 모바일 공통 */
+    @media all and (max-width:575px) {
+        .cp705.popup { left:0; top:0; width:100%; }
+        .cp705.popup.on { top:0; }
+        .cp705_slide { width:100%!important; max-width:100%; height:100%; }
+    }

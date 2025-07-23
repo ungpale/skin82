@@ -1,0 +1,34 @@
+<!--------------------------------------------------------------------------------------------------------------
+
+	### cp703(팝업3) ###
+
+-------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/_cPack/cp703/style.css)-->
+<!--@js(/_wg/_cPack/cp703/option.js)-->
+
+<style>
+    .cp703.btn { bottom:35px; } /* 버튼의 위치설정 */
+</style>
+
+<div js-banner-module="cp703" js-hide>
+    <!-- 버튼 -->
+    <div class="scroll_check">
+        <div class="cp703 btn"><i class="xi-bell-o"></i> <span>{$js-group-description}</span></div>
+    </div>
+    <!-- 팝업 -->
+    <div class="cp703 popup">
+        <!-- 슬라이드배너 -->
+        <div class="cp703_slide">
+            <div class="owl-carousel ul normal">
+                <li js-banner data-text="{$js-alt}"><!-- 탭버튼 -->
+                    <a href="{$js-href}" target="{$js-target}">{$js-banner}</a>
+                </li>
+                <li js-banner data-text="{$js-alt}"><!-- 탭버튼 -->
+                    <a href="{$js-href}" target="{$js-target}">{$js-banner}</a>
+                </li>
+            </div>
+        </div>
+        <button type="button" class="p-close" alt="닫기버튼">오늘하루 열지않음</button>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=1.0, user-scalable=yes, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="naver-site-verification" content="03eb2cbccf42b57b05f4a3ec4e746738ed7f3086" />
+    <meta name="naver-site-verification" content="be8b2cb6980d55bfef390f63da9ba9b64fed20f4" />
+    
+    <!-- PG크로스브라우징필수내용 -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- // PG크로스브라우징필수내용 -->
+
+    <title></title>
+    
+    <!--@css(/layout/basic/css/common.css)--><!-- 수정 -->
+    <!--@css(/layout/basic/css/ec-base-ui.css)--><!-- 수정 -->
+    <!--@css(/layout/basic/css/ec-base-paginate.css)--><!-- 수정 -->
+    <!--@css(/layout/basic/css/ec-base-button.css)--><!-- 수정 -->
+    <!--@css(/layout/basic/css/ec-base-tab.css)--><!-- 수정 -->
+    
+    <!--@css(/layout/basic/css/ec-base-box.css)--><!-- PC -->
+    <!--@css(/layout/basic/css/ec-base-desc.css)--><!-- PC -->
+    
+    <!--@css(/layout/basic/css/ec-base-tooltip.css)--><!-- 모바일 -->
+    <!--@css(/layout/basic/css/ec-base-help.css)--><!-- 모바일 -->
+    <!--@css(/layout/basic/css/ec-base-table.css)--><!-- 모바일 -->
+ 	<!--@css(/layout/basic/css/ec-base-fold.css)--><!-- 모바일 -->
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)--><!-- 모바일 -->
+   	<!--@css(/layout/basic/css/ec-base-layer.css)--><!-- 모바일 -->
+    
+    <!-- 사용안함 (/_wg/css/fix_cafe.css 에서 수정가능) -->
+    <!--@css(/layout/basic/css/layout.css) --><!-- 사용안함 -->
+    <!--@css(/layout/basic/css/ec-base-product.css) --><!-- 사용안함 -->
+    
+    <!--@js(/layout/basic/js/basic.js)-->
+    <!--@js(/js/common.js)-->
+    <!--@js(/js/module/layout/quick_view.js)-->
+        
+    <!--@import(/_wg/base.html)--><!-- 베이스 -->
+</head>
+<body id="main" class="-switchWrap colorThema">
+<div module="Popup_MultiPopup">
+	<!--
+		$banner_popup_no =
+		※ 노출시킬 팝업의 ID를 숫자로 넣어주세요.
+	-->
+	{$popup}
+</div>
+<div module="Popup_MultiBanner">
+	<!--
+		$banner_popup_no =
+		※ 노출시킬 배너의 ID를 숫자로 넣어주세요.
+	-->
+	{$banner}
+</div>
+<div id="wrap">
+    
+    <!-- cp507 ( 최상단 슬라이드배너 - 메인페이지에만 노출됩니다.) -->
+    <!--@import(/_wg/_cPack/cp507/dom.html)-->
+
+    <!-- 상단 디자인 -->
+    <!--@import(/_wg/import/header.html)-->
+    
+    <div id="container">
+        <div id="contents_main">
+            <!--@contents-->
+        </div>
+    </div><hr class="layout" />
+    
+    <!-- 하단 디자인 -->
+    <!--@import(/_wg/import/footer.html)-->
+
+    <!-- cp550(우측패널) -->
+    <!--@import(/_wg/_cPack/cp550/dom.html)-->
+    
+    <!-- cp705(팝업1) -->
+    <!--@import(/_wg/_cPack/cp705/dom.html)-->
+    
+    <!-- cp701(팝업2) -->
+    <!--@import(/_wg/_cPack/cp701/dom.html)-->
+    
+    <!-- cp703(팝업3) -->
+    <!--@import(/_wg/_cPack/cp703/dom.html)-->
+
+</div>
+<!-- 배너앱 코드 -->
+<!--@import(/_wg/import/bnrApp.html)-->
+<script type="text/javascript">
+  var divYoutubeList = document.querySelectorAll(".cp500 div.youtube");
+  divYoutubeList.forEach(function (divYoutube) {
+    var liParent = divYoutube.closest("li");
+    var timerValue = divYoutube.getAttribute("data-timer");
+    var youtubeValue = divYoutube.getAttribute("data-youtube");
+
+    liParent.classList.add("youtube");
+    liParent.setAttribute("data-timer", timerValue);
+    liParent.setAttribute("data-youtube", youtubeValue);
+  });
+</script>    
+</body>
+</html>

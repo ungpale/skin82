@@ -1,0 +1,39 @@
+<div class="header_icon">
+    <ul>
+        <li class="cp792 btn">
+            <a href="#none">
+            	<i class="xi-bars"></i>
+                <div class="-caption"><p>전체메뉴</p></div>
+            </a>
+        </li>
+    	<li class="cp797 btn header_cp797">
+            <a href="#none">
+                <i class="xi-search"></i>
+                <div class="-caption"><p>상품검색</p></div>
+            </a>
+        </li>
+    	<li class="ico_myshop">
+            <a href="/myshop/index.html">
+                <i class="btn_off xi-user-o"></i>
+                <div class="-caption"><p>마이샵</p></div>
+                <i class="btn_on xi-user"></i>
+            </a>
+        </li>
+        <li class="ico_cart">
+            <a href="/order/basket.html">
+                <i class="btn_off xi-cart-o"></i>
+                <span module="Layout_orderBasketcount" class="count mColor {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span>
+                <i class="btn_on xi-cart"></i>
+                <div class="-caption"><p>장바구니</p></div>
+            </a>
+        </li>
+    	<li class="cp798 btn">
+            <a href="#none">
+                <i class="btn_off xi-heart-o"></i>
+                <span module="myshop_main" class="count mColor">{$recent_count}</span>
+                <i class="btn_on mTxt xi-heart"></i>
+                <div class="-caption"><p>최근본상품</p></div>
+            </a>
+        </li>
+    </ul>
+</div>

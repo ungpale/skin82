@@ -1,0 +1,11 @@
+
+    .cp011 { position:relative; margin:0 auto 40px/*하단여백*/; }
+    .cp011:after { content:""; display:block; *zoom:1; clear:both; }
+    .cp011 > ul { }
+    .cp011 > ul > li:first-child { margin:0; }
+    .cp011 > ul > li { float:left; overflow:hidden; }
+    .cp011 > ul > li:nth-child(1) { width:29.474%; margin:0 1.586% 1% 0; }
+    .cp011 > ul > li:nth-child(2) { width:38.158%; margin:0 0 1.586% 0; }
+    .cp011 > ul > li:nth-child(3) { float:right; width:29.474%; margin:0 0 1% 0; }
+    .cp011 > ul > li:nth-child(4) { width:38.158%; margin:0 0 1% 0; }
+    .cp011 > ul > li img { width:100%; }

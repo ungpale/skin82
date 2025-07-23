@@ -1,0 +1,27 @@
+<!-- 에스크로 -->
+<div class="footer_escrow _part">
+    <h4 class="title sm">구매안전서비스</h4>
+    <ul>
+        <li><span class="mColor">NHN한국사이버결제</span></li>
+        <li>고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 구매안전 서비스를 이용하실 수 있습니다.</li>
+        <!-- <li><a href="https://www.inicis.com/" target="_blank" class="-btn -xs -white"><i class="xi-check-min"></i> 서비스 가입사실 확인</a></li> -->
+        <li>
+            <form name="shop_check" method="post" action="//admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp">
+                <input type="hidden" name="site_cd" value="D8821" />
+                <a href="#none" class="-btn -xs -white" onclick="javascript:go_check()"><i class="xi-check-min"></i> 서비스 가입사실 확인</a>
+            </form>
+        </li>
+    </ul>
+    <!-- 하단 아이콘 -->
+    <!--@import(/_wg/import/footer_ico.html)-->
+</div>
+<script type="text/javascript">
+  function go_check() {
+    var status  = "width=500 height=450 menubar=no,scrollbars=no,resizable=no,status=no";
+    var obj     = window.open('', 'kcp_pop', status);
+    document.shop_check.method = "post";
+    document.shop_check.target = "kcp_pop";
+    document.shop_check.action = "//admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp";
+    document.shop_check.submit();
+  }
+</script>

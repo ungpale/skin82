@@ -1,0 +1,50 @@
+
+/** 상품 리스트 **/
+
+    .ec-base-product.cp574 { margin:0 auto 60px; }
+
+	/* 타이틀 이미지 */
+	.cp574_titleImg { display:; margin:0 auto 20px; }
+	.cp574_titleImg img { width:100%; }
+
+	/* 타이틀 */
+    .ec-base-product.cp574 h2 { margin:0 auto 30px; }
+    .ec-base-product.cp574 info { display:block; line-height:140%; margin:0 0 30px; font-size:100%; font-weight:normal; text-align:center; }
+
+    /* 타이머 */
+    .ec-base-product.cp574 time { display:block; width:99.5%; margin:0 auto; }
+    .ec-base-product.cp574 .timer { display:block; margin:0 0 5px; padding:12px 0; border-radius:8px; background:#efefef; text-align:center; font-size:100%; color:#111; }
+
+	/* 시간 */
+	.ec-base-product.cp574 .timer span { display:inline-block; height:30px; line-height:28px; margin:0 5px; padding:0 4px 0 6px; border-radius:4px; background:#fff; font-size:12px; letter-spacing:.2em; color:#111; }
+    .ec-base-product.cp574 .timer .day { }
+    .ec-base-product.cp574 .timer .hour { }
+    .ec-base-product.cp574 .timer .minute { }
+    .ec-base-product.cp574 .timer .second { }
+
+	/* 진행상태(타임세일앞 텍스트) */
+	.ec-base-product.cp574 span.state { border-radius:4px; font-size:13px; color:#fff; letter-spacing:0; }
+    .ec-base-product.cp574 .ready .state { background:#ccc; } /* 준비중 */
+	.ec-base-product.cp574 .ing .state { background:#be3455; color:#fff; } /* 진행중 */
+	.ec-base-product.cp574 .on .state { display:block; background:none; color:#111; } /* 종료 */
+
+	/** 클릭방지 **/
+    /* 준비중 */
+    .ec-base-product.cp574 li .ready { display:none; position:absolute; z-index:100; width:99.5%; height:96%; margin:-5px 0 0 0; background-color:rgba(255,255,255,0.6); }
+    .ec-base-product.cp574 li.ready .ready { display:block; }
+
+    /* 종료 */
+    .ec-base-product.cp574 li .time_out { display:none; position:absolute; z-index:100; width:99.5%; height:96%; margin:-5px 0 0 0px; background-color:rgba(255,255,255,0.6); -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px); }
+    .ec-base-product.cp574 li.on .time_out { display:block; }
+
+    /* 리스트 */
+    .ec-base-product.cp574 .prdList .thumbnail { width:99.5%; margin:0 auto 20px; }
+    .ec-base-product.cp574 .prdList .description {  }
+
+	@media all and (max-width:840px) {
+        .ec-base-product.cp574 info { font-size:70%; }
+		.ec-base-product.cp574 .prdList > li { flex:0 1 100%; }
+	}
+	@media all and (min-width:841px) and (max-width:1100px) {
+		.ec-base-product.cp574 .prdList > li { width:33.33%; }
+	}

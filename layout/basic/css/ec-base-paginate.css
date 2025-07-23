@@ -1,0 +1,29 @@
+.ec-base-paginate {margin:40px 0;text-align:center;font-size:0;line-height:0;}
+.ec-base-paginate ol { display:inline-block;line-height:0; font-size:0; vertical-align:top; }
+
+/* 방향키 */
+.ec-base-paginate > a { display:inline-block; width:15px; height:15px; margin:0 2px; padding:8px 6px; filter:alpha(opacity=50); opacity:.5; transition:all .3s ease; }
+.ec-base-paginate > a:hover { filter:alpha(opacity=100); opacity:1; }
+.ec-base-paginate > a:first-child { content:url('/_wg/img/_btn/btn_page_first.png'); }
+.ec-base-paginate > a:nth-child(100n+2) { content:url('/_wg/img/_btn/btn_page_prev.png'); }
+.ec-base-paginate > a:nth-child(100n+4) { content:url('/_wg/img/_btn/btn_page_next.png'); }
+.ec-base-paginate > a:last-child { content:url('/_wg/img/_btn/btn_page_last.png'); }
+.ec-base-paginate > a img { width:100%; }
+
+/* 넘버 */
+.ec-base-paginate li { display:inline-block;}
+.ec-base-paginate li a { display:block; width:30px; height:30px; line-height:30px; margin:0 5px; border-radius:50%; background:#f4f4f4; font-size:13px; color:#555; text-align:center; transition:all .3s ease; }
+.ec-base-paginate li a:hover { background:#ddd; }
+.ec-base-paginate li a.this { background:#1e1e1e; color:#fff; }
+
+.ec-base-paginate a.nolink { cursor:default; }
+
+
+/* 더보기 typeMoreview */
+.ec-base-paginate.typeMoreview { width:100%; line-height:1; margin:0 auto 80px; font-size:100%; }
+.ec-base-paginate.typeMoreview .btnMore { display: block; width:130px; padding:17px 10px; margin:0 auto; border-radius:30px; border:1px solid #777; background:#fff; color:#ddd; letter-spacing:0; content:initial; text-align:center; filter:alpha(opacity=100); opacity:1; }
+.ec-base-paginate.typeMoreview .btnMore:hover { background:#f4f4f4; }
+.ec-base-paginate.typeMoreview .btnMore span { padding:0 10px; }
+.ec-base-paginate.typeMoreview .btnMore span:nth-child(1) { font-weight:bold; color:#be3454; }
+.ec-base-paginate.typeMoreview .btnMore span:nth-child(2) { color:#333; }
+.ec-base-paginate.typeMoreview .icoMore { display:inline-block; margin:0; width:18px; height:7px; font-size:0; line-height:0; vertical-align:baseline; background:url("/_wg/img/_arrow/arrowVR_21.gif") no-repeat 0 50%; background-size:18px auto; }

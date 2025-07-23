@@ -1,0 +1,15 @@
+
+    .cp006 { position:relative; margin:0 auto 40px/*하단여백*/; }
+    .cp006:after { content:""; display:block; *zoom:1; clear:both; }
+    .cp006 > ul > li:nth-child(1) { margin:0; }
+    .cp006 > ul > li { float:left; width:18.948%; margin:0 0 0 1.315%; overflow:hidden; }
+    .cp006 > ul > li img { width:100%; }
+
+	/* 스마트폰 세로 */
+	@media all and (max-width:575px) {
+        .cp006 > ul > li:nth-child(1) { width:49.207%; margin:0 0 8px; }
+        .cp006 > ul > li:nth-child(2) { width:49.207%; margin:0 0 8px 1.5866%; }
+		.cp006 > ul > li:nth-child(3) { width:32.143%; margin:0 0 8px; }
+        .cp006 > ul > li:nth-child(4) { width:32.143%; margin:0 0 8px 1.7855%; }
+        .cp006 > ul > li:nth-child(5) { width:32.143%; margin:0 0 8px 1.7855%; }
+	}

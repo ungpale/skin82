@@ -1,0 +1,32 @@
+<!-- 쿠폰 다운로드 -->
+<div module="coupon_productdetailajax" class="detail_coupon">
+    <!--
+		$coupon_down_result_url = /coupon/coupon_down_result.html
+	-->
+    <div id="couponZone"></div>
+    <h2 class="title md">할인쿠폰 다운로드 <a href="#none" id="btn_all_coupondown" class="-btn -xs -black">전체 쿠폰 다운받기</a></h2>
+    <div class="couponSkinArea">
+        <ul>
+            <li class="mColor">
+                <div class="coupon_list">
+                    <div class="detail" {$call_coupon_detail}>
+                        <p class="title">{$coupon_name|cut:13,...}</p>
+                        <p class="discount">{$coupon_content}</p>
+                        <p class="period">{$coupon_period}</p>
+                    </div>
+                    <div class="botton"><a href="{$coupon_issue_url}" class="-btn -mov"><i class="xi-arrow-bottom -mov"></i></a></div>
+                </div>
+            </li>
+            <li class="mColor">
+                <div class="coupon_list">
+                    <div class="detail" {$call_coupon_detail}>
+                        <p class="title">{$coupon_name|cut:13,...}</p>
+                        <p class="discount">{$coupon_content}</p>
+                        <p class="period">{$coupon_period}</p>
+                    </div>
+                    <div class="botton"><a href="{$coupon_issue_url}" class="-btn -mov"><i class="xi-arrow-bottom -mov"></i></a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

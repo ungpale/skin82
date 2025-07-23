@@ -1,0 +1,46 @@
+<!--@css(/_wg/_cPack/cp535/style.css)-->
+<!--@js(/_wg/_cPack/cp535/option.js)-->
+<div id="cp535" module="product_relation">
+    <div class="titleArea2">
+        <h3>관련상품</h3>
+    </div>
+    <div module="product_relationlist" class="owl-carousel ul">
+        <!--
+        $count = 20
+        -->
+        <li class="item">
+            <div class="thumbnail">
+                <a href="/product/detail.html{$param}"><img src="{$img_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /></a>
+            </div>
+            <div class="description">
+                <p class="name">
+                    <a href="{$link_product_detail}">{$name}</a>
+                </p>
+                <ul class="spec">
+                    <li><strong class="{$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</strong></li>
+                    <li class="salePrice {$sale_price_display|display}">{$disp_sale_price}</li>
+                </ul>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</div>
+                </div>
+            </div>
+        </li>
+        <li class="item">
+            <div class="thumbnail">
+                <a href="/product/detail.html{$param}"><img src="{$img_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /></a>
+            </div>
+            <div class="description">
+                <p class="name">
+                    <a href="{$link_product_detail}">{$name}</a>
+                </p>
+                <ul class="spec">
+                    <li><strong class="{$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</strong></li>
+                    <li class="salePrice {$sale_price_display|display}">{$disp_sale_price}</li>
+                </ul>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</div>
+                </div>
+            </div>
+        </li>
+    </div>
+</div><!-- //관련상품 -->
